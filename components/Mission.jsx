@@ -17,26 +17,26 @@ export const Mission = () => {
 
   const logoOpacity = useTransform(
     scrollYProgress,
-    [0.1, 0.3],
-    [0, 1]
+    [0.3, 0.4, 0.9, 1],
+    [0, 1, 1, 0]
   )
 
   const middleScale = useTransform(
     scrollYProgress,
-    [0.3, 0.8],
-    [600, 150]
+    [0.4, 0.8],
+    [600, 250]
   )
 
   const lineScale = useTransform(
     scrollYProgress,
-    [0.3, 0.8],
-    [0, 1]
+    [0.4, 0.8, 0.9, 1],
+    [0, 1, 1, 0]
   )
 
   const statementPos = useTransform(
     scrollYProgress,
-    [0.3, 0.8],
-    [2000, 0]
+    [0.4, 0.8, 0.9, 1],
+    [2000, 0, 0, 2000]
   )
 
   const negativeStatementPos = useTransform(statementPos, s => -s);
@@ -53,7 +53,7 @@ export const Mission = () => {
         }}
       >
         <div className={styles.main}>
-          <motion.div className={styles.mainText} style={{ opacity: mainTextOpacity }}>
+          <motion.div className={styles.mainText} style={{ opacity: mainTextOpacity, scale: mainTextOpacity }}>
             <h2 className={styles.title}>
               Our Mission
             </h2>
@@ -62,7 +62,7 @@ export const Mission = () => {
               Collaborative support that unlocks their unique potential.
             </p>
           </motion.div>
-          <motion.div className={styles.logo} style={{ opacity: logoOpacity }}>
+          <motion.div className={styles.logo} style={{ opacity: logoOpacity, scale: logoOpacity }}>
             <img src="logo.svg" alt="logo" />
           </motion.div>
           <motion.div className={classNames(styles.statementLine, styles.statement1Line)} style={{ scaleY: lineScale, originY: "100%" }} />

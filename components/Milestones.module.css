@@ -1,7 +1,6 @@
 .wrapper {
   height: 500vh;
-  background: #253F6D;
-  color: white;
+  background: white;
   width: 100%;
 }
 
@@ -35,7 +34,6 @@
 .header h2 {
   margin-top: 4rem;
   font-size: 3rem;
-  color: #F5C261;
 }
 
 .milestones {
@@ -63,32 +61,16 @@
   border-radius: 25px;
   padding: 6rem;
   position: relative;
+  border: 1px solid black;
+  background: white;
 }
-
-/*.inner::after {*/
-/*  position: absolute;*/
-/*  content: ' ';*/
-/*  height: 5px;*/
-/*  width: 50px;*/
-/*  top: 50%;*/
-/*  left: 100%;*/
-/*  width: 100vw;*/
-/*  background: #F5C261;*/
-/*}*/
-/**/
-/**/
-/*.milestoneItem:last-child .inner::after {*/
-/*  content: none;*/
-/*}*/
 
 .milestoneTitle {
   font-size: 2rem;
-  color: #253F6D;
 }
 
 .milestoneDescription {
   font-size: 1.5rem;
-  color: #253F6D;
 }
 
 @media screen and (max-width: 780px) {

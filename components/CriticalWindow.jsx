@@ -55,7 +55,7 @@ export const CriticalWindow = () => {
       <div className={styles.content}>
         <motion.div className={styles.header} style={{ opacity: headerProgress }}>
           <h2>Critical window of opportunity</h2>
-          <Progress progress={scrollYProgress} />
+          <Progress progress={scrollYProgress} color='black' />
         </motion.div>
         <div className={styles.cards}>
           {items.map((item, index) => {
@@ -107,7 +107,7 @@ export const Card = ({
 
   return (
     <div style={{ top: `calc(20% + ${100 * i}px)` }} className={styles.cardContainer}>
-      <motion.div style={{ background: bg, scale: scaleFinal, y }} className={styles.cardContent}>
+      <motion.div style={{ background: 'white', scale: scaleFinal, y }} className={styles.cardContent}>
         <motion.h3 style={{ opacity }} className={styles.cardTitle}>{title}</motion.h3>
         <motion.div style={{ opacity }} className={styles.cardDescription}>{description}</motion.div>
       </motion.div>

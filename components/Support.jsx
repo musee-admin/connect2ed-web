@@ -76,7 +76,7 @@ export const Support = ({ ref }) => {
       <div className={styles.content}>
         <div className={styles.heading}>
           <h2>Supporting Neurodivergent Children</h2>
-          <Progress progress={scrollYProgress} color="#F5C261" />
+          <Progress progress={scrollYProgress} />
         </div>
         <div className={styles.items}>
           <AnimatePresence mode="wait" custom={direction}>

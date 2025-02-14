@@ -51,26 +51,20 @@ export const Milestones = () => {
   });
 
   const progressArray = milestoneItems.reduce((acc, _, index) => {
-    if (index === 0) {
-      return [0];
-    }
-    if (index === milestoneItems.length - 1) {
-    }
-    const unitPos = 1 / ((milestoneItems.length - 1) * 3);
-    const pos = index / (milestoneItems.length - 1);
-    return [...acc, pos - (unitPos * 2), pos - unitPos, pos];
+    const unitPos = 1 / ((milestoneItems.length) * 3);
+    const pos = index / (milestoneItems.length);
+    return [...acc, pos + (unitPos), pos + (unitPos * 2), pos + (unitPos * 3)];
   }, []);
 
   const rangeArray = milestoneItems.reduce((acc, _, index) => {
-    if (index === 0) {
-      return ['0vw'];
-    }
     const translate = index * 100;
     if (index === milestoneItems.length - 1) {
       return [...acc, `-${translate - 20}vw`, `-${translate - 10}vw`, `-${translate}vw`];
     }
-    return [...acc, `-${translate - 10}vw`, `-${translate}vw`, `-${translate + 10}vw`];
+    return [...acc, `-${translate}vw`, `-${translate + 10}vw`, `-${translate + 20}vw`];
   }, []);
+
+  console.log({ progressArray, rangeArray })
 
 
   const x = useTransform(
@@ -85,7 +79,7 @@ export const Milestones = () => {
       <motion.div style={{ scale, opacity: scale }} className={styles.content} ref={containerRef}>
         <div className={styles.header}>
           <h2>Milestones in a Neurodivergent Child's Journey</h2>
-          <Progress progress={scrollYProgress} color="#F5C261" />
+          <Progress progress={scrollYProgress} color="black" />
         </div>
         <motion.div className={styles.milestones} style={{ x }}>
           <div className={styles.hr} style={{ width: `${(milestoneItems.length - 1) * 100}vw` }}>
@@ -111,7 +105,6 @@ export const MilestoneItem = ({ title, description, i }) => {
     >
       <div className={styles.inner}
         style={{
-          background: i % 2 === 0 ? '#F59293' : '#5DB8F1',
           color: 'black'
         }}
       >

@@ -1,9 +1,7 @@
 .wrapper {
-  height: 800vh;
+  height: 600vh;
   width: 100%;
   position: relative;
-  background: #253F6D;
-  color: white;
   transition: all 1s ease-in-out;
 }
 
@@ -21,7 +19,6 @@
 .heading {
   font-size: 2rem;
   padding: 2rem;
-  color: #F5C261;
 }
 
 .items {
@@ -42,7 +39,6 @@
   text-align: center;
   font-weight: 700;
   min-height: 110px;
-  color: #F7A7A8;
 }
 
 .slideContent {

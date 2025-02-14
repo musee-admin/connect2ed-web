@@ -8,6 +8,8 @@ import { Support } from './Support';
 import { CriticalWindow } from './CriticalWindow';
 import { Milestones } from './Milestones';
 import { Mission } from './Mission';
+import { KeyFeatures } from './KeyFeatures';
+import { Footer } from './Footer';
 
 export const Home = () => {
   const [cs, setCs] = useState(false);
@@ -45,6 +47,8 @@ export const Home = () => {
       <CriticalWindow />
       {cs && <Milestones />}
       <Mission />
+      <KeyFeatures />
+      <Footer />
     </section>
   )
 }
