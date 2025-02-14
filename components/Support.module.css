@@ -1,5 +1,5 @@
 .wrapper {
-  height: 500vh;
+  height: 800vh;
   width: 100%;
   position: relative;
   background: #253F6D;
@@ -24,15 +24,11 @@
   color: #F5C261;
 }
 
-.progress {
-  height: 5px;
-  background-color: #F5C261;
-}
-
 .items {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .slide {
@@ -46,6 +42,7 @@
   text-align: center;
   font-weight: 700;
   min-height: 110px;
+  color: #F7A7A8;
 }
 
 .slideContent {

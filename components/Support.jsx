@@ -2,21 +2,38 @@ import { useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from "motion/react";
 
 import styles from './Support.module.css';
+import { Progress } from '../uiComponents/Progress';
 
 const variants = {
   enter: (direction) => {
     return {
-      x: direction === 'down' ? 100 : -100,
       opacity: 0,
     };
   },
   center: {
-    x: 0,
     opacity: 1,
   },
   exit: (direction) => {
     return {
-      x: direction === 'down' ? -100 : 100,
+      opacity: 0,
+    };
+  }
+};
+
+const descVariants = {
+  enter: (direction) => {
+    return {
+      y: direction === 'down' ? -200 : 200,
+      opacity: 0,
+    };
+  },
+  center: {
+    y: 0,
+    opacity: 1,
+  },
+  exit: (direction) => {
+    return {
+      y: direction === 'down' ? 200 : -200,
       opacity: 0,
     };
   }
@@ -43,7 +60,6 @@ export const Support = ({ ref }) => {
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
-    layoutEffect: false,
   })
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -60,7 +76,7 @@ export const Support = ({ ref }) => {
       <div className={styles.content}>
         <div className={styles.heading}>
           <h2>Supporting Neurodivergent Children</h2>
-          <motion.div style={{ scaleX: scrollYProgress }} className={styles.progress} />
+          <Progress progress={scrollYProgress} color="#F5C261" />
         </div>
         <div className={styles.items}>
           <AnimatePresence mode="wait" custom={direction}>
@@ -73,7 +89,7 @@ export const Support = ({ ref }) => {
               animate="center"
               exit="exit"
               transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
+                x: { type: "spring", stiffness: 10, damping: 10 },
                 opacity: { duration: 0.2 }
               }}
             >
@@ -84,11 +100,12 @@ export const Support = ({ ref }) => {
             <motion.div
               key={`desc-${activeSlide}`}
               className={styles.slideContent}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              variants={descVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
               transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
+                y: { type: "spring", bounce: 0.5 },
                 opacity: { duration: 0.2 }
               }}
             >

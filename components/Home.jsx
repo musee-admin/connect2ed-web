@@ -7,6 +7,7 @@ import { Hero } from './Hero';
 import { Support } from './Support';
 import { CriticalWindow } from './CriticalWindow';
 import { Milestones } from './Milestones';
+import { Mission } from './Mission';
 
 export const Home = () => {
   const [cs, setCs] = useState(false);
@@ -43,6 +44,7 @@ export const Home = () => {
       <Support ref={propositionRef} />
       <CriticalWindow />
       {cs && <Milestones />}
+      <Mission />
     </section>
   )
 }

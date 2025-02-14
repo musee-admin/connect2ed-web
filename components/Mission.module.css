@@ -1,0 +1,122 @@
+.wrapper {
+  height: 500vh;
+  width: 100%;
+  padding: 2rem;
+}
+
+.content {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-areas:
+    "st4 st1 st1"
+    "st4 ms st2"
+    "st3 st3 st2";
+}
+
+.main {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  grid-area: ms;
+  position: relative;
+}
+
+.mainText {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 8rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+
+.logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.mainStatement {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 6rem;
+  overflow: none;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+}
+
+.statement h3 {
+  font-size: 2rem;
+  width: 100%;
+}
+
+.statement p {
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.statement1 {
+  grid-area: st1;
+}
+
+.statement2 {
+  grid-area: st2;
+}
+
+.statement3 {
+  grid-area: st3;
+}
+
+.statement4 {
+  grid-area: st4;
+}
+
+.statementLine {
+  position: absolute;
+  height: 70vh;
+  width: 2px;
+  background-color: black;
+}
+
+.statement1Line {
+  left: 0;
+  bottom: 0;
+}
+
+.statement2Line {
+  left: 0;
+  top: 0;
+  width: 50vw;
+  height: 2px;
+}
+
+.statement3Line {
+  right: 0;
+  top: 0;
+}
+
+.statement4Line {
+  right: 0;
+  bottom: 0;
+  width: 50vw;
+  height: 2px;
+}

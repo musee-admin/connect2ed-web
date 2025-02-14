@@ -1,31 +1,32 @@
 import { useRef } from 'react';
 
 import styles from './CriticalWindow.module.css';
-import { motion, useScroll, useTransform, useMotionValueEvent } from 'motion/react';
+import { motion, useScroll, useTransform, useSpring } from 'motion/react';
+import { Progress } from '../uiComponents/Progress';
 
 const items = [
   {
     title: 'Scale of Variation',
     description: '12% of children experience developmental variations, demanding innovative tracking.',
-    bg: '#253F6D',
     fg: '',
+    bg: '#00B0B8',
   },
   {
     title: 'Pivotal Development Period',
     description: 'The first 8 years are crucial for idenifying and supporting neurodivergent children.',
-    bg: '#00B0B8',
+    bg: '#253F6D',
     fg: '',
   },
   {
     title: 'Fragmented Support',
     description: 'Professionals Struggle to collaborate and provide comprehensive support.',
-    bg: '#253F6D',
+    bg: '#00B0B8',
     fg: '',
   },
   {
     title: 'Outdated Tracking',
     description: 'Current information systems are fragmented and inefficient.',
-    bg: '#00B0B8',
+    bg: '#253F6D',
     fg: '',
   },
 ]
@@ -38,6 +39,12 @@ export const CriticalWindow = () => {
     layoutEffect: false,
   });
 
+  const progress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 10,
+    mass: 1,
+  });
+
   const headerProgress = useTransform(scrollYProgress,
     [0, 0.9, 1],
     [1, 1, 0],
@@ -48,7 +55,7 @@ export const CriticalWindow = () => {
       <div className={styles.content}>
         <motion.div className={styles.header} style={{ opacity: headerProgress }}>
           <h2>Critical window of opportunity</h2>
-          <motion.div style={{ scaleX: scrollYProgress }} className={styles.progress} />
+          <Progress progress={scrollYProgress} />
         </motion.div>
         <div className={styles.cards}>
           {items.map((item, index) => {
@@ -58,7 +65,7 @@ export const CriticalWindow = () => {
                 key={index}
                 i={index}
                 targetScale={targetScale}
-                progress={scrollYProgress}
+                progress={progress}
                 range={[index * (1 / items.length), 1]}
                 {...item}
               />
@@ -85,7 +92,7 @@ export const Card = ({
   const scale = useTransform(progress, range, [1, targetScale]);
   const scaleLast = useTransform(
     progress,
-    [0, 0.9, 1],
+    [0, 0.95, 1],
     [1, 1, 3]
   );
   const opacity = useTransform(
@@ -94,11 +101,13 @@ export const Card = ({
     [1, 1, 0]
   );
 
+  const y = useTransform(scaleLast, (s) => (s - 1) * -100)
+
   const scaleFinal = useTransform([scale, scaleLast], ([s1, s2]) => s2 > 1 ? s2 * s1 : s1);
 
   return (
     <div style={{ top: `calc(20% + ${100 * i}px)` }} className={styles.cardContainer}>
-      <motion.div style={{ background: bg, scale: scaleFinal }} className={styles.cardContent}>
+      <motion.div style={{ background: bg, scale: scaleFinal, y }} className={styles.cardContent}>
         <motion.h3 style={{ opacity }} className={styles.cardTitle}>{title}</motion.h3>
         <motion.div style={{ opacity }} className={styles.cardDescription}>{description}</motion.div>
       </motion.div>

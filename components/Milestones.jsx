@@ -1,6 +1,8 @@
 import { useRef, useMemo } from 'react';
 import styles from './Milestones.module.css';
 import { useScroll, motion, useTransform, useMotionTemplate } from 'motion/react';
+import { Progress } from '../uiComponents/Progress';
+import { Swiggly } from '../uiComponents/Swiggly';
 
 const milestoneItems = [
   {
@@ -48,15 +50,33 @@ export const Milestones = () => {
     layoutEffect: false,
   });
 
-  const containerWidth = useMemo(() => {
-    if (!containerRef.current) { return 0 }
-    return containerRef.current.width;
-  }, [containerRef]);
+  const progressArray = milestoneItems.reduce((acc, _, index) => {
+    if (index === 0) {
+      return [0];
+    }
+    if (index === milestoneItems.length - 1) {
+    }
+    const unitPos = 1 / ((milestoneItems.length - 1) * 3);
+    const pos = index / (milestoneItems.length - 1);
+    return [...acc, pos - (unitPos * 2), pos - unitPos, pos];
+  }, []);
+
+  const rangeArray = milestoneItems.reduce((acc, _, index) => {
+    if (index === 0) {
+      return ['0vw'];
+    }
+    const translate = index * 100;
+    if (index === milestoneItems.length - 1) {
+      return [...acc, `-${translate - 20}vw`, `-${translate - 10}vw`, `-${translate}vw`];
+    }
+    return [...acc, `-${translate - 10}vw`, `-${translate}vw`, `-${translate + 10}vw`];
+  }, []);
+
 
   const x = useTransform(
     scrollYProgress,
-    [0, 1],
-    ['0vw', `-${(milestoneItems.length - 1) * 100}vw`]
+    progressArray,
+    rangeArray
   );
 
 
@@ -65,9 +85,12 @@ export const Milestones = () => {
       <motion.div style={{ scale, opacity: scale }} className={styles.content} ref={containerRef}>
         <div className={styles.header}>
           <h2>Milestones in a Neurodivergent Child's Journey</h2>
-          <motion.div style={{ scaleX: scrollYProgress }} className={styles.progress} />
+          <Progress progress={scrollYProgress} color="#F5C261" />
         </div>
         <motion.div className={styles.milestones} style={{ x }}>
+          <div className={styles.hr} style={{ width: `${(milestoneItems.length - 1) * 100}vw` }}>
+            <Swiggly progress={scrollYProgress} />
+          </div>
           {milestoneItems.map((item, index) => (
             <MilestoneItem
               key={index}
