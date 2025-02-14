@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: clip;
+}
+
+.motionSection {
+  display: flex;
+  width: 100%;
+  height: 500vh;
+  background: #F5C261;
+  flex-direction: column;
+}
+
+
+.slide1 {
+  position: sticky;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 100vh;
+}

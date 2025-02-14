@@ -1,0 +1,32 @@
+.wrapper {
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 3rem;
+  text-align: center;
+  padding-inline: 2rem;
+  gap: 4rem;
+}
+
+.wrapper img {
+  height: 200px;
+  object-fit: contain;
+}
+
+.heroText {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 780px) {
+  .wrapper {
+    gap: 0rem;
+  }
+
+  .heroText {
+    font-size: 1rem;
+  }
+}

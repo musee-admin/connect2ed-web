@@ -1,0 +1,126 @@
+defs:
+  - typesRef: &types-ref
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        collapsed: true
+        types:
+          - label: "Hero"
+            name: "hero"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: false,
+                }
+              - {
+                  label: "Video",
+                  name: "video",
+                  widget: "file",
+                  media_library: { config: { multiple: false } },
+                }
+              - {
+                  label: "Button Text",
+                  name: "cta_text",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Button Link",
+                  name: "cta_link",
+                  widget: "string",
+                  required: false,
+                }
+
+local_backend: true
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: public/img
+public_folder: img
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Basic"
+        name: "basic"
+        file: "content/pages/basic.md"
+        fields:
+          - label: "Full Logo"
+            name: "full_logo"
+            widget: "image"
+            media_library: { config: { multiple: false } }
+
+          - label: "Mini Logo"
+            name: "mini_logo"
+            widget: "image"
+            media_library: { config: { multiple: false } }
+
+          - label: "Name"
+            name: "name"
+            widget: "string"
+
+          - label: "Message (Shows in footer)"
+            name: "message"
+            widget: "text"
+
+          - label: "Phone Number"
+            name: "phone_number"
+            widget: "string"
+
+          - label: "Email Id"
+            name: "email_id"
+            widget: "string"
+
+          - label: "Registered Office"
+            name: "registered_office"
+            widget: "text"
+
+          - label: "Corporate Office"
+            name: "corporate_office"
+            widget: "text"
+
+          - label: "Address (used in footer)"
+            name: "address"
+            widget: "text"
+
+          - label: "Linkedin"
+            name: "linkedin"
+            widget: "string"
+            required: false
+
+          - label: "Instagram"
+            name: "instagram"
+            widget: "string"
+            required: false
+
+          - label: "Facebook"
+            name: "facebook"
+            widget: "string"
+            required: false
+
+          - label: "X"
+            name: "x"
+            widget: "string"
+            required: false
+
+      - label: "Home"
+        name: "home"
+        file: "content/pages/home.md"
+        fields: *types-ref
+
+      - label: "Privacy Policy"
+        name: "privacy_policy"
+        file: "content/pages/privacy_policy.md"
+        fields:
+          - { label: "Privacy Policy", name: "body", widget: "markdown" }
+
+      - label: "Terms of use"
+        name: "terms_of_use"
+        file: "content/pages/terms.md"
+        fields:
+          - { label: "Terms of use", name: "body", widget: "markdown" }

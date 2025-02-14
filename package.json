@@ -1,0 +1,32 @@
+{
+  "name": "connec2ed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -p 3200",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build",
+    "postbuild": "next-sitemap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fillout/react": "^1.1.2",
+    "classnames": "^2.5.1",
+    "lenis": "^1.1.20",
+    "motion": "^12.4.2",
+    "next": "^15.1.2",
+    "next-sitemap": "^4.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-social-icons": "^6.20.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
+    "frontmatter-markdown-loader": "^3.7.0"
+  }
+}

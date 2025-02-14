@@ -1,0 +1,84 @@
+.wrapper {
+  height: 400vh;
+  background: #00B0B8;
+  color: white;
+  width: 100%;
+}
+
+.content {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress {
+  height: 5px;
+  background: white;
+}
+
+.header {
+  margin: 0 auto;
+}
+
+.header h2 {
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.milestones {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+
+.milestoneItem {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 100vw;
+  padding: 8rem;
+  padding-inline: 12rem;
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 6rem;
+  border-radius: 25px;
+  padding: 2rem;
+}
+
+.milestoneTitle {
+  font-size: 2rem;
+}
+
+.milestoneDescription {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 780px) {
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .milestoneItem {
+    gap: 2rem;
+    padding: 1rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .milestoneTitle {
+    font-size: 1.5rem;
+  }
+
+  .milestoneDescription {
+    font-size: 1rem;
+  }
+}
