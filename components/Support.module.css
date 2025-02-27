@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
   transition: all 1s ease-in-out;
+  background: var(--primary-color);
 }
 
 .content {
@@ -14,11 +15,13 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .heading {
   font-size: 2rem;
   padding: 2rem;
+  color: var(--secondary-color);
 }
 
 .items {
@@ -39,6 +42,7 @@
   text-align: center;
   font-weight: 700;
   min-height: 110px;
+  color: var(--tertiary-color);
 }
 
 .slideContent {

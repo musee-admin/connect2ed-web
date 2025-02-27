@@ -100,7 +100,8 @@ html {
 }
 
 :root {
-  --primary-color: #104161;
+  --primary-color: #253F6D;
   --secondary-color: #F8A24F;
+  --tertiary-color: #F59293;
   --screen-width-limit: 1280px;
 }

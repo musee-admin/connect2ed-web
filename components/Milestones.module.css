@@ -1,15 +1,7 @@
 .wrapper {
   height: 500vh;
-  background: white;
+  background: var(--primary-color);
   width: 100%;
-}
-
-.line {
-  height: 5px;
-  /*background: #F5C261;*/
-  background: white;
-  position: relative;
-  /*z-index: 2;*/
 }
 
 .hr {
@@ -34,6 +26,7 @@
 .header h2 {
   margin-top: 4rem;
   font-size: 3rem;
+  color: var(--secondary-color);
 }
 
 .milestones {
@@ -62,7 +55,7 @@
   padding: 6rem;
   position: relative;
   border: 1px solid black;
-  background: white;
+  background: var(--tertiary-color);
 }
 
 .milestoneTitle {

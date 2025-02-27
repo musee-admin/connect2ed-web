@@ -39,13 +39,18 @@ export const CriticalWindow = () => {
     layoutEffect: false,
   });
 
+  const p = useTransform(scrollYProgress,
+    [0, 0.95, 1],
+    [0, 0.8, 1]
+  );
+
   const progress = useSpring(scrollYProgress, {
     stiffness: 100,
-    damping: 10,
+    damping: 50,
     mass: 1,
   });
 
-  const headerProgress = useTransform(scrollYProgress,
+  const opacity = useTransform(scrollYProgress,
     [0, 0.9, 1],
     [1, 1, 0],
   )
@@ -53,7 +58,7 @@ export const CriticalWindow = () => {
   return (
     <section ref={ref} className={styles.wrapper}>
       <div className={styles.content}>
-        <motion.div className={styles.header} style={{ opacity: headerProgress }}>
+        <motion.div className={styles.header} style={{ opacity }}>
           <h2>Critical window of opportunity</h2>
           <Progress progress={scrollYProgress} color='black' />
         </motion.div>
@@ -65,7 +70,7 @@ export const CriticalWindow = () => {
                 key={index}
                 i={index}
                 targetScale={targetScale}
-                progress={progress}
+                progress={p}
                 range={[index * (1 / items.length), 1]}
                 {...item}
               />
@@ -92,12 +97,12 @@ export const Card = ({
   const scale = useTransform(progress, range, [1, targetScale]);
   const scaleLast = useTransform(
     progress,
-    [0, 0.95, 1],
+    [0, 0.8, 1],
     [1, 1, 3]
   );
   const opacity = useTransform(
     progress,
-    [0, 0.9, 1],
+    [0, 0.8, 1],
     [1, 1, 0]
   );
 
@@ -107,7 +112,7 @@ export const Card = ({
 
   return (
     <div style={{ top: `calc(20% + ${100 * i}px)` }} className={styles.cardContainer}>
-      <motion.div style={{ background: 'white', scale: scaleFinal, y }} className={styles.cardContent}>
+      <motion.div style={{ background: bg, scale: scaleFinal, y }} className={styles.cardContent}>
         <motion.h3 style={{ opacity }} className={styles.cardTitle}>{title}</motion.h3>
         <motion.div style={{ opacity }} className={styles.cardDescription}>{description}</motion.div>
       </motion.div>

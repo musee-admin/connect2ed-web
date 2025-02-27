@@ -79,7 +79,7 @@ export const Milestones = () => {
       <motion.div style={{ scale, opacity: scale }} className={styles.content} ref={containerRef}>
         <div className={styles.header}>
           <h2>Milestones in a Neurodivergent Child's Journey</h2>
-          <Progress progress={scrollYProgress} color="black" />
+          <Progress progress={scrollYProgress} color="var(--secondary-color)" />
         </div>
         <motion.div className={styles.milestones} style={{ x }}>
           <div className={styles.hr} style={{ width: `${(milestoneItems.length - 1) * 100}vw` }}>

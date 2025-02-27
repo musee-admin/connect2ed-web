@@ -67,6 +67,7 @@
 .statement h3 {
   font-size: 2rem;
   max-width: 500px;
+  width: 100%;
 }
 
 .statement p {
