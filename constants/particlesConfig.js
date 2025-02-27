@@ -1,4 +1,4 @@
-const color1 = "#253F6D";
+const color1 = "#5DB8F1";
 const color2 = "#F8A24F";
 const color3 = "#F59293";
 const color4 = '#00B0B8';
@@ -7,6 +7,9 @@ const colors = [color1, color2, color3, color4]
 export const particlesConfig = {
   "detectRetina": true,
   "fpsLimit": 90,
+  "fullScreen": {
+    "enable": false
+  },
   "interactivity": {
     "detectsOn": "window",
     "events": {
@@ -48,14 +51,14 @@ export const particlesConfig = {
     "number": {
       "limit": {
         "mode": "delete",
-        "value": 100
+        "value": 50
       },
-      "value": 100
+      "value": 50
     },
     "opacity": {
       "value": {
-        "min": 0.3,
-        "max": 0.5
+        "min": 0.1,
+        "max": 0.3
       },
     },
     "reduceDuplicates": true,
