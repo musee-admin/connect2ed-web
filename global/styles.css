@@ -95,7 +95,7 @@ a {
 }
 
 html {
-  font-family: 'Nunito', sans-serif;
+  font-family: museo, serif;
   line-height: 1.6;
 }
 
@@ -103,5 +103,7 @@ html {
   --primary-color: #253F6D;
   --secondary-color: #F8A24F;
   --tertiary-color: #F59293;
+  --accent-color-1: #5DB8F1;
   --screen-width-limit: 1280px;
+  --font-accent: felt-tip-senior;
 }

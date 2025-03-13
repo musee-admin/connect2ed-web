@@ -1,0 +1,110 @@
+.wrapper {
+  position: relative;
+  overflow-x: clip;
+}
+
+.scrollContainer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  will-change: transform;
+}
+
+.ghost {
+  width: 100vw;
+}
+
+.itemsContainer {
+  position: relative;
+  height: 70vh;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 0px 160px;
+
+}
+
+.items {
+  position: relative;
+  display: flex;
+}
+
+.items:not(:last-child) {
+  margin-right: 45px;
+}
+
+.item {
+  height: 60vh;
+  width: calc(60vh + 8rem);
+  padding-left: 8rem;
+}
+
+.itemContent {
+  border-radius: 4rem;
+  height: 100%;
+  position: relative;
+}
+
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.subHeading {
+  font-family: var(--font-accent);
+  line-height: 1rem;
+  font-size: 3rem;
+  color: var(--tertiary-color);
+}
+
+.textContent {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  padding: 4rem;
+  padding-top: 4rem;
+  color: white;
+  gap: 2rem;
+}
+
+.itemTitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.itemDescription {
+  font-weight: 300;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.imageContainer img {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.hr {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+}

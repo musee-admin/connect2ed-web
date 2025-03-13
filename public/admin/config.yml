@@ -18,9 +18,9 @@ defs:
                   required: false,
                 }
               - {
-                  label: "Video",
-                  name: "video",
-                  widget: "file",
+                  label: "Hero Image",
+                  name: "hero_image",
+                  widget: "image",
                   media_library: { config: { multiple: false } },
                 }
               - {
@@ -34,6 +34,56 @@ defs:
                   name: "cta_link",
                   widget: "string",
                   required: false,
+                }
+
+          - label: "Rolling Hills"
+            name: "rolling_hills"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag Line", name: "tag_line", widget: "text" }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                  media_library: { config: { multiple: false } },
+                }
+
+          - label: "HorizontalScroll"
+            name: "horizontal_scroll"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
+              - {
+                  label: "Items",
+                  name: "items",
+                  widget: "list",
+                  field:
+                    {
+                      label: "Item",
+                      name: "item",
+                      widget: "object",
+                      fields:
+                        [
+                          { label: "Title", name: "title", widget: "string" },
+                          {
+                            label: "Description",
+                            name: "description",
+                            widget: "text",
+                          },
+                          {
+                            label: "Image",
+                            name: "image",
+                            widget: "image",
+                            media_library: { config: { multiple: false } },
+                          },
+                        ],
+                    },
                 }
 
 local_backend: true
@@ -113,14 +163,25 @@ collections:
         file: "content/pages/home.md"
         fields: *types-ref
 
-      - label: "Privacy Policy"
-        name: "privacy_policy"
-        file: "content/pages/privacy_policy.md"
+      - label: "General Design Elements"
+        name: "general_design"
+        file: "content/pages/general-design.md"
         fields:
-          - { label: "Privacy Policy", name: "body", widget: "markdown" }
-
-      - label: "Terms of use"
-        name: "terms_of_use"
-        file: "content/pages/terms.md"
-        fields:
-          - { label: "Terms of use", name: "body", widget: "markdown" }
+          - {
+              label: "Rolling Hills Background",
+              name: "rolling_hills_bg",
+              widget: "image",
+              media_library: { config: { multiple: false } },
+            }
+          - {
+              label: "Rolling Hills Foreground",
+              name: "rolling_hills_fg",
+              widget: "image",
+              media_library: { config: { multiple: false } },
+            }
+          - {
+              label: "Tag Flair",
+              name: "tag_flair",
+              widget: "image",
+              media_library: { config: { multiple: false } },
+            }
