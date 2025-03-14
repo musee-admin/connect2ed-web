@@ -1,0 +1,134 @@
+.wrapper {
+  height: 400vh;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.wrapper img {
+  border: 0.5rem solid black;
+  border-radius: 1rem;
+}
+
+.content {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.headerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+}
+
+.title {
+  font-family: var(--font-accent);
+  color: white;
+  font-size: 3rem;
+  line-height: 1rem;
+}
+
+.subHeading {
+  color: var(--secondary-color);
+  font-size: 2rem;
+}
+
+.demoWrapper {
+  display: flex;
+  height: calc(100vh - 320px);
+  justify-content: center;
+  align-items: center;
+}
+
+.features {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+.featureWrapper {
+  padding: 1rem;
+  border-left: 6px solid var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.featureTitle {
+  font-size: 1rem;
+  color: white;
+  font-weight: 400;
+}
+
+.featureDescription {
+  color: white;
+  text-overflow: wrap;
+}
+
+.featureSelected {
+  border-left: 1rem solid var(--tertiary-color);
+}
+
+.featureSelected .featureTitle {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.demo {
+  flex-basis: 50%;
+  height: 100%;
+}
+
+.singleItem {
+  padding: 2rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tripleImageWrapper {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.tripleFirstImage {
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tripleThirdImage {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  height: 40%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tripleSecondImage {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  height: 40%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

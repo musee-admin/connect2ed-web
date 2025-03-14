@@ -22,7 +22,6 @@
   display: flex;
   align-items: center;
   padding: 0px 160px;
-
 }
 
 .items {
@@ -45,7 +44,6 @@
   height: 100%;
   position: relative;
 }
-
 
 .titleSection {
   display: flex;

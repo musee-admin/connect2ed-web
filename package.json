@@ -8,6 +8,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next build",
+    "lint": "next lint",
+    "format:fix": "prettier --write --ignore-path .gitignore .",
     "postbuild": "next-sitemap"
   },
   "keywords": [],
@@ -29,6 +31,10 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
-    "frontmatter-markdown-loader": "^3.7.0"
+    "eslint": "9.22.0",
+    "eslint-config-next": "15.2.2",
+    "eslint-config-prettier": "^10.1.1",
+    "frontmatter-markdown-loader": "^3.7.0",
+    "prettier": "^3.5.3"
   }
 }

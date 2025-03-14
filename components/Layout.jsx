@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
-import Lenis from 'lenis';
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
 
 export const Layout = ({ children }) => {
   const lenis = useRef(null);
@@ -23,9 +23,5 @@ export const Layout = ({ children }) => {
       lenis.current.destroy();
     };
   }, []);
-  return (
-    <main>
-      {children}
-    </main>
-  )
-}
+  return <main>{children}</main>;
+};

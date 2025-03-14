@@ -3,7 +3,13 @@ import { motion } from "motion/react";
 import { getCssUrl } from "../utils";
 import { LinkButton } from "../uiComponents/Button";
 
-export const Hero = ({ title, description, hero_image, cta_text, cta_link }) => {
+export const Hero = ({
+  title,
+  description,
+  hero_image,
+  cta_text,
+  cta_link,
+}) => {
   return (
     <motion.section
       className={styles.wrapper}
@@ -20,5 +26,5 @@ export const Hero = ({ title, description, hero_image, cta_text, cta_link }) => 
         <LinkButton>{cta_text}</LinkButton>
       </motion.div>
     </motion.section>
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
-import Head from "next/head"
-import '../global/styles.css';
+import Head from "next/head";
+import "../global/styles.css";
 import { ParticlesProvider } from "../providers/ParticlesProvider";
 import { Layout } from "../components/Layout";
 
@@ -18,5 +18,5 @@ export default function App({ Component, pageProps, params }) {
         </Layout>
       </ParticlesProvider>
     </div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* 1. Use a more-intuitive box-sizing model */
 *,
@@ -100,10 +100,10 @@ html {
 }
 
 :root {
-  --primary-color: #253F6D;
-  --secondary-color: #F8A24F;
-  --tertiary-color: #F59293;
-  --accent-color-1: #5DB8F1;
+  --primary-color: #253f6d;
+  --secondary-color: #f8a24f;
+  --tertiary-color: #f59293;
+  --accent-color-1: #5db8f1;
   --screen-width-limit: 1280px;
   --font-accent: felt-tip-senior;
 }

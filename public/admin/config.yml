@@ -63,27 +63,61 @@ defs:
                   label: "Items",
                   name: "items",
                   widget: "list",
-                  field:
-                    {
-                      label: "Item",
-                      name: "item",
-                      widget: "object",
-                      fields:
-                        [
-                          { label: "Title", name: "title", widget: "string" },
-                          {
-                            label: "Description",
-                            name: "description",
-                            widget: "text",
-                          },
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+          - label: "Demo"
+            name: "demo"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
+              - {
+                  label: "Items",
+                  name: "items",
+                  widget: "list",
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+                      {
+                        label: "Type",
+                        name: "type",
+                        widget: "select",
+                        options:
+                          ["single-image", "double-image", "triple-image"],
+                      },
+                      {
+                        label: "Images",
+                        name: "images",
+                        widget: "list",
+                        field:
                           {
                             label: "Image",
                             name: "image",
                             widget: "image",
                             media_library: { config: { multiple: false } },
                           },
-                        ],
-                    },
+                      },
+                    ],
                 }
 
 local_backend: true

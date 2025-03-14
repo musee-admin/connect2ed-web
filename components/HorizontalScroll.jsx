@@ -1,47 +1,42 @@
-import React, { useRef, useState, useLayoutEffect, useCallback } from "react"
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring
-} from "motion/react"
-import styles from './HorizontalScroll.module.css';
+import React, { useRef, useState, useLayoutEffect, useCallback } from "react";
+import { motion, useScroll, useTransform, useSpring } from "motion/react";
+import styles from "./HorizontalScroll.module.css";
 import { processAssetUrl } from "../utils";
-import { Swiggly } from '../uiComponents/Swiggly.jsx';
+import { Swiggly } from "../uiComponents/Swiggly.jsx";
 
 export const HorizontalScroll = ({ title, sub_heading, items }) => {
-  const scrollRef = useRef(null)
-  const containerRef = useRef(null)
-  const ghostRef = useRef(null)
-  const [scrollRange, setScrollRange] = useState(0)
-  const [viewportW, setViewportW] = useState(0)
+  const scrollRef = useRef(null);
+  const containerRef = useRef(null);
+  const ghostRef = useRef(null);
+  const [scrollRange, setScrollRange] = useState(0);
+  const [viewportW, setViewportW] = useState(0);
 
   useLayoutEffect(() => {
-    scrollRef && setScrollRange(scrollRef.current.scrollWidth)
-  }, [scrollRef])
+    scrollRef && setScrollRange(scrollRef.current.scrollWidth);
+  }, [scrollRef]);
 
-  const onResize = useCallback(entries => {
+  const onResize = useCallback((entries) => {
     for (let entry of entries) {
-      setViewportW(entry.contentRect.width)
+      setViewportW(entry.contentRect.width);
     }
-  }, [])
+  }, []);
 
   useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver(entries => onResize(entries))
-    resizeObserver.observe(ghostRef.current)
-    return () => resizeObserver.disconnect()
-  }, [onResize])
+    const resizeObserver = new ResizeObserver((entries) => onResize(entries));
+    resizeObserver.observe(ghostRef.current);
+    return () => resizeObserver.disconnect();
+  }, [onResize]);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef
-  })
+    target: containerRef,
+  });
   const transform = useTransform(
     scrollYProgress,
     [0, 1],
-    [0, -scrollRange + viewportW]
-  )
-  const physics = { damping: 15, mass: 0.27, stiffness: 55 }
-  const spring = useSpring(transform, physics)
+    [0, -scrollRange + viewportW],
+  );
+  const physics = { damping: 15, mass: 0.27, stiffness: 55 };
+  const spring = useSpring(transform, physics);
 
   return (
     <div ref={containerRef} className={styles.wrapper}>
@@ -56,25 +51,41 @@ export const HorizontalScroll = ({ title, sub_heading, items }) => {
           className={styles.itemsContainer}
         >
           {items.map((item, i) => (
-            <HorizontalScrollItem {...item.item} variant={i % 2 === 0 ? 'primary' : 'secondary'} />
+            <HorizontalScrollItem
+              key={i}
+              {...item}
+              variant={i % 2 === 0 ? "primary" : "secondary"}
+            />
           ))}
           <div className={styles.hr} style={{ width: scrollRange }}>
             <Swiggly progress={scrollYProgress} />
           </div>
         </motion.section>
       </div>
-      <div ref={ghostRef} style={{ height: scrollRange }} className={styles.ghost} />
+      <div
+        ref={ghostRef}
+        style={{ height: scrollRange }}
+        className={styles.ghost}
+      />
     </div>
-  )
-}
+  );
+};
 
-export const HorizontalScrollItem = ({ title, description, image, variant }) => {
+export const HorizontalScrollItem = ({
+  title,
+  description,
+  image,
+  variant,
+}) => {
   return (
     <div className={styles.item}>
       <div
         className={styles.itemContent}
         style={{
-          background: variant === 'primary' ? 'var(--primary-color)' : 'var(--accent-color-1)'
+          background:
+            variant === "primary"
+              ? "var(--primary-color)"
+              : "var(--accent-color-1)",
         }}
       >
         <div className={styles.textContent}>
@@ -86,5 +97,5 @@ export const HorizontalScrollItem = ({ title, description, image, variant }) => 
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
