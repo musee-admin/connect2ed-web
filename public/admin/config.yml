@@ -52,6 +52,22 @@ defs:
                   media_library: { config: { multiple: false } },
                 }
 
+          - label: "Text Image"
+            name: "text_image"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag Line", name: "tag_line", widget: "text" }
+              - {
+                  label: "Image",
+                  name: "image",
+                  widget: "image",
+                  media_library: { config: { multiple: false } },
+                }
+
           - label: "HorizontalScroll"
             name: "horizontal_scroll"
             widget: object
@@ -66,6 +82,63 @@ defs:
                   fields:
                     [
                       { label: "Title", name: "title", widget: "string" },
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+          - label: "VideoScroll"
+            name: "video_scroll"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - {
+                  label: "Items",
+                  name: "items",
+                  widget: "list",
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+                      {
+                        label: "Video",
+                        name: "video",
+                        widget: "file",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+          - label: "Stacking Cards"
+            name: "stacking_cards"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
+              - {
+                  label: "Items",
+                  name: "items",
+                  widget: "list",
+                  fields:
+                    [
+                      { label: "Title", name: "title", widget: "string" },
+                      {
+                        label: "Sub Heading",
+                        name: "sub_heading",
+                        widget: "text",
+                      },
                       {
                         label: "Description",
                         name: "description",
@@ -116,6 +189,33 @@ defs:
                             widget: "image",
                             media_library: { config: { multiple: false } },
                           },
+                      },
+                    ],
+                }
+          - label: "People"
+            name: "people"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - {
+                  label: "Items",
+                  name: "items",
+                  widget: "list",
+                  fields:
+                    [
+                      { label: "Tag Line", name: "tag", widget: "string" },
+                      { label: "Name", name: "name", widget: "string" },
+                      { label: "Credentials", name: "creds", widget: "string" },
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
                       },
                     ],
                 }

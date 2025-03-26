@@ -9,7 +9,8 @@ sections:
     title: Who we are
     sub_heading: At Link2ED, we’re transforming how neurodivergent students are
       supported in schools
-    description: Our integrated platform streamlines communication between educators
+    description:
+      Our integrated platform streamlines communication between educators
       and intervention professionals, creating a structured workflow to track
       progress and deliver tailored support. By improving coordination, we help
       every neurodivergent child thrive.
@@ -44,7 +45,8 @@ sections:
     sub_heading: Key features of our solution
     items:
       - title: Personalized User Journeys
-        description: Track individual experiences and collect specific information for
+        description:
+          Track individual experiences and collect specific information for
           each user
         type: single-image
         images:
@@ -56,4 +58,61 @@ sections:
           - img/dashboard-1.png
           - img/dashboard-2.png
           - img/dashboard-3.png
+  - type: video_scroll
+    items:
+      - title: Test Video
+        description: Test Video Description
+        video: img/girl-drawing.mp4
+      - title: T2
+        description: Test Video Description
+        video: img/students-walking.mp4
+  - type: stacking_cards
+    title: test
+    sub_heading: test
+    items:
+      - title: t1
+        sub_heading: t2
+        description: t3
+        image: img/group-43.png
+      - title: Methodology
+        sub_heading: Identifying issues affecting Child’s performance, including
+          absenteeism and school avoidance
+        description:
+          Our integrated platform streamlines communication between educators
+          and intervention professionals, creating a structured workflow to
+          track progress and deliver tailored support. By improving
+          coordination, we help every neurodivergent child thrive.
+        image: img/group-61.png
+  - type: text_image
+    title: Title
+    sub_heading: Sub Heading
+    description: Descripition
+    tag_line: hiu
+    image: img/group-80.png
+  - type: people
+    items:
+      - tag: Who we are
+        name: "Ms. Seema Gandharan "
+        creds: School Counsellor & Early Intervention Specialist
+        description: >-
+          Ms. Seema Gandharan currently serves as a School Counsellor and Early
+          Intervention Specialist at a reputed institution. She is also a
+          Positive Parenting Coach and the founder of NILA, an innovative
+          sensory integration and education wing at Delhi Public School,
+          Bangalore.
+
+          As a subject matter expert for our software application, Ms. Seema brings her vast experience and expertise to inform the design and development of our platform in supporting the mainstreaming of neurodivergent students into regular schools.
+        image: img/group-43.png
+      - tag: Who we are
+        name: "Ms. Seema Gandharan "
+        creds: School Counsellor & Early Intervention Specialist
+        description: >-
+          Ms. Seema Gandharan currently serves as a School Counsellor and Early
+          Intervention Specialist at a reputed institution. She is also a
+          Positive Parenting Coach and the founder of NILA, an innovative
+          sensory integration and education wing at Delhi Public School,
+          Bangalore.
+
+          As a subject matter expert for our software application, Ms. Seema brings her vast experience and expertise to inform the design and development of our platform in supporting the mainstreaming of neurodivergent students into regular schools.
+        image: img/group-43.png
 ---

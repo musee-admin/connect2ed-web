@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.personWrapper {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.reverseLayout {
+  flex-direction: row-reverse;
+}
+
+.image {
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  font-size: 3rem;
+  font-family: var(--font-accent);
+  line-height: 1rem;
+  color: var(--tertiary-color);
+}
+
+.name {
+  font-size: 3rem;
+}
+
+.credentials {
+  font-size: 1rem;
+}
+
+.description {
+  padding-top: 1rem;
+}

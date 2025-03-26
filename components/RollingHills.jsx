@@ -26,9 +26,9 @@ export const RollingHills = ({
     offset: ["start end", "start start"],
   });
 
-  const bg_x = useTransform(scrollYProgress, [0, 1], [20, 35]);
+  const bg_x = useTransform(scrollYProgress, [0, 1], [20, 30]);
 
-  const fg_x = useTransform(scrollYProgress, [0, 1], [5, 30]);
+  const fg_x = useTransform(scrollYProgress, [0, 1], [5, 25]);
 
   const bg_x_percent = useMotionTemplate`${bg_x}%`;
   const fg_x_percent = useMotionTemplate`${fg_x}%`;
@@ -53,12 +53,12 @@ export const RollingHills = ({
         <motion.div
           className={styles.textContainer}
           initial={{
-            y: 300,
+            x: 50,
             opacity: 0,
           }}
           whileInView={{
             opacity: 1,
-            y: 0,
+            x: 0,
           }}
           transition={{ duration: 1 }}
         >
@@ -69,12 +69,12 @@ export const RollingHills = ({
         <motion.div
           className={styles.imageContainer}
           initial={{
-            y: 300,
+            x: -50,
             opacity: 0,
           }}
           whileInView={{
+            x: 0,
             opacity: 1,
-            y: 0,
           }}
           transition={{ duration: 1 }}
         >
