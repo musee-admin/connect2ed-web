@@ -7,7 +7,7 @@ export const People = ({ items }) => {
   return (
     <div className={styles.wrapper}>
       {items.map((item, index) => (
-        <Person {...item} reverseLayout={index % 2 === 1} />
+        <Person key={index} {...item} reverseLayout={index % 2 === 1} />
       ))}
     </div>
   );
