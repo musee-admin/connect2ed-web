@@ -22,7 +22,7 @@ export const StackingCards = ({ items, title, sub_heading }) => {
           <h2 className={styles.mainTitle}>{title}</h2>
         </motion.div>
         <div className={styles.cards}>
-          {items.map((item, index) => {
+          {items?.map((item, index) => {
             const targetScale = 1 - (items.length - index) * 0.05;
             return (
               <Card
@@ -58,7 +58,7 @@ export const Card = ({
 
   return (
     <div
-      style={{ top: `calc(10% + ${100 * i}px)` }}
+      style={{ top: `calc(20% + ${100 * i}px)` }}
       className={styles.cardContainer}
     >
       <motion.div

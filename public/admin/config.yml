@@ -35,16 +35,59 @@ defs:
                   widget: "string",
                   required: false,
                 }
+              - {
+                  label: "Left Content Title",
+                  name: "left_title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Left Content Description",
+                  name: "left_description",
+                  widget: "text",
+                  required: false,
+                }
+              - {
+                  label: "Right Content Title",
+                  name: "right_title",
+                  widget: "string",
+                  required: false,
+                }
+              - {
+                  label: "Right Content Description",
+                  name: "right_description",
+                  widget: "text",
+                  required: false,
+                }
 
           - label: "Rolling Hills"
             name: "rolling_hills"
             widget: object
             summary: "{{fields.title}}"
             fields:
+              - {
+                  label: "Color",
+                  name: "color",
+                  widget: "select",
+                  options: ["blue", "pink", "yellow"],
+                  default: "blue",
+                }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Sub Heading", name: "sub_heading", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Tag Line", name: "tag_line", widget: "text" }
+              - {
+                  label: "Button Text",
+                  name: "cta_text",
+                  widget: "text",
+                  required: false,
+                }
+              - {
+                  label: "Button Link",
+                  name: "cta_link",
+                  widget: "text",
+                  required: false,
+                }
               - {
                   label: "Image",
                   name: "image",
@@ -57,15 +100,39 @@ defs:
             widget: object
             summary: "{{fields.title}}"
             fields:
+              - {
+                  label: "Color",
+                  name: "color",
+                  widget: "select",
+                  options: ["blue", "pink", "yellow"],
+                  default: "blue",
+                }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Sub Heading", name: "sub_heading", widget: "text" }
               - { label: "Description", name: "description", widget: "text" }
-              - { label: "Tag Line", name: "tag_line", widget: "text" }
+              - {
+                  label: "Tag Line",
+                  name: "tag_line",
+                  widget: "text",
+                  required: false,
+                }
               - {
                   label: "Image",
                   name: "image",
                   widget: "image",
                   media_library: { config: { multiple: false } },
+                }
+              - {
+                  label: "Button Text",
+                  name: "cta_text",
+                  widget: "text",
+                  required: false,
+                }
+              - {
+                  label: "Button Link",
+                  name: "cta_link",
+                  widget: "text",
+                  required: false,
                 }
 
           - label: "HorizontalScroll"
@@ -248,9 +315,9 @@ collections:
             name: "name"
             widget: "string"
 
-          - label: "Message (Shows in footer)"
+          - label: "Footer Message"
             name: "message"
-            widget: "text"
+            widget: "string"
 
           - label: "Phone Number"
             name: "phone_number"
@@ -260,15 +327,7 @@ collections:
             name: "email_id"
             widget: "string"
 
-          - label: "Registered Office"
-            name: "registered_office"
-            widget: "text"
-
-          - label: "Corporate Office"
-            name: "corporate_office"
-            widget: "text"
-
-          - label: "Address (used in footer)"
+          - label: "Address"
             name: "address"
             widget: "text"
 
@@ -297,19 +356,50 @@ collections:
         file: "content/pages/home.md"
         fields: *types-ref
 
+      - label: "Our Solution"
+        name: "our_solution"
+        file: "content/pages/our_solution.md"
+        fields: *types-ref
+
+      - label: "Knowledge Center"
+        name: "knowledge_center"
+        file: "content/pages/knowledge_center.md"
+        fields: *types-ref
+
+      - label: "Our Ecosystem"
+        name: "our_ecosystem"
+        file: "content/pages/our_ecosystem.md"
+        fields: *types-ref
+
+      - label: "About Us"
+        name: "about_us"
+        file: "content/pages/about_us.md"
+        fields: *types-ref
+
+      - label: "Contact Us"
+        name: "contact_us"
+        file: "content/pages/contact_us.md"
+        fields: *types-ref
+
       - label: "General Design Elements"
         name: "general_design"
         file: "content/pages/general-design.md"
         fields:
           - {
-              label: "Rolling Hills Background",
-              name: "rolling_hills_bg",
+              label: "Blue Rolling Hills",
+              name: "blue_rolling_hills",
               widget: "image",
               media_library: { config: { multiple: false } },
             }
           - {
-              label: "Rolling Hills Foreground",
-              name: "rolling_hills_fg",
+              label: "Pink Rolling Hills",
+              name: "pink_rolling_hills",
+              widget: "image",
+              media_library: { config: { multiple: false } },
+            }
+          - {
+              label: "Yellow Rolling Hills",
+              name: "yellow_rolling_hills",
               widget: "image",
               media_library: { config: { multiple: false } },
             }

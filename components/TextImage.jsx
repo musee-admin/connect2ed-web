@@ -1,10 +1,19 @@
+import classNames from "classnames";
 import { processAssetUrl } from "../utils";
 import styles from "./TextImage.module.css";
 import { motion } from "motion/react";
 
-export const TextImage = ({ title, sub_heading, description, image }) => {
+export const TextImage = ({
+  title,
+  sub_heading,
+  description,
+  image,
+  color,
+  cta_link,
+  cta_text,
+}) => {
   return (
-    <motion.div className={styles.wrapper}>
+    <motion.div className={classNames(styles.wrapper, styles[color])}>
       <div className={styles.innerWrapper}>
         <motion.div
           className={styles.textContainer}

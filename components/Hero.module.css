@@ -1,22 +1,40 @@
 .wrapper {
+  height: 200vh;
+  position: relative;
+}
+.primaryWrapper {
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: 900px;
+  background-size: 50%;
   background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.extraSections {
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
 }
 
 .contentWrapper {
   color: var(--primary-color);
-  transform: translate(30%, -150%);
+  position: absolute;
+  top: 15vh;
+  left: 30vw;
 }
 
 .title {
   font-family: var(--font-accent);
+  color: var(--tertiary-color);
   font-size: 3rem;
   line-height: 1rem;
 }
@@ -24,4 +42,42 @@
 .description {
   font-size: 3rem;
   font-weight: 700;
+}
+
+.otherSection {
+  max-width: 400px;
+  position: absolute;
+}
+
+.otherSection h3 {
+  font-family: var(--font-accent);
+  font-size: 2rem;
+}
+
+.leftSection h3 {
+  color: var(--tertiary-color);
+}
+
+.leftSection p {
+  color: var(--primary-color);
+}
+
+.rightSection h3 {
+  color: var(--primary-color);
+}
+
+.rightSection p {
+  color: var(--tertiary-color);
+}
+
+.leftSection {
+  text-align: right;
+  left: 3vw;
+  top: 30vh;
+}
+
+.rightSection {
+  margin-left: auto;
+  right: 3vw;
+  bottom: 30vh;
 }

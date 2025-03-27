@@ -19,7 +19,7 @@
   text-align: center;
   width: fit-content;
   margin: 0 auto;
-  padding: 4rem;
+  padding-top: 8rem;
 }
 
 .mainTitle {
@@ -54,7 +54,7 @@
   border: 1px solid black;
   display: flex;
   padding: 3rem;
-  min-height: 70vh;
+  min-height: 60vh;
   border-radius: 25px;
   flex-basis: 50%;
 }

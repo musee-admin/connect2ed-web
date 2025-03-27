@@ -1,9 +1,34 @@
+.blue {
+  --background-color: var(--primary-color);
+  --title-color: white;
+  --subheading-color: var(--secondary-color);
+  --description-color: white;
+}
+
+.yellow {
+  --background-color: var(--secondary-color);
+  --title-color: var(--primary-color);
+  --subheading-color: var(--primary-color);
+  --description-color: var(--primary-color);
+}
+
+.pink {
+  --background-color: var(--tertiary-color);
+  --title-color: var(--primary-color);
+  --subheading-color: var(--primary-color);
+  --description-color: var(--primary-color);
+}
+
+.startingSpacer {
+  height: 30vh;
+}
+
 .wrapper {
   position: relative;
   background: linear-gradient(
     0deg,
-    var(--primary-color) 0%,
-    var(--primary-color) 80%,
+    var(--background-color) 0%,
+    var(--background-color) 80%,
     transparent 80%,
     transparent 100%
   );
@@ -23,6 +48,7 @@
 
 .rollingBg {
   top: -25vh;
+  filter: brightness(80%);
 }
 
 .content {
@@ -54,15 +80,15 @@
 
 .title {
   font-family: var(--font-accent);
-  color: white;
+  color: var(--title-color);
   font-size: 3rem;
 }
 
 .subHeading {
-  color: var(--secondary-color);
+  color: var(--subheading-color);
   font-size: 2rem;
 }
 
 .description {
-  color: white;
+  color: var(--description-color);
 }

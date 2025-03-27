@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 export const Layout = ({ children }) => {
   const lenis = useRef(null);
@@ -23,5 +25,11 @@ export const Layout = ({ children }) => {
       lenis.current.destroy();
     };
   }, []);
-  return <main>{children}</main>;
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
 };

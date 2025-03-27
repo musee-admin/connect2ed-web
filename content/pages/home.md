@@ -1,23 +1,36 @@
 ---
 sections:
-  - type: hero
+  - left_title: I am old now
+    left_description: |-
+      Early identification and intervention
+      during the formative years (up to age 10) 
+      are crucial for shaping a child's 
+      development trajectory.
+    right_title: Every child is special
+    hero_image: img/image-16.png
     title: Building Bridges for
-    description: Neurodiverse Education
-    hero_image: img/group-4.png
+    right_description: |-
+      At Link2ED, we believe that every child 
+      deserves a chance to thrive in an inclusive
+      supportive learning environment.
+    type: hero
     cta_text: Explore
-  - type: rolling_hills
-    title: Who we are
-    sub_heading: At Link2ED, we’re transforming how neurodivergent students are
-      supported in schools
-    description:
-      Our integrated platform streamlines communication between educators
-      and intervention professionals, creating a structured workflow to track
-      progress and deliver tailored support. By improving coordination, we help
-      every neurodivergent child thrive.
-    tag_line: |-
-      We’ve designed 
-      an integrated platform
-    image: img/group-80.png
+    description: Neurodiverse Education
+  - type: video_scroll
+    items:
+      - description: 5-15% of school going children experience specific Learning
+          Disabilities, presenting a critical educational challenge.
+        title: Prevalence of Learning Challenges
+        video: img/students-walking.mp4
+      - description: The high lack of awareness among teachers about learning
+          disabilities significantly impacts student support.
+        title: Teacher Awareness Gap
+        video: img/girl-drawing.mp4
+      - description: Early identification and intervention during the formative years
+          (up to age 10) are absolutely crucial for a child's development
+          trajectory.
+        title: Critical Intervention Window
+        video: img/family-professional.mp4
   - type: horizontal_scroll
     title: Milestones in Neurodivergence
     sub_heading: Its an exciting journey
@@ -40,13 +53,25 @@ sections:
       - title: Exemptions
         description: Adjusting expectations to match the child's capabilities.
         image: img/group-77.png
+  - type: rolling_hills
+    title: Our Vision
+    sub_heading: Empowerment of Family and Support Specialists
+    description: Lack of understanding and support can feel overwhelming. You worry
+      about your child's development, social struggles, and self-esteem.
+      Balancing guidance and independence is challenging, making it hard to
+      distinguish between real struggles and avoidance. You want them to thrive
+      but often question when to step in or let them try.
+    tag_line: |-
+      We’ve designed 
+      an integrated platform
+    image: img/image-13.png
+    color: pink
   - type: demo
     title: How we do it
     sub_heading: Key features of our solution
     items:
       - title: Personalized User Journeys
-        description:
-          Track individual experiences and collect specific information for
+        description: Track individual experiences and collect specific information for
           each user
         type: single-image
         images:
@@ -58,61 +83,17 @@ sections:
           - img/dashboard-1.png
           - img/dashboard-2.png
           - img/dashboard-3.png
-  - type: video_scroll
-    items:
-      - title: Test Video
-        description: Test Video Description
-        video: img/girl-drawing.mp4
-      - title: T2
-        description: Test Video Description
-        video: img/students-walking.mp4
-  - type: stacking_cards
-    title: test
-    sub_heading: test
-    items:
-      - title: t1
-        sub_heading: t2
-        description: t3
-        image: img/group-43.png
-      - title: Methodology
-        sub_heading: Identifying issues affecting Child’s performance, including
-          absenteeism and school avoidance
-        description:
-          Our integrated platform streamlines communication between educators
-          and intervention professionals, creating a structured workflow to
-          track progress and deliver tailored support. By improving
-          coordination, we help every neurodivergent child thrive.
-        image: img/group-61.png
-  - type: text_image
-    title: Title
-    sub_heading: Sub Heading
-    description: Descripition
-    tag_line: hiu
-    image: img/group-80.png
-  - type: people
-    items:
-      - tag: Who we are
-        name: "Ms. Seema Gandharan "
-        creds: School Counsellor & Early Intervention Specialist
-        description: >-
-          Ms. Seema Gandharan currently serves as a School Counsellor and Early
-          Intervention Specialist at a reputed institution. She is also a
-          Positive Parenting Coach and the founder of NILA, an innovative
-          sensory integration and education wing at Delhi Public School,
-          Bangalore.
-
-          As a subject matter expert for our software application, Ms. Seema brings her vast experience and expertise to inform the design and development of our platform in supporting the mainstreaming of neurodivergent students into regular schools.
-        image: img/group-43.png
-      - tag: Who we are
-        name: "Ms. Seema Gandharan "
-        creds: School Counsellor & Early Intervention Specialist
-        description: >-
-          Ms. Seema Gandharan currently serves as a School Counsellor and Early
-          Intervention Specialist at a reputed institution. She is also a
-          Positive Parenting Coach and the founder of NILA, an innovative
-          sensory integration and education wing at Delhi Public School,
-          Bangalore.
-
-          As a subject matter expert for our software application, Ms. Seema brings her vast experience and expertise to inform the design and development of our platform in supporting the mainstreaming of neurodivergent students into regular schools.
-        image: img/group-43.png
+  - sub_heading: At Link2ED, we’re transforming how neurodivergent students are
+      supported in schools
+    color: yellow
+    cta_link: /about-us
+    title: Who we are
+    tag_line: ""
+    type: text_image
+    image: img/image-18.png
+    cta_text: About Us
+    description: Our integrated platform streamlines communication between educators
+      and intervention professionals, creating a structured workflow to track
+      progress and deliver tailored support. By improving coordination, we help
+      every neurodivergent child thrive.
 ---

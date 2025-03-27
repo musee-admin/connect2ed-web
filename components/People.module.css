@@ -6,7 +6,7 @@
 .personWrapper {
   display: flex;
   gap: 2rem;
-  padding: 4rem;
+  padding: 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -15,8 +15,12 @@
   flex-direction: row-reverse;
 }
 
+.reverseLayout .textContent {
+  text-align: right;
+}
+
 .image {
-  flex-basis: 50%;
+  flex-basis: 30%;
   flex-grow: 0;
   flex-shrink: 0;
   display: flex;
@@ -25,9 +29,18 @@
   min-height: 400px;
 }
 
+.image img {
+  object-fit: contain;
+  height: auto;
+  width: auto;
+}
+
 .textContent {
   display: flex;
   flex-direction: column;
+  flex-basis: 50%;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .tag {

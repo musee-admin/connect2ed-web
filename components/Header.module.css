@@ -1,0 +1,44 @@
+.wrapper {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  display: flex;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  backdrop-filter: blur(8px);
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 4rem;
+}
+
+.logoContainer {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.wrapper img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.linkSection {
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.wrapper nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  height: 60px;
+  padding: 0.5rem;
+}
+
+.wrapper nav ul a {
+  color: var(--primary-color);
+}

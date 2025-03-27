@@ -1,5 +1,6 @@
 ---
-rolling_hills_bg: img/path-1532.png
-rolling_hills_fg: img/path-1531.png
+blue_rolling_hills: img/path-1531.png
+pink_rolling_hills: img/pink.png
+yellow_rolling_hills: img/yellow.png
 tag_flair: img/group-45.png
 ---
