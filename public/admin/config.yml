@@ -239,23 +239,15 @@ defs:
                         widget: "text",
                       },
                       {
-                        label: "Type",
-                        name: "type",
-                        widget: "select",
-                        options:
-                          ["single-image", "double-image", "triple-image"],
+                        label: "Video",
+                        name: "video",
+                        widget: "file",
+                        media_library: { config: { multiple: false } },
                       },
                       {
-                        label: "Images",
-                        name: "images",
-                        widget: "list",
-                        field:
-                          {
-                            label: "Image",
-                            name: "image",
-                            widget: "image",
-                            media_library: { config: { multiple: false } },
-                          },
+                        label: "Video Length (in seconds)",
+                        name: "video_length",
+                        widget: "number",
                       },
                     ],
                 }
@@ -285,6 +277,16 @@ defs:
                         media_library: { config: { multiple: false } },
                       },
                     ],
+                }
+          - label: "Contact Us"
+            name: "contact_us"
+            widget: object
+            fields:
+              - {
+                  label: "Name",
+                  name: "name",
+                  widget: "hidden",
+                  required: false,
                 }
 
 local_backend: true
@@ -406,6 +408,12 @@ collections:
           - {
               label: "Tag Flair",
               name: "tag_flair",
+              widget: "image",
+              media_library: { config: { multiple: false } },
+            }
+          - {
+              label: "Laptop Image",
+              name: "laptop_image",
               widget: "image",
               media_library: { config: { multiple: false } },
             }

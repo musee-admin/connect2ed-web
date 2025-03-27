@@ -1,0 +1,24 @@
+import { FilloutStandardEmbed } from "@fillout/react";
+import styles from "./ContactUsForm.module.css";
+import { attributes } from "../content/pages/basic.md";
+import { processString } from "../utils";
+
+export const ContactUsForm = () => {
+  const { address, phone_number, email_id } = attributes;
+  return (
+    <section className={styles.wrapper}>
+      <FilloutStandardEmbed filloutId="phLvfq9qbgus" />
+      <div className={styles.detailsWrapper}>
+        <div className={styles.address}>
+          <p className={styles.title}>Address:</p>
+          <p className={styles.details}>{processString(address)}</p>
+        </div>
+        <div className={styles.contactDetails}>
+          <p className={styles.title}>Contact Details:</p>
+          <p className={styles.details}>{processString(phone_number)}</p>
+          <p className={styles.details}>{processString(email_id)}</p>
+        </div>
+      </div>
+    </section>
+  );
+};

@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { processAssetUrl } from "../utils";
 import styles from "./TextImage.module.css";
 import { motion } from "motion/react";
+import { LinkButton } from "../uiComponents/Button";
 
 export const TextImage = ({
   title,
@@ -12,6 +13,7 @@ export const TextImage = ({
   cta_link,
   cta_text,
 }) => {
+  console.log({ cta_link, cta_text });
   return (
     <motion.div className={classNames(styles.wrapper, styles[color])}>
       <div className={styles.innerWrapper}>
@@ -30,6 +32,7 @@ export const TextImage = ({
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.subHeading}>{sub_heading}</p>
           <p className={styles.description}>{description}</p>
+          {cta_text && <LinkButton href={cta_link}>{cta_text}</LinkButton>}
         </motion.div>
         <motion.div
           className={styles.imageContainer}

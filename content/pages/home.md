@@ -53,19 +53,21 @@ sections:
       - title: Exemptions
         description: Adjusting expectations to match the child's capabilities.
         image: img/group-77.png
-  - type: rolling_hills
+  - sub_heading: Empowerment of Family and Support Specialists
+    color: yellow
+    cta_link: /knowledge-bank
     title: Our Vision
-    sub_heading: Empowerment of Family and Support Specialists
+    tag_line: |-
+      We’ve designed 
+      an integrated platform
+    type: rolling_hills
+    image: img/image-13.png
+    cta_text: Know More
     description: Lack of understanding and support can feel overwhelming. You worry
       about your child's development, social struggles, and self-esteem.
       Balancing guidance and independence is challenging, making it hard to
       distinguish between real struggles and avoidance. You want them to thrive
       but often question when to step in or let them try.
-    tag_line: |-
-      We’ve designed 
-      an integrated platform
-    image: img/image-13.png
-    color: pink
   - type: demo
     title: How we do it
     sub_heading: Key features of our solution
@@ -73,19 +75,15 @@ sections:
       - title: Personalized User Journeys
         description: Track individual experiences and collect specific information for
           each user
-        type: single-image
-        images:
-          - img/screenshot-2025-03-04-145533.png
+        video: img/demo.mp4
+        video_length: 3
       - title: Intuitive Dashboards
         description: Quick overview of key information to support fast decision-making
-        type: triple-image
-        images:
-          - img/dashboard-1.png
-          - img/dashboard-2.png
-          - img/dashboard-3.png
+        video: img/demo.mp4
+        video_length: 3
   - sub_heading: At Link2ED, we’re transforming how neurodivergent students are
       supported in schools
-    color: yellow
+    color: pink
     cta_link: /about-us
     title: Who we are
     tag_line: ""

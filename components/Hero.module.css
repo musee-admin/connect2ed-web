@@ -1,7 +1,12 @@
 .wrapper {
-  height: 200vh;
+  height: 100vh;
   position: relative;
 }
+
+.doubleHeight {
+  height: 200vh;
+}
+
 .primaryWrapper {
   height: 100vh;
   background-repeat: no-repeat;

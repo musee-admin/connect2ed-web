@@ -33,8 +33,16 @@ export const Hero = ({
     [0, 0.5, 0.7, 1],
     [0, 0, 1, 1],
   );
+
+  const hasLeftOrRightSections = left_title || right_title;
   return (
-    <section className={styles.wrapper} ref={ref}>
+    <section
+      className={classNames(
+        styles.wrapper,
+        hasLeftOrRightSections ? styles.doubleHeight : undefined,
+      )}
+      ref={ref}
+    >
       <motion.div
         className={styles.primaryWrapper}
         style={{ backgroundImage: getCssUrl(hero_image) }}
@@ -42,7 +50,7 @@ export const Hero = ({
         <motion.div className={styles.contentWrapper}>
           <div className={styles.title}>{title}</div>
           <div className={styles.description}>{processString(description)}</div>
-          {cta_text && <LinkButton>{cta_text}</LinkButton>}
+          {cta_text && <LinkButton href={cta_link}>{cta_text}</LinkButton>}
         </motion.div>
         <div className={styles.extraSections}>
           <motion.div

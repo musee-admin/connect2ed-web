@@ -7,6 +7,7 @@ import { VideoScroll } from "./components/VideoScroll";
 import { StackingCards } from "./components/StackingCards";
 import { TextImage } from "./components/TextImage";
 import { People } from "./components/People";
+import { ContactUsForm } from "./components/ContactUsForm";
 
 export const processString = (value) => {
   if (typeof value !== "string" || value.indexOf("\n") < 0) {
@@ -47,6 +48,9 @@ export const renderSections = (sections) => {
     }
     if (section.type === "people") {
       return <People key={index} {...section} />;
+    }
+    if (section.type === "contact_us") {
+      return <ContactUsForm key={index} {...section} />;
     }
     return null;
   });

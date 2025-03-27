@@ -1,6 +1,7 @@
 ---
 sections:
-  - type: stacking_cards
-    title: t
-    sub_heading: t
+  - type: hero
+    title: Title
+    description: Our Ecosystem
+    hero_image: img/adobe-express-file.png
 ---

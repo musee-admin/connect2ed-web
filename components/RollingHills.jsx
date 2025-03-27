@@ -9,6 +9,7 @@ import styles from "./RollingHills.module.css";
 import { useRef } from "react";
 import { getCssUrl, processAssetUrl } from "../utils";
 import classNames from "classnames";
+import { LinkButton } from "../uiComponents/Button";
 
 export const RollingHills = ({
   color,
@@ -75,6 +76,11 @@ export const RollingHills = ({
             <h2 className={styles.title}>{title}</h2>
             <p className={styles.subHeading}>{sub_heading}</p>
             <p className={styles.description}>{description}</p>
+            {cta_text && (
+              <LinkButton href={cta_link} contrastColor={color}>
+                {cta_text}
+              </LinkButton>
+            )}
           </motion.div>
           <motion.div
             className={styles.imageContainer}

@@ -1,7 +1,7 @@
 ---
 sections:
   - type: hero
-    title: Connec2ED App - Coming Soon!
+    title: Title
     description: Our Solution
     hero_image: img/adobe-express-file.png
 ---

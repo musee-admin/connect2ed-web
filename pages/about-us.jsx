@@ -1,4 +1,4 @@
-import { attributes } from "../content/pages/our_ecosystem.md";
+import { attributes } from "../content/pages/about_us.md";
 import { renderSections } from "../utils";
 
 const AboutUs = () => {
