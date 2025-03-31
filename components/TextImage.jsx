@@ -29,8 +29,8 @@ export const TextImage = ({
           }}
           transition={{ duration: 1 }}
         >
-          <h2 className={styles.title}>{title}</h2>
           <p className={styles.subHeading}>{sub_heading}</p>
+          <h2 className={styles.title}>{title}</h2>
           <p className={styles.description}>{description}</p>
           {cta_text && <LinkButton href={cta_link}>{cta_text}</LinkButton>}
         </motion.div>

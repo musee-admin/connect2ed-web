@@ -1,4 +1,4 @@
-.wrapper {
+.innerWrapper {
   display: flex;
   height: fit-content;
   padding: 2rem;
@@ -6,6 +6,9 @@
   color: var(--primary-color);
   justify-content: center;
   align-items: stretch;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 2rem;
 }
 
 .detailsWrapper {
@@ -17,7 +20,28 @@
   padding-top: 2rem;
 }
 
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
 .title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.subHeading {
+  font-family: var(--font-accent);
+  line-height: 1rem;
+  font-size: 3rem;
+  color: var(--tertiary-color);
+}
+
+.addressTitle {
   font-size: 1.5rem;
   font-weight: 700;
 }

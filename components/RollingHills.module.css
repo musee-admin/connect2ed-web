@@ -3,6 +3,7 @@
   --title-color: white;
   --subheading-color: var(--secondary-color);
   --description-color: white;
+  --button-color: var(--tertiary-color);
 }
 
 .yellow {
@@ -10,6 +11,7 @@
   --title-color: var(--primary-color);
   --subheading-color: var(--primary-color);
   --description-color: var(--primary-color);
+  --button-color: var(--tertiary-color);
 }
 
 .pink {
@@ -17,6 +19,7 @@
   --title-color: var(--primary-color);
   --subheading-color: var(--primary-color);
   --description-color: var(--primary-color);
+  --button-color: var(--primary-color);
 }
 
 .startingSpacer {
@@ -55,6 +58,8 @@
   display: flex;
   align-items: center;
   height: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .textContainer {
@@ -75,13 +80,14 @@
 .textContainer {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .title {
   font-family: var(--font-accent);
   color: var(--title-color);
   font-size: 3rem;
+  line-height: 2rem;
 }
 
 .subHeading {
@@ -91,4 +97,8 @@
 
 .description {
   color: var(--description-color);
+}
+
+.button {
+  background-color: var(--button-color);
 }

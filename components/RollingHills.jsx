@@ -77,7 +77,11 @@ export const RollingHills = ({
             <p className={styles.subHeading}>{sub_heading}</p>
             <p className={styles.description}>{description}</p>
             {cta_text && (
-              <LinkButton href={cta_link} contrastColor={color}>
+              <LinkButton
+                className={styles.button}
+                href={cta_link}
+                contrastColor={color}
+              >
                 {cta_text}
               </LinkButton>
             )}

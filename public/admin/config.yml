@@ -150,6 +150,11 @@ defs:
                     [
                       { label: "Title", name: "title", widget: "string" },
                       {
+                        label: "Sub Heading",
+                        name: "sub_heading",
+                        widget: "string",
+                      },
+                      {
                         label: "Description",
                         name: "description",
                         widget: "text",
@@ -174,6 +179,11 @@ defs:
                   fields:
                     [
                       { label: "Title", name: "title", widget: "string" },
+                      {
+                        label: "Sub Heading",
+                        name: "sub_heading",
+                        widget: "string",
+                      },
                       {
                         label: "Description",
                         name: "description",
@@ -256,6 +266,8 @@ defs:
             widget: object
             summary: "{{fields.title}}"
             fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
               - {
                   label: "Items",
                   name: "items",
@@ -282,6 +294,8 @@ defs:
             name: "contact_us"
             widget: object
             fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
               - {
                   label: "Name",
                   name: "name",

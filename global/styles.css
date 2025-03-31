@@ -104,6 +104,7 @@ html {
   --secondary-color: #f5c261;
   --tertiary-color: #f59293;
   --accent-color-1: #5db8f1;
-  --screen-width-limit: 1280px;
+  --accent-color-2: #014245;
   --font-accent: felt-tip-senior;
+  --max-width: 1920px;
 }

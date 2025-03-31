@@ -71,8 +71,8 @@ export const Card = ({
         className={styles.cardContent}
       >
         <div className={styles.textContent}>
-          <h3 className={styles.cardTitle}>{title}</h3>
           <p className={styles.cardSubHeading}>{sub_heading}</p>
+          <h3 className={styles.cardTitle}>{title}</h3>
           <div className={styles.cardDescription}>{description}</div>
         </div>
         <div className={styles.image}>

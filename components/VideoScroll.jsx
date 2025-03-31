@@ -13,7 +13,7 @@ export const VideoScroll = ({ items }) => {
   );
 };
 
-export const VideoItem = ({ video, title, description }) => {
+export const VideoItem = ({ video, title, sub_heading, description }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -50,6 +50,7 @@ export const VideoItem = ({ video, title, description }) => {
         style={{ opacity: textOpacity }}
       >
         <h3 className={styles.title}>{title}</h3>
+        <p className={styles.sub_heading}>{sub_heading}</p>
         <p className={styles.description}>{description}</p>
       </motion.div>
     </div>

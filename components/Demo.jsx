@@ -19,14 +19,14 @@ export const Demo = ({ title, sub_heading, items }) => {
   });
 
   const itemProgress = useTransform(scrollYProgress, (p) => {
-    const itemCount = items.length + 2;
+    const itemCount = items?.length + 2;
     const singleItemPercentage = 1 / itemCount;
     const progress = (p % singleItemPercentage) / singleItemPercentage;
     return progress;
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const itemCount = items.length + 2;
+    const itemCount = items?.length + 2;
     const singleItemPercentage = 1 / itemCount;
     const activeSlideN = Math.floor(latest / singleItemPercentage) - 1;
     setActiveSlide(activeSlideN);
@@ -36,7 +36,7 @@ export const Demo = ({ title, sub_heading, items }) => {
     <section
       ref={ref}
       className={styles.wrapper}
-      style={{ height: `${items.length * 200}vh` }}
+      style={{ height: `${items?.length * 100}vh` }}
     >
       <div className={styles.content}>
         <div className={styles.headerSection}>
@@ -45,13 +45,13 @@ export const Demo = ({ title, sub_heading, items }) => {
         </div>
         <div className={styles.demoWrapper}>
           <div className={styles.features}>
-            {items.map((item, i) => (
+            {items?.map((item, i) => (
               <FeaturesItem key={i} {...item} selected={i === activeSlide} />
             ))}
           </div>
           <div className={styles.demo}>
             <AnimatePresence mode="wait">
-              {items[activeSlide]?.video && (
+              {items?.[activeSlide]?.video && (
                 <DemoItem
                   key={`demo-item-${activeSlide}`}
                   {...items[activeSlide]}

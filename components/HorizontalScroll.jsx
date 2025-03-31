@@ -42,8 +42,8 @@ export const HorizontalScroll = ({ title, sub_heading, items }) => {
     <div ref={containerRef} className={styles.wrapper}>
       <div className={styles.scrollContainer}>
         <div className={styles.titleSection}>
-          <h2 className={styles.title}>{title}</h2>
           <p className={styles.subHeading}>{sub_heading}</p>
+          <h2 className={styles.title}>{title}</h2>
         </div>
         <motion.section
           ref={scrollRef}
@@ -73,6 +73,7 @@ export const HorizontalScroll = ({ title, sub_heading, items }) => {
 
 export const HorizontalScrollItem = ({
   title,
+  sub_heading,
   description,
   image,
   variant,
@@ -89,8 +90,33 @@ export const HorizontalScrollItem = ({
         }}
       >
         <div className={styles.textContent}>
-          <h3 className={styles.itemTitle}>{title}</h3>
-          <p className={styles.itemDescription}>{description}</p>
+          <h3
+            className={styles.itemTitle}
+            style={{
+              color: variant === "primary" ? "white" : "var(--accent-c)",
+            }}
+          >
+            {title}
+          </h3>
+          <h3
+            className={styles.itemSubHeading}
+            style={{
+              color:
+                variant === "primary"
+                  ? "var(--secondary-color)"
+                  : "var(--accent-color-2)",
+            }}
+          >
+            {sub_heading}
+          </h3>
+          <p
+            className={styles.itemDescription}
+            style={{
+              color: variant === "primary" ? "white" : "var(--primary-color)",
+            }}
+          >
+            {description}
+          </p>
         </div>
         <div className={styles.imageContainer}>
           <img src={processAssetUrl(image)} alt="background" />

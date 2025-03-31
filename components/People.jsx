@@ -3,9 +3,13 @@ import classNames from "classnames";
 import { processAssetUrl } from "../utils";
 import styles from "./People.module.css";
 
-export const People = ({ items }) => {
+export const People = ({ title, sub_heading, items }) => {
   return (
     <div className={styles.wrapper}>
+      <div className={styles.titleSection}>
+        <p className={styles.subHeading}>{sub_heading}</p>
+        <h2 className={styles.title}>{title}</h2>
+      </div>
       {items.map((item, index) => (
         <Person key={index} {...item} reverseLayout={index % 2 === 1} />
       ))}

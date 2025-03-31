@@ -77,11 +77,16 @@
 }
 
 .itemTitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
+.itemSubHeading {
+  font-size: 1rem;
+}
+
 .itemDescription {
+  font-size: 1rem;
   font-weight: 300;
 }
 
@@ -98,6 +103,7 @@
   right: 2rem;
   height: auto;
   object-fit: contain;
+  max-width: 40%;
 }
 
 .hr {

@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import styles from "./Button.module.css";
 
 export const Button = ({ children, ...props }) => {
@@ -8,9 +9,9 @@ export const Button = ({ children, ...props }) => {
   );
 };
 
-export const LinkButton = ({ children, ...props }) => {
+export const LinkButton = ({ children, className, ...props }) => {
   return (
-    <a className={styles.button} {...props}>
+    <a className={classNames(styles.button, className)} {...props}>
       {children}
     </a>
   );
