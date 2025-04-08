@@ -53,8 +53,8 @@
 .cardContent {
   border: 1px solid black;
   display: flex;
-  padding: 3rem;
-  min-height: 60vh;
+  padding: 0rem 3rem;
+  min-height: 50vh;
   border-radius: 25px;
   flex-basis: 50%;
 }

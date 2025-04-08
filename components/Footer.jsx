@@ -17,6 +17,7 @@ export const Footer = () => {
 
   return (
     <>
+      <div className={styles.endingSpacer}></div>
       <section ref={ref} className={styles.wrapper}>
         <div className={styles.content}>
           <div className={styles.logo}>
