@@ -87,7 +87,6 @@ export const FeaturesItem = ({ title, description, selected }) => {
 };
 
 export const DemoItem = ({ video, video_length, progress }) => {
-  const videoProgress = useTransform(progress, [0, 1], [0, video_length + 1]);
   const { laptop_image } = attributes;
   return (
     <div className={styles.item}>

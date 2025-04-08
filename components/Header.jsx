@@ -8,11 +8,19 @@ import { useState } from "react";
 import styles from "./Header.module.css";
 import { processAssetUrl } from "../utils";
 import Link from "next/link";
+import classNames from "classnames";
 // import { attributes } from "../content/pages/basics.md";
 
 export const Header = () => {
   const { scrollY } = useScroll();
   const [scrollDirection, setScrollDirection] = useState("up");
+  const [isActive, setIsActive] = useState(false);
+  const toggleActiveClass = () => {
+    setIsActive(!isActive);
+  };
+  const removeActive = () => {
+    setIsActive(false);
+  };
 
   useMotionValueEvent(scrollY, "change", (current) => {
     if (current < 400) {
@@ -37,33 +45,57 @@ export const Header = () => {
       exit={{ opacity: 0, y: -100 }}
       className={styles.wrapper}
     >
-      <div className={styles.logoContainer}>
-        <img src="/logo.svg" alt="logo" />
-      </div>
-      <div className={styles.linkSection}>
-        <nav>
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/our-solution">Our Solution</Link>
-            </li>
-            <li>
-              <Link href="/knowledge-center">Knowledge Center</Link>
-            </li>
-            <li>
-              <Link href="/our-ecosystem">Our Ecosystem</Link>
-            </li>
-            <li>
-              <Link href="/about-us">About Us</Link>
-            </li>
-            <li>
-              <Link href="/contact-us">Contact Us</Link>
-            </li>
+      <header className={styles.header}>
+        <nav className={`${styles.navbar}`}>
+          <div className={styles.logo}>
+            <Link href="/">
+              <img src="/logo.svg" alt="logo" className={styles.img} />
+            </Link>
+          </div>
+          <ul className={`${styles.navMenu} ${isActive ? styles.active : ""}`}>
+            <div className={classNames(styles.navHalf, styles.navHalfLast)}>
+              <li onClick={removeActive}>
+                <Link href="/" className={`${styles.navLink}`}>
+                  Home
+                </Link>
+              </li>
+              <li onClick={removeActive}>
+                <Link href="/our-solution" className={`${styles.navLink}`}>
+                  Our Solution
+                </Link>
+              </li>
+              <li onClick={removeActive}>
+                <Link href="/knowledge-center" className={`${styles.navLink}`}>
+                  Knowledge Center
+                </Link>
+              </li>
+              <li onClick={removeActive}>
+                <Link href="/our-ecosystem" className={`${styles.navLink}`}>
+                  Our Ecosystem
+                </Link>
+              </li>
+              <li onClick={removeActive}>
+                <Link href="/about-us" className={`${styles.navLink}`}>
+                  About us
+                </Link>
+              </li>
+              <li onClick={removeActive}>
+                <Link href="/contact-us" className={`${styles.navLink}`}>
+                  Contact us
+                </Link>
+              </li>
+            </div>
           </ul>
+          <div
+            className={`${styles.hamburger} ${isActive ? styles.active : ""}`}
+            onClick={toggleActiveClass}
+          >
+            <span className={`${styles.bar}`}></span>
+            <span className={`${styles.bar}`}></span>
+            <span className={`${styles.bar}`}></span>
+          </div>
         </nav>
-      </div>
+      </header>
     </motion.div>
   );
 };

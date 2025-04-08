@@ -61,6 +61,7 @@
   font-family: var(--font-accent);
   font-size: 2rem;
   line-height: 1.5rem;
+  font-weight: 400;
 }
 
 .leftSection h3 {
@@ -89,4 +90,45 @@
   margin-left: auto;
   right: 3vw;
   bottom: 30vh;
+}
+
+@media screen and (max-width: 1100px) {
+  .primaryWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 2rem 2rem 2rem;
+    justify-content: space-between;
+    background-size: 100%;
+  }
+
+  .contentWrapper {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .extraSections {
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  .otherSection {
+    position: static;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+  }
+
+  .otherSection h3 {
+    font-size: 1.5rem;
+  }
+
+  .otherSection p {
+    font-size: 0.825rem;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 2rem;
+  }
 }

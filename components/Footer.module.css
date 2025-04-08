@@ -1,11 +1,9 @@
 .wrapper {
-  height: 50vh;
   width: 100vw;
   position: relative;
 }
 
 .content {
-  height: 40vh;
   width: 100%;
   z-index: 2;
   background: var(--primary-color);
@@ -70,12 +68,50 @@
   align-items: flex-start;
   flex-basis: 30%;
   gap: 1rem;
+  padding: 0;
 }
 
 .links a {
   color: white;
+  cursor: pointer;
 }
 
 .endingSpacer {
   height: 10vh;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    font-size: 0.75rem;
+  }
+
+  .logo {
+    flex-basis: 100%;
+    align-items: center;
+    padding-bottom: 2rem;
+  }
+  .logo img {
+    height: 60px;
+  }
+  .content {
+    padding: 3rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .links ul {
+    gap: 0.5rem;
+    flex-basis: 50%;
+  }
+
+  .hangingContent {
+    width: 96%;
+    left: 2vw;
+    font-size: 0.75rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .hangingContentText {
+    margin-top: auto;
+  }
 }

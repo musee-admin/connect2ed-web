@@ -1,4 +1,9 @@
-import { motion, useScroll, useTransform } from "motion/react";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "motion/react";
 import styles from "./Footer.module.css";
 import { useRef } from "react";
 import Link from "next/link";
@@ -10,15 +15,15 @@ export const Footer = () => {
   const { message, address, phone_number } = attributes;
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "start 40vh"],
+    offset: ["start end", "end end"],
   });
 
-  const y = useTransform(scrollYProgress, [0.6, 1], ["15vh", "3vh"]);
+  const y = useTransform(scrollYProgress, [0.6, 1], ["0", "-6vh"]);
 
   return (
     <>
       <div className={styles.endingSpacer}></div>
-      <section ref={ref} className={styles.wrapper}>
+      <section className={styles.wrapper}>
         <div className={styles.content}>
           <div className={styles.logo}>
             <img src="logo-white.svg" alt="logo" />
@@ -55,11 +60,13 @@ export const Footer = () => {
           className={styles.hangingContent}
           style={{ opacity: scrollYProgress, bottom: y }}
         >
-          For any enquiries or feedback contact us at{" "}
-          <a href="mailto:enquiry@connec2ed.com">enquiry@connec2ed.com</a>
+          <div className={styles.hangingContentText}>
+            For any enquiries or feedback contact us at{" "}
+            <a href="mailto:enquiry@connec2ed.com">enquiry@connec2ed.com</a>
+          </div>
         </motion.div>
       </section>
-      <div className={styles.endingSpacer}></div>
+      <div ref={ref} className={styles.endingSpacer}></div>
     </>
   );
 };

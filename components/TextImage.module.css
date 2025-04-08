@@ -38,7 +38,7 @@
   padding: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .imageContainer {
@@ -52,17 +52,50 @@
 }
 
 .title {
-  color: var(--title-color);
+  color: var(--subheading-color);
+  font-family: var(--font-accent);
   font-size: 2.5rem;
 }
 
 .subHeading {
-  font-family: var(--font-accent);
-  color: var(--subheading-color);
+  color: var(--title-color);
   font-size: 2rem;
 }
 
 .description {
   color: var(--description-color);
   font-weight: 200;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    height: 100%;
+    padding: 0rem;
+  }
+  .innerWrapper {
+    flex-direction: column-reverse;
+    gap: 1rem;
+    padding-top: 20vh;
+    border-radius: 0;
+  }
+
+  .textContainer {
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 1.75rem;
+  }
+
+  .subHeading {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .imageContainer {
+    padding: 2rem;
+  }
 }

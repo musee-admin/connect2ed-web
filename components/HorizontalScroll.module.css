@@ -35,7 +35,7 @@
 
 .item {
   height: 60vh;
-  width: calc(60vh + 8rem);
+  width: calc(40vw + 8rem);
   padding-left: 8rem;
 }
 
@@ -51,6 +51,7 @@
   justify-content: center;
   align-items: center;
   height: 30vh;
+  gap: 1rem;
 }
 
 .title {
@@ -111,4 +112,35 @@
   top: 50%;
   left: 0;
   z-index: -1;
+}
+@media screen and (max-width: 1100px) {
+  .textContent {
+    text-align: center;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+  .subHeading {
+    font-size: 2rem;
+  }
+
+  .item {
+    width: calc(90vw + 1rem);
+    padding-left: 1rem;
+  }
+
+  .textContent {
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+  }
+  .itemsContainer {
+    padding: 0px 2rem;
+  }
+
+  .imageContainer {
+    display: none;
+  }
 }
