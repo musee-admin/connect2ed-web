@@ -1,6 +1,7 @@
 .wrapper {
   height: 100vh;
   padding: 4rem;
+  overflow: clip;
 }
 
 .blue {
