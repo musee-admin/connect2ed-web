@@ -24,7 +24,6 @@
 
 .extraSections {
   height: 100vh;
-  top: 0;
   display: flex;
   flex-direction: column;
   gap: 10rem;
@@ -108,8 +107,9 @@
   }
 
   .extraSections {
-    justify-content: flex-end;
-    gap: 1rem;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    height: 100%;
   }
   .otherSection {
     position: static;
@@ -130,5 +130,6 @@
   }
   .description {
     font-size: 2rem;
+    line-height: 2rem;
   }
 }

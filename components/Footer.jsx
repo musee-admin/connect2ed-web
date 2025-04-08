@@ -8,11 +8,11 @@ import styles from "./Footer.module.css";
 import { useRef } from "react";
 import Link from "next/link";
 import { attributes } from "../content/pages/basic.md";
-import { processString } from "../utils";
+import { processAssetUrl, processString } from "../utils";
 
 export const Footer = () => {
   const ref = useRef(null);
-  const { message, address, phone_number } = attributes;
+  const { message, address, phone_number, mini_logo } = attributes;
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end end"],
@@ -26,7 +26,7 @@ export const Footer = () => {
       <section className={styles.wrapper}>
         <div className={styles.content}>
           <div className={styles.logo}>
-            <img src="logo-white.svg" alt="logo" />
+            <img src={processAssetUrl(mini_logo)} alt="logo" />
             <div className={styles.message}>{message}</div>
           </div>
           <div className={styles.links}>

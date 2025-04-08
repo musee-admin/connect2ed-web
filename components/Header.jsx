@@ -1,15 +1,10 @@
-import {
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-  motion,
-} from "motion/react";
+import { useScroll, useMotionValueEvent, motion } from "motion/react";
 import { useState } from "react";
 import styles from "./Header.module.css";
 import { processAssetUrl } from "../utils";
 import Link from "next/link";
 import classNames from "classnames";
-// import { attributes } from "../content/pages/basics.md";
+import { attributes } from "../content/pages/basic.md";
 
 export const Header = () => {
   const { scrollY } = useScroll();
@@ -18,6 +13,8 @@ export const Header = () => {
   const toggleActiveClass = () => {
     setIsActive(!isActive);
   };
+
+  const { full_logo } = attributes;
   const removeActive = () => {
     setIsActive(false);
   };
@@ -49,7 +46,11 @@ export const Header = () => {
         <nav className={`${styles.navbar}`}>
           <div className={styles.logo}>
             <Link href="/">
-              <img src="/logo.svg" alt="logo" className={styles.img} />
+              <img
+                src={processAssetUrl(full_logo)}
+                alt="logo"
+                className={styles.img}
+              />
             </Link>
           </div>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ""}`}>

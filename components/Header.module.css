@@ -61,6 +61,7 @@
 .logo {
   position: fixed;
   left: 2rem;
+  cursor: pointer;
 }
 
 .img {

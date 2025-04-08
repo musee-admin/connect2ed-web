@@ -19,16 +19,19 @@ export const Demo = ({ title, sub_heading, items }) => {
   });
 
   const itemProgress = useTransform(scrollYProgress, (p) => {
-    const itemCount = items?.length + 2;
+    const itemCount = items?.length;
     const singleItemPercentage = 1 / itemCount;
     const progress = (p % singleItemPercentage) / singleItemPercentage;
     return progress;
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const itemCount = items?.length + 2;
+    const itemCount = items?.length;
     const singleItemPercentage = 1 / itemCount;
-    const activeSlideN = Math.floor(latest / singleItemPercentage) - 1;
+    const activeSlideN = Math.min(
+      Math.floor(latest / singleItemPercentage),
+      items?.length - 1,
+    );
     setActiveSlide(activeSlideN);
   });
 

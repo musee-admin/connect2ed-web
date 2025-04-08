@@ -121,10 +121,15 @@
 
   .demoWrapper {
     flex-direction: column;
+    height: calc(100vh - 200px);
   }
 
   .features {
     padding: 1rem;
+  }
+
+  .demo {
+    width: 100%;
   }
 
   .featureWrapper {
@@ -148,5 +153,8 @@
 
   .featureSelected {
     display: flex;
+  }
+  .featureSelected .featureTitle {
+    font-size: 1.5rem;
   }
 }
