@@ -10,10 +10,9 @@ sections:
     color: blue
     title: Our Vision
     sub_heading: Personalized support to help every child thrive
-    description: At Connec2ed, we help schools create inclusive learning
-      environments where unique thinkers receive the tailored support they need.
-      Through collaboration and customized solutions, we unlock every child's
-      potential.
+    description: At Link2ed, we help schools create inclusive learning environments
+      where unique thinkers receive the tailored support they need. Through
+      collaboration and customized solutions, we unlock every child's potential.
     tag_line: aa
     image: img/image-27.png
   - type: text_image
@@ -21,7 +20,7 @@ sections:
     description: >
       As the emphasis on inclusive education grows, supporting neurodivergent
       students remains complex due to fragmented communication and inefficient
-      workflows. At Connec2ed, we've developed a solution that unites educators
+      workflows. At Link2ed, we've developed a solution that unites educators
       and intervention professionals, fostering seamless collaboration. Our
       structured workflow enhances communication, monitors progress, and
       delivers comprehensive support. By bridging coordination gaps, we empower
@@ -50,7 +49,7 @@ sections:
           the application to address emergent needs.
         name: "Muralikrishnan Puthanveedu "
         creds: Co Founder
-        tag: The Brains
+        tag: The Product person
         image: img/image-10.png
       - description: CV comes with 25+ years of experience in the technology field and
           he is the chief architect of the solution. He currently heads the
@@ -59,6 +58,31 @@ sections:
         name: Ranjith CV
         tag: The Techie
         creds: CTO
+        image: img/image-10.png
+      - tag: The strategist
+        name: Prasad Hariharan
+        creds: CSO
+        description: Prasad brings in 25+ years of experience in strategy and technology
+          transformation with a variety of organizations across multiple
+          geographies. With diverse experiences from startups to large global
+          companies, Prasad brings in a strategic and value creation lens to
+          enable the implementation of our platform.  Prasad’s focus is to
+          constantly understand the underlying complexities of the ecosystem and
+          ensure creation of meaningful value throughout the journey of our
+          Link2Ed platform.
+        image: img/prasadh.png
+      - tag: The Operations Person
+        name: Malini V
+        description: >-
+          Malini comes with over 16 years of experience in technology
+          consulting, specializing in global operations and delivering
+          large-scale software solutions including open-source healthcare
+          platforms for leading non-profits around the world. She has  seen how
+          the right systems can transform lives at scale.  
+
+
+          Her personal journey as a parent of a child with ADD and dyslexia has fueled a deep commitment to early intervention and inclusive education. Having witnessed the transformative power of timely support, she is passionate about raising awareness and driving systemic change. Her focus is now to enable schools, parents, and educators through a unified platform designed to assess, track, and collaborate—ensuring that every child receives the support they need to thrive.
+        creds: COO
         image: img/image-10.png
     title: Our People
     sub_heading: The team behind Connec2ed
