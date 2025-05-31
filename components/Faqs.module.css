@@ -16,6 +16,7 @@
 .itemAnswer {
   font-size: 2rem;
   padding: 0 1rem;
+  color: var(--accent-color-2);
 }
 
 .titleSection {

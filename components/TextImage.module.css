@@ -75,6 +75,7 @@
     height: 100%;
     padding: 0rem;
   }
+
   .innerWrapper {
     flex-direction: column-reverse;
     gap: 1rem;

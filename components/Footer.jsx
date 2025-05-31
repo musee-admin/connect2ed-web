@@ -1,9 +1,3 @@
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "motion/react";
 import styles from "./Footer.module.css";
 import { useRef } from "react";
 import Link from "next/link";
@@ -12,7 +6,7 @@ import { processAssetUrl, processString } from "../utils";
 
 export const Footer = () => {
   const ref = useRef(null);
-  const { message, address, phone_number, mini_logo } = attributes;
+  const { message, address, phone_number, mini_logo, email_id } = attributes;
 
   return (
     <>
@@ -53,11 +47,10 @@ export const Footer = () => {
         <div className={styles.hangingContent}>
           <div className={styles.hangingContentText}>
             For any enquiries or feedback contact us at
-            <a href="mailto:enquiry@connec2ed.com">enquiry@connec2ed.com</a>
+            <a href={`mailto:${email_id}`}>{email_id}</a>
           </div>
         </div>
       </section>
-      <div ref={ref} className={styles.endingSpacer}></div>
     </>
   );
 };
