@@ -100,10 +100,10 @@ html {
 }
 
 :root {
-  --primary-color: #304057;
-  --secondary-color: #c3d3c8;
-  --tertiary-color: #e5acaf;
-  --accent-color-1: #adbcd1;
+  --primary-color: #2f4668;
+  --secondary-color: #a3d7b4;
+  --tertiary-color: #e88f94;
+  --accent-color-1: #91aed6;
   --accent-color-2: #014245;
   --font-accent: "Caveat", cursive;
   --max-width: 1920px;
