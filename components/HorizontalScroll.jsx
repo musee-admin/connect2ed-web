@@ -38,9 +38,31 @@ export const HorizontalScroll = ({ title, sub_heading, items }) => {
   const physics = { damping: 15, mass: 0.27, stiffness: 55 };
   const spring = useSpring(transform, physics);
 
+  const moveNext = () => {
+    const bodyRect = document.body.getBoundingClientRect()
+    const element = containerRef.current;
+    const elementRect = element.getBoundingClientRect();
+    const offset = elementRect.top - bodyRect.top;
+    const currentScroll = window.scrollY;
+    window.scrollTo(0, Math.min(currentScroll + window.innerHeight, offset + elementRect.height - window.innerHeight));
+
+  }
+  const movePrev = () => {
+    const bodyRect = document.body.getBoundingClientRect()
+    const element = containerRef.current;
+    const elementRect = element.getBoundingClientRect();
+    const offset = elementRect.top - bodyRect.top;
+    const currentScroll = window.scrollY;
+    window.scrollTo(0, Math.max(currentScroll - window.innerHeight, offset));
+  }
+
   return (
     <div ref={containerRef} className={styles.wrapper}>
       <div className={styles.scrollContainer}>
+        <div className={styles.navigationActions}>
+          <button onClick={movePrev}>{"◀"}</button>
+          <button onClick={moveNext}>{"▶"}</button>
+        </div>
         <div className={styles.titleSection}>
           <p className={styles.subHeading}>{sub_heading}</p>
           <h2 className={styles.title}>{title}</h2>
@@ -79,7 +101,7 @@ export const HorizontalScrollItem = ({
   variant,
 }) => {
   return (
-    <div className={styles.item}>
+    <div className={styles.item} id="horizontal-scroll-item">
       <div
         className={styles.itemContent}
         style={{
