@@ -13,12 +13,6 @@ import { processAssetUrl, processString } from "../utils";
 export const Footer = () => {
   const ref = useRef(null);
   const { message, address, phone_number, mini_logo } = attributes;
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end end"],
-  });
-
-  const y = useTransform(scrollYProgress, [0.6, 1], ["0", "-6vh"]);
 
   return (
     <>
@@ -56,15 +50,12 @@ export const Footer = () => {
             <div className={styles.phone}>{processString(phone_number)}</div>
           </div>
         </div>
-        <motion.div
-          className={styles.hangingContent}
-          style={{ opacity: scrollYProgress, bottom: y }}
-        >
+        <div className={styles.hangingContent}>
           <div className={styles.hangingContentText}>
-            For any enquiries or feedback contact us at{" "}
+            For any enquiries or feedback contact us at
             <a href="mailto:enquiry@connec2ed.com">enquiry@connec2ed.com</a>
           </div>
-        </motion.div>
+        </div>
       </section>
       <div ref={ref} className={styles.endingSpacer}></div>
     </>

@@ -59,7 +59,7 @@
 .image img {
   object-fit: contain;
   height: auto;
-  width: auto;
+  width: 100%;
 }
 
 .textContent {

@@ -16,14 +16,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 8rem;
+  padding: 4rem;
 }
 
 .title {
   font-family: var(--font-accent);
   color: white;
-  font-size: 3rem;
-  line-height: 1rem;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 .subHeading {
@@ -33,7 +33,7 @@
 
 .demoWrapper {
   display: flex;
-  height: calc(100vh - 320px);
+  height: calc(100vh - 208px);
   justify-content: center;
   align-items: center;
 }

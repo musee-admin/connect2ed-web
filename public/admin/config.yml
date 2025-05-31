@@ -167,6 +167,23 @@ defs:
                       },
                     ],
                 }
+          - label: "FAQs"
+            name: "faqs"
+            widget: object
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
+              - {
+                  label: "Questions",
+                  name: "questions",
+                  widget: "list",
+                  fields:
+                    [
+                      { label: "Question", name: "question", widget: "text" },
+                      { label: "Answer", name: "answer", widget: "text" },
+                    ],
+                }
           - label: "VideoScroll"
             name: "video_scroll"
             widget: object

@@ -49,10 +49,10 @@
 }
 
 .sub_heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: var(--secondary-color);
   font-family: var(--font-accent);
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 .description {
