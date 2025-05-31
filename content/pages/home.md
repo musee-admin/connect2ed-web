@@ -93,4 +93,11 @@ sections:
       child can flourish.
     image: img/group-80.png
     cta_text: See How We Help
+    cta_link: our-solution
+  - type: faqs
+    questions:
+      - title: This is a test question
+        answer: This is a test answer
+      - title: This is another test question
+        answer: This is another test answer
 ---

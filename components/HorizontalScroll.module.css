@@ -78,16 +78,18 @@
 }
 
 .itemTitle {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
 }
 
 .itemSubHeading {
-  font-size: 1rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: var(--font-accent);
 }
 
 .itemDescription {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 

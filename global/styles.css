@@ -95,7 +95,7 @@ a {
 }
 
 html {
-  font-family: museo, serif;
+  font-family: "Gantari", sans-serif;
   line-height: 1.6;
 }
 
@@ -105,6 +105,6 @@ html {
   --tertiary-color: #f59293;
   --accent-color-1: #5db8f1;
   --accent-color-2: #014245;
-  --font-accent: felt-tip-senior;
+  --font-accent: "Caveat", cursive;
   --max-width: 1920px;
 }

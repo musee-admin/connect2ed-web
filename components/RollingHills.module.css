@@ -87,17 +87,19 @@
 .title {
   font-family: var(--font-accent);
   color: var(--title-color);
-  font-size: 3rem;
-  line-height: 2rem;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 .subHeading {
   color: var(--subheading-color);
   font-size: 2rem;
+  line-height: 2rem;
 }
 
 .description {
   color: var(--description-color);
+  font-size: 1.2rem;
 }
 
 .button {

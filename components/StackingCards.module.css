@@ -23,15 +23,16 @@
 }
 
 .mainTitle {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 .mainSubHeading {
   color: var(--secondary-color);
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: var(--font-accent);
-  line-height: 1.5rem;
+  line-height: 1rem;
+  padding-bottom: 1rem;
 }
 
 .cards {
@@ -83,7 +84,7 @@
 }
 
 .cardTitle {
-  line-height: 2rem;
+  line-height: 3rem;
   font-size: 3rem;
 }
 
