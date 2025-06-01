@@ -35,7 +35,7 @@ sections:
         sub_heading: Timely actions shape brighter futures.
   - type: horizontal_scroll
     title: Milestones Celebrations
-    sub_heading: Its an collaborative journey
+    sub_heading: Its a collaborative journey with extensive support
     items:
       - title: Discovery
         description: Recognizing early signs and seeking professional assessments to
