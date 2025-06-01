@@ -34,7 +34,7 @@ sections:
         video: img/family-professional.mp4
         sub_heading: Timely actions shape brighter futures.
   - type: horizontal_scroll
-    title: Milestones Celebrations
+    title: Milestone Celebrations
     sub_heading: Its a collaborative journey with extensive support
     items:
       - title: Discovery
