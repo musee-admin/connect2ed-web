@@ -4,6 +4,26 @@ sections:
     title: Title
     description: Knowledge Hub
     hero_image: img/adobe-express-file.png
+  - type: stacking_cards
+    title: Parents Corner
+    sub_heading: "Popular books that covers topics on inclusion "
+    items:
+      - title: Articles
+        sub_heading: Promoted articles that covers various topics on inclusion
+        image: img/people-writing-content-1-01.png
+        description: Promoted articles
+      - title: Books
+        sub_heading: "Popular books that covers topics on inclusion "
+        description: Popular books
+        image: img/nkl_m328_08.png
+      - title: Illustrations
+        sub_heading: "Promoted visuals that covers topics on inclusion "
+        description: Promoted Art
+        image: img/people-writing-content-2-01.png
+      - title: Videos
+        sub_heading: "Propular videos that covers topics on inclusion "
+        description: Propular videos
+        image: img/vnu_m630_13.png
   - type: faqs
     questions:
       - question: What is a Learning Difficulty?
@@ -251,24 +271,4 @@ sections:
         answer: Link to product DEMO
     title: FAQs
     sub_heading: Have questions?
-  - type: stacking_cards
-    title: Parents Corner
-    sub_heading: "Popular books that covers topics on inclusion "
-    items:
-      - title: Articles
-        sub_heading: Promoted articles that covers various topics on inclusion
-        image: img/people-writing-content-1-01.png
-        description: Promoted articles
-      - title: Books
-        sub_heading: "Popular books that covers topics on inclusion "
-        description: Popular books
-        image: img/nkl_m328_08.png
-      - title: Illustrations
-        sub_heading: "Promoted visuals that covers topics on inclusion "
-        description: Promoted Art
-        image: img/people-writing-content-2-01.png
-      - title: Videos
-        sub_heading: "Propular videos that covers topics on inclusion "
-        description: Propular videos
-        image: img/vnu_m630_13.png
 ---
