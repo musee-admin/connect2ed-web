@@ -34,8 +34,8 @@ sections:
         video: img/family-professional.mp4
         sub_heading: Timely actions shape brighter futures.
   - type: horizontal_scroll
-    title: Milestones in Neurodivergence
-    sub_heading: Its an exciting journey
+    title: Milestones Celebrations
+    sub_heading: Its an collaborative journey
     items:
       - title: Discovery
         description: Recognizing early signs and seeking professional assessments to
