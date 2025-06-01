@@ -6,7 +6,7 @@ sections:
     hero_image: img/adobe-express-file.png
   - type: stacking_cards
     title: Parents Corner
-    sub_heading: "Popular books that covers topics on inclusion "
+    sub_heading: Key resources that a parent needs to support their child.
     items:
       - title: Articles
         sub_heading: Promoted articles that covers various topics on inclusion
