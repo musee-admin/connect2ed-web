@@ -38,7 +38,7 @@ sections:
           Ms. Seema brings her vast experience and expertise to inform the
           design and development of our Link2ED platform in supporting the
           mainstreaming of neurodivergent students into regular schools.
-        name: Seema Gandharan
+        name: Seema Gangadharan
         creds: Co-Founder
         image: img/whatsapp-image-2025-06-05-at-9.25.06-pm.jpeg
         tag: The Counsellor
