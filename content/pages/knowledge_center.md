@@ -1,8 +1,8 @@
 ---
 sections:
   - type: hero
-    title: Title
-    description: Knowledge Hub
+    title: Learn more
+    description: Knowledge Center
     hero_image: img/adobe-express-file.png
   - type: stacking_cards
     title: Parents Corner
@@ -10,20 +10,20 @@ sections:
     items:
       - title: Articles
         sub_heading: Promoted articles that covers various topics on inclusion
-        image: img/people-writing-content-1-01.png
+        image: img/office-space-shared-work-desk.png
         description: Promoted articles
       - title: Books
         sub_heading: "Popular books that covers topics on inclusion "
         description: Popular books
-        image: img/nkl_m328_08.png
+        image: img/workspace-taking-notes-during-call.png
       - title: Illustrations
         sub_heading: "Promoted visuals that covers topics on inclusion "
         description: Promoted Art
-        image: img/people-writing-content-2-01.png
+        image: img/male-designer-working-on-display-graphic-tablet.png
       - title: Videos
         sub_heading: "Propular videos that covers topics on inclusion "
         description: Propular videos
-        image: img/vnu_m630_13.png
+        image: img/young-man-working-on-laptop.png
   - type: faqs
     questions:
       - question: What is a Learning Difficulty?

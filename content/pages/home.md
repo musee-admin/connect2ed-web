@@ -6,7 +6,7 @@ sections:
       brings educators and intervention professionals together, creating a
       seamless support system that ensures no child is left behind.
     right_title: Timely intervention shapes brighter futures.
-    hero_image: img/image-16.png
+    hero_image: img/hero-image.png
     title: Building Bridges for
     right_description: The formative years—especially before age 10—are crucial in a
       child’s development. Identifying challenges early and providing the right
@@ -26,12 +26,12 @@ sections:
       - description: A notable lack of awareness among educators about learning
           disabilities can hinder effective student assistance.​
         title: Teacher Awareness Gap
-        video: img/girl-drawing.mp4
+        video: img/students-raising-hand.mp4
         sub_heading: Enhancing student support.
       - description: Early identification and intervention during formative years (up to
           age 10) are vital for a child's developmental path.​
         title: Critical Intervention Window
-        video: img/family-professional.mp4
+        video: img/child-writing.mp4
         sub_heading: Timely actions shape brighter futures.
   - type: horizontal_scroll
     title: Milestone Celebrations
@@ -74,7 +74,7 @@ sections:
       We’ve designed 
       an integrated platform
     type: rolling_hills
-    image: img/image-18.png
+    image: img/group-of-people-discussing-something.png
     cta_text: About Us
     description: As the emphasis on inclusive education grows, supporting
       neurodivergent students remains complex due to fragmented communication

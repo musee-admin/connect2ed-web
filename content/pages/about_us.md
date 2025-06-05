@@ -3,7 +3,7 @@ sections:
   - type: hero
     title: Empowering inclusive education
     description: About Link2ED
-    hero_image: img/adobe-express-file.png
+    hero_image: img/passersby-people-working-around.png
     left_description: ""
     left_title: ""
   - type: rolling_hills
@@ -14,7 +14,7 @@ sections:
       where unique thinkers receive the tailored support they need. Through
       collaboration and customized solutions, we unlock every child's potential.
     tag_line: aa
-    image: img/image-27.png
+    image: img/family-testing-a-smart-home-system.png
   - type: text_image
     color: pink
     description: >
@@ -27,7 +27,7 @@ sections:
       educators to cultivate
     sub_heading: Addressing challenges through connection and collaboration.
     title: Dedicated to Inclusive Education for Every Learner
-    image: img/image-18.png
+    image: img/people-working-in-creative-office-space.png
   - type: people
     items:
       - description: Seema currently serves as a School Counsellor and Early
@@ -62,7 +62,7 @@ sections:
         tag: The Techie
         creds: CTO
         image: img/seevi.jpg
-      - tag: The strategist
+      - tag: The Strategist
         name: Prasad Hariharan
         creds: CSO
         description: Prasad brings in 25+ years of experience in strategy and technology
@@ -73,7 +73,7 @@ sections:
           constantly understand the underlying complexities of the ecosystem and
           ensure creation of meaningful value throughout the journey of our
           Link2Ed platform.
-        image: img/prasadh.png
+        image: img/prasad.jpeg
       - tag: The Operations Person
         name: Malini V
         description: >-
