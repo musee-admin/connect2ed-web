@@ -2,7 +2,7 @@
 sections:
   - type: hero
     title: Empowering inclusive education
-    description: About Connec2ed
+    description: About Link2ED
     hero_image: img/adobe-express-file.png
     left_description: ""
     left_title: ""
@@ -36,29 +36,32 @@ sections:
           sensory integration and education wing at Delhi Public School,
           Bangalore. As a subject matter expert for our software application,
           Ms. Seema brings her vast experience and expertise to inform the
-          design and development of our platform in supporting the mainstreaming
-          of neurodivergent students into regular schools.
+          design and development of our Link2ED platform in supporting the
+          mainstreaming of neurodivergent students into regular schools.
         name: Seema Gandharan
-        creds: Co- Founder
-        image: img/image-10.png
+        creds: Co-Founder
+        image: img/whatsapp-image-2025-06-05-at-9.25.06-pm.jpeg
         tag: The Counsellor
       - description: >
-          Murali comes with 25+ years of experience in the technology consulting
-          field and has played various roles across engineering, consulting,
-          product development. Murali focuses on improving the capabilities in
-          the application to address emergent needs.
+          Murali comes with 25+ years of experience in the Financial Services
+          technology consulting field and has played various roles across
+          engineering, consulting, product development. At Link2ED, Murali
+          focuses on charting the product roadmap and building capabilities that
+          addresses the current and emerging needs of our customers.
         name: "Muralikrishnan Puthanveedu "
         creds: Co Founder
         tag: The Product person
-        image: img/image-10.png
+        image: img/murali-photo.png
       - description: CV comes with 25+ years of experience in the technology field and
-          he is the chief architect of the solution. He currently heads the
-          architecture practice at one of the largest software providers in the
-          world.
+          is the chief architect at Link2ED. With a global experience in
+          financial services industry, he currently heads the architecture
+          consulting practice at one of the largest software providers in the
+          world. CV focuses on building scalable, safe and robust technology
+          platform that support Link2ED's vision.
         name: Ranjith CV
         tag: The Techie
         creds: CTO
-        image: img/image-10.png
+        image: img/seevi.jpg
       - tag: The strategist
         name: Prasad Hariharan
         creds: CSO
@@ -83,7 +86,7 @@ sections:
 
           Her personal journey as a parent of a child with ADD and dyslexia has fueled a deep commitment to early intervention and inclusive education. Having witnessed the transformative power of timely support, she is passionate about raising awareness and driving systemic change. Her focus is now to enable schools, parents, and educators through a unified platform designed to assess, track, and collaborate—ensuring that every child receives the support they need to thrive.
         creds: COO
-        image: img/image-10.png
+        image: img/malini.jpg
     title: Our People
-    sub_heading: The team behind Connec2ed
+    sub_heading: The team behind Link2ED
 ---
