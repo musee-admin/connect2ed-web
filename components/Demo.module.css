@@ -99,10 +99,11 @@
 .item video {
   position: absolute;
   left: 50%;
-  top: 53%;
+  top: 54%;
   transform: translate(-50%, -50%);
   width: 62%;
   object-fit: cover;
+  aspect-ratio: 1.8/1;
 }
 
 @media screen and (max-width: 1100px) {

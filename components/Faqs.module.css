@@ -6,15 +6,14 @@
   padding: 4rem;
 }
 
-
 .itemQuestion {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1rem;
   cursor: pointer;
 }
 
 .itemAnswer {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0 1rem;
   color: var(--accent-color-2);
 }
@@ -55,5 +54,4 @@
   .subHeading {
     font-size: 2rem;
   }
-
 }

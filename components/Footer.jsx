@@ -26,14 +26,14 @@ export const Footer = () => {
                 <Link href="/our-solution">Our Solution</Link>
               </li>
               <li>
-                <Link href="/knowledge-center">Knowledge Center</Link>
-              </li>
-              <li>
-                <Link href="/our-ecosystem">Our Ecosystem</Link>
-              </li>
-              <li>
                 <Link href="/about-us">About Us</Link>
               </li>
+              <li>
+                <Link href="/knowledge-center">Knowledge Center</Link>
+              </li>
+              {/* <li> */}
+              {/*   <Link href="/our-ecosystem">Our Ecosystem</Link> */}
+              {/* </li> */}
               <li>
                 <Link href="/contact-us">Contact Us</Link>
               </li>
@@ -44,11 +44,9 @@ export const Footer = () => {
             <div className={styles.phone}>{processString(phone_number)}</div>
           </div>
         </div>
-        <div className={styles.hangingContent}>
-          <div className={styles.hangingContentText}>
-            For any enquiries or feedback contact us at
-            <a href={`mailto:${email_id}`}>{email_id}</a>
-          </div>
+        <div className={styles.contactText}>
+          For any enquiries or feedback contact us at
+          <a href={`mailto:${email_id}`}>{email_id}</a>
         </div>
       </section>
     </>

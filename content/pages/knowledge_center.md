@@ -3,7 +3,7 @@ sections:
   - type: hero
     title: Learn more
     description: Knowledge Center
-    hero_image: img/adobe-express-file.png
+    hero_image: img/young-woman-planning-her-workday.png
   - type: stacking_cards
     title: Parents Corner
     sub_heading: Key resources that a parent needs to support their child.

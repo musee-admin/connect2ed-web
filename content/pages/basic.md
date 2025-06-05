@@ -1,8 +1,8 @@
 ---
-full_logo: img/logo.png
-mini_logo: img/logo-white.svg
+full_logo: img/asset-1-4x.png
+mini_logo: img/asset-3-4x.png
 name: Link2ED.
-message: Ready to transform support for neurodivergent children? contact us today..
+message: Ready to transform support for neurodivergent children? Contact us today..
 phone_number: +91 9739327544
 email_id: enquiry@link2ed.in
 address: |-

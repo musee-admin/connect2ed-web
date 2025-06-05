@@ -66,20 +66,20 @@ export const Header = () => {
                 </Link>
               </li>
               <li onClick={removeActive}>
-                <Link href="/knowledge-center" className={`${styles.navLink}`}>
-                  Knowledge Center
-                </Link>
-              </li>
-              <li onClick={removeActive}>
-                <Link href="/our-ecosystem" className={`${styles.navLink}`}>
-                  Our Ecosystem
-                </Link>
-              </li>
-              <li onClick={removeActive}>
                 <Link href="/about-us" className={`${styles.navLink}`}>
                   About us
                 </Link>
               </li>
+              <li onClick={removeActive}>
+                <Link href="/knowledge-center" className={`${styles.navLink}`}>
+                  Knowledge Center
+                </Link>
+              </li>
+              {/* <li onClick={removeActive}> */}
+              {/*   <Link href="/our-ecosystem" className={`${styles.navLink}`}> */}
+              {/*     Our Ecosystem */}
+              {/*   </Link> */}
+              {/* </li> */}
               <li onClick={removeActive}>
                 <Link href="/contact-us" className={`${styles.navLink}`}>
                   Contact us

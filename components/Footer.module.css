@@ -10,32 +10,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10rem;
+  padding: 5rem 10rem;
 }
 
 .text {
   flex-basis: 20%;
 }
 
-.hangingContent {
-  bottom: -60px;
-  position: absolute;
-  width: 80%;
-  height: 10vh;
-  z-index: 1;
-  left: 10vw;
-  border-radius: 25px;
+.contactText {
+  color: white;
+  background: var(--primary-color);
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
-  font-size: 1.2rem;
-  padding-bottom: 1rem;
-  z-index: -1;
-  background-color: var(--accent-color-1);
+  padding-bottom: 5rem;
 }
 
-.hangingContent a {
-  color: black;
+.contactText a {
+  color: white;
   text-decoration: underline;
   padding-left: 0.4rem;
 }
@@ -45,7 +37,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 2rem;
   color: white;
 }
@@ -102,17 +94,5 @@
   .links ul {
     gap: 0.5rem;
     flex-basis: 50%;
-  }
-
-  .hangingContent {
-    width: 96%;
-    left: 2vw;
-    font-size: 0.75rem;
-    text-align: center;
-    padding-bottom: 0.5rem;
-  }
-
-  .hangingContentText {
-    margin-top: auto;
   }
 }
