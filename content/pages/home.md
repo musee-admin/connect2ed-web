@@ -23,11 +23,11 @@ sections:
         title: Prevalence of Learning Challenges
         video: img/students-walking.mp4
         sub_heading: The scope to better support every learner.
-      - description: A notable lack of awareness among educators about learning
-          disabilities can hinder effective student assistance.​
-        title: Teacher Awareness Gap
+      - description: Where multi-actor collaboration ensures every student’s uniqueness
+          shapes a stronger, kinder community.
+        title: The Heart of an Inclusive School Community
         video: img/students-raising-hand.mp4
-        sub_heading: Enhancing student support.
+        sub_heading: Fostering Belonging & Enhancing student support.
       - description: Early identification and intervention during formative years (up to
           age 10) are vital for a child's developmental path.​
         title: Critical Intervention Window
