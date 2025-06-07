@@ -2,11 +2,11 @@
   display: inline-block;
   border: none;
   padding: 0.5rem 4rem;
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   border-radius: 1.5rem;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: var(--primary-color);
   cursor: pointer;
   width: fit-content;
 }

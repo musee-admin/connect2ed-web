@@ -39,22 +39,27 @@ export const HorizontalScroll = ({ title, sub_heading, items }) => {
   const spring = useSpring(transform, physics);
 
   const moveNext = () => {
-    const bodyRect = document.body.getBoundingClientRect()
+    const bodyRect = document.body.getBoundingClientRect();
     const element = containerRef.current;
     const elementRect = element.getBoundingClientRect();
     const offset = elementRect.top - bodyRect.top;
     const currentScroll = window.scrollY;
-    window.scrollTo(0, Math.min(currentScroll + window.innerHeight, offset + elementRect.height - window.innerHeight));
-
-  }
+    window.scrollTo(
+      0,
+      Math.min(
+        currentScroll + window.innerHeight,
+        offset + elementRect.height - window.innerHeight,
+      ),
+    );
+  };
   const movePrev = () => {
-    const bodyRect = document.body.getBoundingClientRect()
+    const bodyRect = document.body.getBoundingClientRect();
     const element = containerRef.current;
     const elementRect = element.getBoundingClientRect();
     const offset = elementRect.top - bodyRect.top;
     const currentScroll = window.scrollY;
     window.scrollTo(0, Math.max(currentScroll - window.innerHeight, offset));
-  }
+  };
 
   return (
     <div ref={containerRef} className={styles.wrapper}>
@@ -126,7 +131,7 @@ export const HorizontalScrollItem = ({
               color:
                 variant === "primary"
                   ? "var(--secondary-color)"
-                  : "var(--accent-color-2)",
+                  : "var(--primary-color)",
             }}
           >
             {sub_heading}

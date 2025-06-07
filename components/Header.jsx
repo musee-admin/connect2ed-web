@@ -44,17 +44,8 @@ export const Header = () => {
     >
       <header className={styles.header}>
         <nav className={`${styles.navbar}`}>
-          <div className={styles.logo}>
-            <Link href="/">
-              <img
-                src={processAssetUrl(full_logo)}
-                alt="logo"
-                className={styles.img}
-              />
-            </Link>
-          </div>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ""}`}>
-            <div className={classNames(styles.navHalf, styles.navHalfLast)}>
+            <div className={classNames(styles.navHalf, styles.navHalFirst)}>
               <li onClick={removeActive}>
                 <Link href="/" className={`${styles.navLink}`}>
                   Home
@@ -65,6 +56,17 @@ export const Header = () => {
                   Our Solution
                 </Link>
               </li>
+            </div>
+            <li className={styles.logo}>
+              <Link href="/">
+                <img
+                  src={processAssetUrl(full_logo)}
+                  alt="logo"
+                  className={styles.img}
+                />
+              </Link>
+            </li>
+            <div className={classNames(styles.navHalf, styles.navHalfLast)}>
               <li onClick={removeActive}>
                 <Link href="/about-us" className={`${styles.navLink}`}>
                   About us

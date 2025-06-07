@@ -101,10 +101,10 @@ html {
 
 :root {
   --primary-color: #2f4668;
-  --secondary-color: #a3d7b4;
-  --tertiary-color: #e88f94;
+  --secondary-color: #ffe3c7;
+  --tertiary-color: #a3d7b4;
   --accent-color-1: #91aed6;
-  --accent-color-2: #014245;
+  --accent-color-2: #038e95;
   --font-accent: "Caveat", cursive;
   --max-width: 1920px;
 }

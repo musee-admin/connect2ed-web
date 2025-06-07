@@ -38,7 +38,7 @@
 
 .title {
   font-family: var(--font-accent);
-  color: var(--tertiary-color);
+  color: var(--accent-color-1);
   font-size: 3rem;
   line-height: 1rem;
   background: rgba(255, 255, 255, 0.75);
@@ -65,24 +65,12 @@
   font-size: 2rem;
   line-height: 1.5rem;
   font-weight: 400;
+  color: var(--accent-color-2);
 }
 
-.leftSection h3 {
-  color: var(--tertiary-color);
-}
-
-.leftSection p {
+.otherSection p {
   color: var(--primary-color);
 }
-
-.rightSection h3 {
-  color: var(--primary-color);
-}
-
-.rightSection p {
-  color: var(--tertiary-color);
-}
-
 .leftSection {
   text-align: right;
   transform: translateX(calc(-50% - 30vw));

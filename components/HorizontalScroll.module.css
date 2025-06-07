@@ -85,7 +85,7 @@
   font-family: var(--font-accent);
   line-height: 1rem;
   font-size: 3rem;
-  color: var(--tertiary-color);
+  color: var(--accent-color-1);
 }
 
 .textContent {
