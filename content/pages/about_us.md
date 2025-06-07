@@ -30,24 +30,26 @@ sections:
     image: img/people-working-in-creative-office-space.png
   - type: people
     items:
-      - description: Seema currently serves as a School Counsellor and Early
-          Intervention Specialist at a reputed institution. She is also a
-          Positive Parenting Coach and the founder of NILA, an innovative
-          sensory integration and education wing at Delhi Public School,
-          Bangalore. As a subject matter expert for our software application,
-          Ms. Seema brings her vast experience and expertise to inform the
-          design and development of our Link2ED platform in supporting the
-          mainstreaming of neurodivergent students into regular schools.
+      - description: A subject matter expert in child and adolescent psychology, Ms.
+          Seema Gangadharan is also an Early Intervention Specialist. She is a
+          certified Positive Parenting Coach with years of experience as a
+          school counsellor and a strong background in supporting inclusive
+          education. Recognized for pioneering the establishment of a sensory
+          integration and education wing at a leading Bangalore school, she
+          brings deep expertise and innovative insights to our software
+          application ensuring the platform supports best practices and fosters
+          the successful mainstreaming of neurodivergent students.
         name: Seema Gangadharan
         creds: Co-Founder
         image: img/whatsapp-image-2025-06-05-at-9.25.06-pm.jpeg
         tag: The Counsellor
       - description: >
-          Murali comes with 25+ years of experience in the Financial Services
-          technology consulting field and has played various roles across
-          engineering, consulting, product development. At Link2ED, Murali
-          focuses on charting the product roadmap and building capabilities that
-          addresses the current and emerging needs of our customers.
+          Murali comes with 25+ years of global experience in the Financial
+          Services technology consulting field and has played various leadership
+          roles across engineering, consulting, and product development. At
+          Link2ED, Murali focuses on charting the product roadmap and building
+          capabilities that addresses the current and emerging needs of our
+          customers.
         name: "Muralikrishnan Puthanveedu "
         creds: Co Founder
         tag: The Product person
