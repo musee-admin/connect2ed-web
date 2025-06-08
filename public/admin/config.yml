@@ -325,6 +325,238 @@ defs:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+          - label: "Ecosystem Players"
+            name: "ecosystem_players"
+            widget: object
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - {
+                  label: "Student Image",
+                  name: "student_image",
+                  widget: "image",
+                  media_library: { config: { multiple: false } },
+                }
+              - {
+                  label: "School Counsellor",
+                  name: "school_counsellor",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Special Educator",
+                  name: "special_educator",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Class Teacher",
+                  name: "class_teacher",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Subject Teachers",
+                  name: "subject_teachers",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Child Psychologist",
+                  name: "child_psychologist",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Parent",
+                  name: "parent",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Behavioural Therapist",
+                  name: "behavioural_therapist",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Occupational Therapist",
+                  name: "occupational_therapist",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Speech Therapist",
+                  name: "speech_therapist",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Assessment Agencies",
+                  name: "assessment_agencies",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
+              - {
+                  label: "Shadow Teacher",
+                  name: "shadow_teacher",
+                  widget: "object",
+                  fields:
+                    [
+                      {
+                        label: "Description",
+                        name: "description",
+                        widget: "text",
+                      },
+
+                      {
+                        label: "Image",
+                        name: "image",
+                        widget: "image",
+                        media_library: { config: { multiple: false } },
+                      },
+                    ],
+                }
 
 local_backend: true
 backend:

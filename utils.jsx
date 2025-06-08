@@ -9,7 +9,8 @@ import { TextImage } from "./components/TextImage";
 import { People } from "./components/People";
 import { ContactUsForm } from "./components/ContactUsForm";
 import { Faqs } from "./components/Faqs";
-import { DevelopmentGraph } from "./components//DevelopmentGraph";
+import { DevelopmentGraph } from "./components/DevelopmentGraph";
+import { EcosystemPlayers } from "./components/EcosystemPlayers";
 
 export const processString = (value) => {
   if (typeof value !== "string" || value.indexOf("\n") < 0) {
@@ -59,6 +60,9 @@ export const renderSections = (sections) => {
     }
     if (section.type === "development_graph") {
       return <DevelopmentGraph key={index} {...section} />;
+    }
+    if (section.type === "ecosystem_players") {
+      return <EcosystemPlayers key={index} {...section} />;
     }
     return null;
   });
