@@ -45,6 +45,9 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .wrapper {
+    padding: 1rem;
+  }
   .title {
     font-size: 2rem;
     text-align: center;
@@ -53,5 +56,10 @@
 
   .subHeading {
     font-size: 2rem;
+  }
+
+  .itemQuestion,
+  .itemAnswer {
+    font-size: 1rem;
   }
 }

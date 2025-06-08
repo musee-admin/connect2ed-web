@@ -87,9 +87,9 @@
   .primaryWrapper {
     display: flex;
     flex-direction: column;
-    padding: 10rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 2rem 2rem;
     justify-content: space-between;
-    background-size: 100%;
+    background-size: 140%;
   }
 
   .contentWrapper {
@@ -103,7 +103,9 @@
     gap: 0.5rem;
     height: 100%;
   }
+
   .otherSection {
+    transform: none;
     position: static;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
@@ -119,6 +121,7 @@
   }
   .title {
     font-size: 2rem;
+    line-height: 2rem;
   }
   .description {
     font-size: 2rem;

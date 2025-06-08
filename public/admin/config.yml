@@ -319,6 +319,12 @@ defs:
                   widget: "hidden",
                   required: false,
                 }
+          - label: "Development Graph"
+            name: "development_graph"
+            widget: object
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
 
 local_backend: true
 backend:

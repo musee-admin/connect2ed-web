@@ -31,7 +31,7 @@
   color: var(--accent-color-1);
   font-size: 3rem;
   font-family: var(--font-accent);
-  line-height: 1rem;
+  line-height: 2rem;
   padding-bottom: 1rem;
 }
 
@@ -106,20 +106,21 @@
     padding-top: 2rem;
   }
 
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .mainSubHeading {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
   .content {
     padding: 1rem;
   }
 
   .cardContainer {
     padding: 0;
-  }
-
-  .cardTitle {
-    font-size: 1rem;
-  }
-
-  .cardDescription {
-    font-size: 1rem;
   }
 
   .image {
@@ -135,6 +136,6 @@
 
   .cardSubHeading {
     font-size: 1.5rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
   }
 }

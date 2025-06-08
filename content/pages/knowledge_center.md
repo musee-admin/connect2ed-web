@@ -4,6 +4,12 @@ sections:
     title: Learn more
     description: Knowledge Center
     hero_image: img/young-woman-planning-her-workday.png
+  - type: development_graph
+    title: The Great Synaptic Surge
+    description: From late pregnancy through childhood and adolescence, the brain
+      forms connections (synapses) at an incredible rate. Different functions
+      develop on unique timelines, with sensory pathways maturing first,
+      followed by language and higher cognitive abilities.
   - type: stacking_cards
     title: Parents Corner
     sub_heading: Key resources that a parent needs to support their child.

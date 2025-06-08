@@ -9,6 +9,7 @@ import { TextImage } from "./components/TextImage";
 import { People } from "./components/People";
 import { ContactUsForm } from "./components/ContactUsForm";
 import { Faqs } from "./components/Faqs";
+import { DevelopmentGraph } from "./components//DevelopmentGraph";
 
 export const processString = (value) => {
   if (typeof value !== "string" || value.indexOf("\n") < 0) {
@@ -55,6 +56,9 @@ export const renderSections = (sections) => {
     }
     if (section.type === "faqs") {
       return <Faqs key={index} {...section} />;
+    }
+    if (section.type === "development_graph") {
+      return <DevelopmentGraph key={index} {...section} />;
     }
     return null;
   });

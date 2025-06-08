@@ -1,0 +1,58 @@
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.contentWrapper {
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  padding: 4rem;
+  color: var(--primary-color);
+}
+
+.graphWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  overflow: hidden;
+}
+
+.graph {
+  height: 900px;
+  aspect-ratio: 12/7;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .contentWrapper {
+    padding: 2rem 1rem;
+  }
+
+  .graphWrapper {
+    height: 40vh;
+  }
+
+  .graph {
+    height: 40vh;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

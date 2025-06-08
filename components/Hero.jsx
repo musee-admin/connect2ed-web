@@ -52,30 +52,42 @@ export const Hero = ({
           <div className={styles.description}>{processString(description)}</div>
           {cta_text && <LinkButton href={cta_link}>{cta_text}</LinkButton>}
         </motion.div>
-        <div className={styles.extraSections}>
-          <motion.div
-            className={styles.leftSectionWrapper}
-            style={{ opacity: leftOpacity }}
-          >
-            <div
-              className={classNames(styles.otherSection, styles.leftSection)}
+        {
+          <div className={styles.extraSections}>
+            <motion.div
+              className={styles.leftSectionWrapper}
+              style={{ opacity: leftOpacity }}
             >
-              <h3>{left_title}</h3>
-              <p>{processString(left_description)}</p>
-            </div>
-          </motion.div>
-          <motion.div
-            className={styles.rightSectionWrapper}
-            style={{ opacity: rightOpacity }}
-          >
-            <div
-              className={classNames(styles.otherSection, styles.rightSection)}
+              {(left_title || left_description) && (
+                <div
+                  className={classNames(
+                    styles.otherSection,
+                    styles.leftSection,
+                  )}
+                >
+                  <h3>{left_title}</h3>
+                  <p>{processString(left_description)}</p>
+                </div>
+              )}
+            </motion.div>
+            <motion.div
+              className={styles.rightSectionWrapper}
+              style={{ opacity: rightOpacity }}
             >
-              <h3>{right_title}</h3>
-              <p>{processString(right_description)}</p>
-            </div>
-          </motion.div>
-        </div>
+              {(right_title || right_description) && (
+                <div
+                  className={classNames(
+                    styles.otherSection,
+                    styles.rightSection,
+                  )}
+                >
+                  <h3>{right_title}</h3>
+                  <p>{processString(right_description)}</p>
+                </div>
+              )}
+            </motion.div>
+          </div>
+        }
       </motion.div>
     </section>
   );

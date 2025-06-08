@@ -139,4 +139,7 @@
     align-items: center;
     padding: 2rem;
   }
+  .imageContainer {
+    padding: 1rem;
+  }
 }

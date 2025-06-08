@@ -61,14 +61,15 @@
 
 .logo {
   cursor: pointer;
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  width: 280px;
 }
 
 .img {
   height: 60px;
+  width: auto;
 }
 
 .navMenu {
@@ -129,6 +130,7 @@
     display: block;
     cursor: pointer;
     margin-left: auto;
+    z-index: 9999;
   }
 
   .bar {

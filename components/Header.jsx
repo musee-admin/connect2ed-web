@@ -44,6 +44,15 @@ export const Header = () => {
     >
       <header className={styles.header}>
         <nav className={`${styles.navbar}`}>
+          <div className={styles.logo}>
+            <Link href="/">
+              <img
+                src={processAssetUrl(full_logo)}
+                alt="logo"
+                className={styles.img}
+              />
+            </Link>
+          </div>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ""}`}>
             <div className={classNames(styles.navHalf, styles.navHalFirst)}>
               <li onClick={removeActive}>
@@ -56,17 +65,6 @@ export const Header = () => {
                   Our Solution
                 </Link>
               </li>
-            </div>
-            <li className={styles.logo}>
-              <Link href="/">
-                <img
-                  src={processAssetUrl(full_logo)}
-                  alt="logo"
-                  className={styles.img}
-                />
-              </Link>
-            </li>
-            <div className={classNames(styles.navHalf, styles.navHalfLast)}>
               <li onClick={removeActive}>
                 <Link href="/about-us" className={`${styles.navLink}`}>
                   About us
@@ -77,11 +75,11 @@ export const Header = () => {
                   Knowledge Center
                 </Link>
               </li>
-              {/* <li onClick={removeActive}> */}
-              {/*   <Link href="/our-ecosystem" className={`${styles.navLink}`}> */}
-              {/*     Our Ecosystem */}
-              {/*   </Link> */}
-              {/* </li> */}
+              <li onClick={removeActive}>
+                <Link href="/our-ecosystem" className={`${styles.navLink}`}>
+                  Our Ecosystem
+                </Link>
+              </li>
               <li onClick={removeActive}>
                 <Link href="/contact-us" className={`${styles.navLink}`}>
                   Contact us

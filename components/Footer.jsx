@@ -31,9 +31,9 @@ export const Footer = () => {
               <li>
                 <Link href="/knowledge-center">Knowledge Center</Link>
               </li>
-              {/* <li> */}
-              {/*   <Link href="/our-ecosystem">Our Ecosystem</Link> */}
-              {/* </li> */}
+              <li>
+                <Link href="/our-ecosystem">Our Ecosystem</Link>
+              </li>
               <li>
                 <Link href="/contact-us">Contact Us</Link>
               </li>

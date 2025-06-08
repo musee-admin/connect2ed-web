@@ -86,6 +86,7 @@
   line-height: 1rem;
   font-size: 3rem;
   color: var(--accent-color-1);
+  text-align: center;
 }
 
 .textContent {
@@ -140,6 +141,9 @@
 @media screen and (max-width: 1100px) {
   .textContent {
     text-align: center;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
   }
 
   .title {
@@ -149,25 +153,41 @@
   }
 
   .subHeading {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 0 2rem;
   }
 
   .item {
     width: calc(90vw + 1rem);
     padding-left: 1rem;
-  }
-
-  .textContent {
-    width: 100%;
-    justify-content: center;
-    height: 100%;
+    height: 70vh;
   }
 
   .itemsContainer {
+    height: 80vh;
     padding: 0px 2rem;
+  }
+
+  .itemTitle {
+    font-size: 2rem;
+  }
+
+  .itemSubHeading {
+    font-size: 1.5rem;
+  }
+
+  .itemDescription {
+    font-size: 1rem;
+    font-weight: 300;
   }
 
   .imageContainer {
     display: none;
+  }
+
+  .titleSection {
+    height: 20vh;
+  }
+  .itemsContainer {
   }
 }
