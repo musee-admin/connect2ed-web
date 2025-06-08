@@ -24,6 +24,11 @@ sections:
         sub_heading: "Propular videos that covers topics on inclusion "
         description: Propular videos
         image: img/young-man-working-on-laptop.png
+      - title: Stories
+        sub_heading: Stories on how multi-actor collaboration has helped parents in
+          their journey.
+        description: popular stories
+        image: img/seeviphoto.jpg
   - type: faqs
     questions:
       - question: What is a Learning Difficulty?
