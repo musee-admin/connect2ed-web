@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import { processAssetUrl } from "../utils";
 import styles from "./EcosystemPlayers.module.css";
+import { Tooltip } from "react-tooltip";
 
 export const EcosystemPlayers = ({
   title,
@@ -23,6 +24,10 @@ export const EcosystemPlayers = ({
       <div className={styles.header}>
         <p className={styles.mainSubHeading}>{description}</p>
         <h2 className={styles.mainTitle}>{title}</h2>
+        <p className={styles.instruction}>(Hover on players to know more)</p>
+        <p className={styles.instructionMobile}>
+          (Click on players to know more)
+        </p>
       </div>
       <div className={styles.contentWrapper}>
         <div className={styles.studentImageWrapper}>
@@ -86,11 +91,27 @@ export const EcosystemPlayers = ({
 
 const Player = ({ title, description, image, className }) => {
   return (
-    <div className={classNames(styles.playerWrapper, className)}>
-      <div className={styles.imageWrapper}>
-        <img alt={title} src={processAssetUrl(image)} />
+    <>
+      <div
+        className={classNames(styles.playerWrapper, className)}
+        data-tooltip-id={title}
+      >
+        <div className={styles.imageWrapper}>
+          <img alt={title} src={processAssetUrl(image)} />
+        </div>
+        <h3>{title}</h3>
       </div>
-      <h3>{title}</h3>
-    </div>
+      <Tooltip
+        id={title}
+        style={{
+          backgroundColor: "var(--primary-color)",
+          borderRadius: "2rem",
+        }}
+      >
+        <div className={styles.descriptionWrapper}>
+          <p>{description}</p>
+        </div>
+      </Tooltip>
+    </>
   );
 };

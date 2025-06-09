@@ -3,18 +3,19 @@ sections:
   - type: hero
     title: Empowering inclusive education
     description: About Link2ED
-    hero_image: img/passersby-people-working-around.png
+    hero_image: img/passersby-people-working-around.webp
     left_description: ""
     left_title: ""
   - type: rolling_hills
     color: blue
     title: Our Vision
     sub_heading: Personalized support to help every child thrive
-    description: At Link2ed, we help schools create inclusive learning environments
+    description:
+      At Link2ed, we help schools create inclusive learning environments
       where unique thinkers receive the tailored support they need. Through
       collaboration and customized solutions, we unlock every child's potential.
     tag_line: aa
-    image: img/family-testing-a-smart-home-system.png
+    image: img/family-testing-a-smart-home-system.webp
   - type: text_image
     color: pink
     description: >
@@ -27,10 +28,11 @@ sections:
       educators to cultivate
     sub_heading: Addressing challenges through connection and collaboration.
     title: Dedicated to Inclusive Education for Every Learner
-    image: img/people-working-in-creative-office-space.png
+    image: img/people-working-in-creative-office-space.webp
   - type: people
     items:
-      - description: A subject matter expert in child and adolescent psychology, Ms.
+      - description:
+          A subject matter expert in child and adolescent psychology, Ms.
           Seema Gangadharan is also an Early Intervention Specialist. She is a
           certified Positive Parenting Coach with years of experience as a
           school counsellor and a strong background in supporting inclusive
@@ -41,7 +43,7 @@ sections:
           the successful mainstreaming of neurodivergent students.
         name: Seema Gangadharan
         creds: Co-Founder
-        image: img/whatsapp-image-2025-06-05-at-9.25.06-pm.jpeg
+        image: img/whatsapp-image-2025-06-05-at-9.25.06-pm.webp
         tag: The Counsellor
       - description: >
           Murali comes with 25+ years of global experience in the Financial
@@ -53,8 +55,9 @@ sections:
         name: "Muralikrishnan Puthanveedu "
         creds: Co Founder
         tag: The Product person
-        image: img/murali-photo.png
-      - description: CV comes with 25+ years of experience in the technology field and
+        image: img/murali-photo.webp
+      - description:
+          CV comes with 25+ years of experience in the technology field and
           is the chief architect at Link2ED. With a global experience in
           financial services industry, he currently heads the architecture
           consulting practice at one of the largest software providers in the
@@ -67,7 +70,8 @@ sections:
       - tag: The Strategist
         name: Prasad Hariharan
         creds: CSO
-        description: Prasad brings in 25+ years of experience in strategy and technology
+        description:
+          Prasad brings in 25+ years of experience in strategy and technology
           transformation with a variety of organizations across multiple
           geographies. With diverse experiences from startups to large global
           companies, Prasad brings in a strategic and value creation lens to

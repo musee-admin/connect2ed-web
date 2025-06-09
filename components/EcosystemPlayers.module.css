@@ -1,11 +1,17 @@
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  color: var(--primary-color);
+}
 .header {
-  position: sticky;
-  top: 0;
   font-size: 2rem;
   text-align: center;
   width: fit-content;
   margin: 0 auto;
-  padding-top: 6rem;
+  padding-top: 2rem;
 }
 
 .mainTitle {
@@ -22,14 +28,27 @@
 }
 .contentWrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(5, 180px);
+  grid-template-rows: repeat(5, minmax(180px, auto));
   grid-template-areas:
     ". counsellor special-educator class-teacher ."
-    "subject-teachers student student student ."
+    "subject-teachers student student student parent"
     "child-psychologist student student student behavioural-therapist"
     "occupational-therapist student student student speech-therapist"
     ". assessment-agencies . shadow-teacher .";
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.studentImageWrapper {
+  grid-area: student;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.studentImageWrapper img {
+  max-height: 400px;
 }
 
 .counsellor {
@@ -44,11 +63,54 @@
   grid-area: class-teacher;
 }
 
+.subjectTeachers {
+  grid-area: subject-teachers;
+}
+
+.childPsychologist {
+  grid-area: child-psychologist;
+}
+
+.parent {
+  grid-area: parent;
+}
+
+.behaviouralTherapist {
+  grid-area: behavioural-therapist;
+}
+
+.occupationalTherapist {
+  grid-area: occupational-therapist;
+}
+
+.speechTherapist {
+  grid-area: speech-therapist;
+}
+
+.assessmentAgencies {
+  grid-area: assessment-agencies;
+}
+
+.shadowTeacher {
+  grid-area: shadow-teacher;
+}
+
+.instruction,
+.instructionMobile {
+  font-size: 1rem;
+  padding-top: 2rem;
+}
+
+.instructionMobile {
+  display: none;
+}
+
 .playerWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .imageWrapper {
@@ -57,4 +119,45 @@
   border-radius: 50%;
   border: 4px solid var(--primary-color);
   overflow: hidden;
+}
+
+.descriptionWrapper {
+  max-width: 300px;
+  background: var(--primary-color);
+  color: white;
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .playerWrapper {
+    padding: 0 !important;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .playerTitle {
+    text-align: left;
+  }
+
+  .descriptionWrapper {
+    font-size: 1rem;
+  }
+
+  .instruction {
+    display: none;
+  }
+
+  .instructionMobile {
+    display: block;
+  }
 }

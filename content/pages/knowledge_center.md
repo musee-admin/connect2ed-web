@@ -3,10 +3,11 @@ sections:
   - type: hero
     title: Learn more
     description: Knowledge Center
-    hero_image: img/young-woman-planning-her-workday.png
+    hero_image: img/young-woman-planning-her-workday.webp
   - type: development_graph
     title: The Great Synaptic Surge
-    description: From late pregnancy through childhood and adolescence, the brain
+    description:
+      From late pregnancy through childhood and adolescence, the brain
       forms connections (synapses) at an incredible rate. Different functions
       develop on unique timelines, with sensory pathways maturing first,
       followed by language and higher cognitive abilities.
@@ -16,22 +17,23 @@ sections:
     items:
       - title: Articles
         sub_heading: Promoted articles that covers various topics on inclusion
-        image: img/office-space-shared-work-desk.png
+        image: img/office-space-shared-work-desk.webp
         description: Promoted articles
       - title: Books
         sub_heading: "Popular books that covers topics on inclusion "
         description: Popular books
-        image: img/workspace-taking-notes-during-call.png
+        image: img/workspace-taking-notes-during-call.webp
       - title: Illustrations
         sub_heading: "Promoted visuals that covers topics on inclusion "
         description: Promoted Art
-        image: img/male-designer-working-on-display-graphic-tablet.png
+        image: img/male-designer-working-on-display-graphic-tablet.webp
       - title: Videos
         sub_heading: "Propular videos that covers topics on inclusion "
         description: Propular videos
-        image: img/young-man-working-on-laptop.png
+        image: img/young-man-working-on-laptop.webp
       - title: Stories
-        sub_heading: Stories on how multi-actor collaboration has helped parents in
+        sub_heading:
+          Stories on how multi-actor collaboration has helped parents in
           their journey.
         description: popular stories
         image: img/seeviphoto.jpg
@@ -94,7 +96,7 @@ sections:
           Better Future Outcomes: Children who get early help often do better in school, have stronger social skills, and grow up more confident and independent.
       - question: How can I identify if a child has a learning difficulty?
         answer: >+
-          
+
           Table below, we have some ways listed to identify learning difficulties in children
 
           Problems reading and/or writing
