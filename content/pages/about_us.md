@@ -10,8 +10,7 @@ sections:
     color: blue
     title: Our Vision
     sub_heading: Personalized support to help every child thrive
-    description:
-      At Link2ed, we help schools create inclusive learning environments
+    description: At Link2ed, we help schools create inclusive learning environments
       where unique thinkers receive the tailored support they need. Through
       collaboration and customized solutions, we unlock every child's potential.
     tag_line: aa
@@ -31,8 +30,7 @@ sections:
     image: img/people-working-in-creative-office-space.webp
   - type: people
     items:
-      - description:
-          A subject matter expert in child and adolescent psychology, Ms.
+      - description: A subject matter expert in child and adolescent psychology, Ms.
           Seema Gangadharan is also an Early Intervention Specialist. She is a
           certified Positive Parenting Coach with years of experience as a
           school counsellor and a strong background in supporting inclusive
@@ -59,8 +57,7 @@ sections:
       - tag: The Strategist
         name: Prasad Hariharan
         creds: CSO
-        description:
-          Prasad brings in 25+ years of experience in strategy and technology
+        description: Prasad brings in 25+ years of experience in strategy and technology
           transformation with a variety of organizations across multiple
           geographies. With diverse experiences from startups to large global
           companies, Prasad brings in a strategic and value creation lens to
@@ -68,7 +65,7 @@ sections:
           constantly understand the underlying complexities of the ecosystem and
           ensure creation of meaningful value throughout the journey of our
           Link2Ed platform.
-        image: img/prasad.jpeg
+        image: img/prasadnew.jpeg
       - tag: The Operations Person
         name: Malini V
         description: >-
@@ -81,7 +78,7 @@ sections:
 
           Her personal journey as a parent of a child with ADD and dyslexia has fueled a deep commitment to early intervention and inclusive education. Having witnessed the transformative power of timely support, she is passionate about raising awareness and driving systemic change. Her focus is now to enable schools, parents, and educators through a unified platform designed to assess, track, and collaborate—ensuring that every child receives the support they need to thrive.
         creds: COO
-        image: img/malini.jpg
+        image: img/malini.webp
     title: Our People
     sub_heading: The team behind Link2ED
 ---
