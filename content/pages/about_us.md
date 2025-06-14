@@ -56,17 +56,6 @@ sections:
         creds: Co Founder
         tag: The Product person
         image: img/murali-photo.webp
-      - description:
-          CV comes with 25+ years of experience in the technology field and
-          is the chief architect at Link2ED. With a global experience in
-          financial services industry, he currently heads the architecture
-          consulting practice at one of the largest software providers in the
-          world. CV focuses on building scalable, safe and robust technology
-          platform that support Link2ED's vision.
-        name: Ranjith CV
-        tag: The Techie
-        creds: CTO
-        image: img/seevi.jpg
       - tag: The Strategist
         name: Prasad Hariharan
         creds: CSO
