@@ -22,8 +22,7 @@ sections:
     hero_image: img/hero-image.webp
     title: Building Bridges for
     type: banner
-    description: Empowering a community with infinite horizons for a truly inclusive
-      experience
+    description: Infinite Empowerment. Inclusive Experiences.
   - type: video_scroll
     items:
       - description: Studies indicate that 5-15% of school-aged children face specific
