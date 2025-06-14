@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { Hero } from "./components/Hero";
+import { Banner } from "./components/Banner.jsx";
 import { RollingHills } from "./components/RollingHills";
 import { HorizontalScroll } from "./components/HorizontalScroll";
 import { Demo } from "./components/Demo";
@@ -30,6 +31,9 @@ export const renderSections = (sections) => {
   const items = sections?.map((section, index) => {
     if (section.type === "hero") {
       return <Hero key={index} {...section} />;
+    }
+    if (section.type === "banner") {
+      return <Banner key={index} {...section} />;
     }
     if (section.type === "rolling_hills") {
       return <RollingHills key={index} {...section} />;

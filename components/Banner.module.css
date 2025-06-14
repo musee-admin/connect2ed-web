@@ -1,0 +1,133 @@
+.wrapper {
+  height: 100vh;
+  position: relative;
+}
+
+.mobileSpacer {
+  display: none;
+}
+
+.primaryWrapper {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.extraSections {
+  height: 100vh;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 10rem;
+  height: 100%;
+  align-items: flex-end;
+}
+
+.extraItem {
+  flex-basis: 25%;
+  width: 300px;
+  padding: 1rem;
+  height: 250px;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-grow: 0;
+  position: relative;
+  background: var(--primary-color);
+}
+
+.extraItem h2 {
+  font-family: var(--font-accent);
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.extraItem p {
+  color: white;
+}
+
+.titleWrapper,
+.descriptionWrapper {
+  padding: 1rem;
+}
+
+.contentWrapper {
+  color: var(--primary-color);
+  position: absolute;
+  top: 15vh;
+  left: 30vw;
+}
+
+.title {
+  font-family: var(--font-accent);
+  color: var(--accent-color-1);
+  font-size: 3rem;
+  line-height: 1rem;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.description {
+  font-size: 3rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    height: 200vh;
+  }
+  .primaryWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem 2rem 2rem;
+    justify-content: space-between;
+    background-size: 140%;
+    position: static;
+  }
+
+  .contentWrapper {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .description {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .extraSections {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .extraItem {
+    flex-basis: auto;
+    height: 300px;
+  }
+
+  .extraItem p {
+    font-size: 0.75rem;
+  }
+
+  .mobileSpacer {
+    display: block;
+    height: 50vh;
+    width: 100%;
+    flex-shrink: 0;
+  }
+}

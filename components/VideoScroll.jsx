@@ -7,13 +7,19 @@ export const VideoScroll = ({ items }) => {
   return (
     <div className={styles.wrapper}>
       {items.map((item, index) => (
-        <VideoItem key={index} {...item} />
+        <VideoItem key={index} {...item} index={index} />
       ))}
     </div>
   );
 };
 
-export const VideoItem = ({ video, title, sub_heading, description }) => {
+export const VideoItem = ({
+  index,
+  video,
+  title,
+  sub_heading,
+  description,
+}) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,6 +38,12 @@ export const VideoItem = ({ video, title, sub_heading, description }) => {
     [0, 1, 1, 0],
   );
 
+  const background = useTransform(
+    scrollYProgress,
+    [0.2, 0.4],
+    ["#ffffff", "#00000"],
+  );
+
   return (
     <div className={styles.itemWrapper} ref={ref}>
       <motion.video
@@ -44,7 +56,10 @@ export const VideoItem = ({ video, title, sub_heading, description }) => {
         src={processAssetUrl(video)}
         type="video/mp4"
       />
-      <motion.div className={styles.videoScreen} style={{ opacity }} />
+      <motion.div
+        className={styles.videoScreen}
+        style={{ opacity, backgroundColor: index === 0 ? background : "black" }}
+      />
       <motion.div
         className={styles.textWrapper}
         style={{ opacity: textOpacity }}
