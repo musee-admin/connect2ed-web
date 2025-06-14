@@ -7,17 +7,19 @@
   display: none;
 }
 
+.particles {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .primaryWrapper {
   height: 100vh;
-  background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  position: sticky;
   top: 0;
   left: 0;
 }
@@ -26,9 +28,9 @@
   height: 100vh;
   display: flex;
   gap: 2rem;
-  padding: 2rem 10rem;
   height: 100%;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 
 .extraItem {
@@ -49,7 +51,7 @@
 .extraItem h2 {
   font-family: var(--font-accent);
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .extraItem p {
@@ -62,23 +64,29 @@
 }
 
 .contentWrapper {
+  display: flex;
   color: var(--primary-color);
-  position: absolute;
-  top: 15vh;
-  left: 30vw;
+  align-items: center;
+  justify-content: center;
+  padding-top: 150px;
+}
+
+.contentWrapper img {
+  max-width: 500px;
 }
 
 .title {
   font-family: var(--font-accent);
   color: var(--accent-color-1);
   font-size: 3rem;
-  line-height: 1rem;
+  line-height: 3rem;
   background: rgba(255, 255, 255, 0.75);
 }
 
 .description {
   font-size: 3rem;
   font-weight: 700;
+  line-height: 3rem;
   background: rgba(255, 255, 255, 0.75);
   max-width: 700px;
 }

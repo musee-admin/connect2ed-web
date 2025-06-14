@@ -1,9 +1,11 @@
 import styles from "./Banner.module.css";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
-import { getCssUrl, processString } from "../utils";
+import { getCssUrl, processAssetUrl, processString } from "../utils";
 import { LinkButton } from "../uiComponents/Button";
 import classNames from "classnames";
 import { useRef, useState } from "react";
+import Particles from "@tsparticles/react";
+import { particlesConfig } from "../constants/particlesConfig";
 
 export const Banner = ({
   title,
@@ -22,14 +24,23 @@ export const Banner = ({
 }) => {
   return (
     <section className={classNames(styles.wrapper)}>
-      <motion.div
-        className={styles.primaryWrapper}
-        style={{ backgroundImage: getCssUrl(hero_image) }}
-      >
+      <Particles
+        className={styles.particles}
+        id="landing-particles"
+        options={particlesConfig}
+      />
+      <motion.div className={styles.primaryWrapper}>
         <motion.div className={styles.contentWrapper}>
-          <div className={styles.title}>{title}</div>
-          <div className={styles.description}>{processString(description)}</div>
-          {cta_text && <LinkButton href={cta_link}>{cta_text}</LinkButton>}
+          <div>
+            <div className={styles.title}>{title}</div>
+            <div className={styles.description}>
+              {processString(description)}
+            </div>
+            {cta_text && <LinkButton href={cta_link}>{cta_text}</LinkButton>}
+          </div>
+          <div>
+            <img src={processAssetUrl(hero_image)} alt="" />
+          </div>
         </motion.div>
         <div className={styles.mobileSpacer} />
         <div className={styles.extraSections}>

@@ -1,9 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Lenis from "lenis";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 export const Layout = ({ children }) => {
+  const [init, setInit] = useState(false);
   const lenis = useRef(null);
 
   useEffect(() => {
@@ -25,6 +28,17 @@ export const Layout = ({ children }) => {
       lenis.current.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      if (!init) {
+        await loadSlim(engine);
+      }
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
   return (
     <>
       <Header />
