@@ -7,7 +7,7 @@ export default function App({ Component, pageProps, params }) {
   return (
     <div>
       <Head>
-        <title>connec2ed.</title>
+        <title>Link2Ed</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="robots" content="noindex,follow" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
