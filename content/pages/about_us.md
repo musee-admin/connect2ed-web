@@ -2,7 +2,7 @@
 sections:
   - type: hero
     title: Empowering inclusive education
-    description: About Link2ED
+    description: About Link2Ed
     hero_image: img/passersby-people-working-around.webp
     left_description: ""
     left_title: ""
@@ -10,7 +10,7 @@ sections:
     color: blue
     title: Our Vision
     sub_heading: Personalized support to help every child thrive
-    description: At Link2ed, we help schools create inclusive learning environments
+    description: At Link2Ed, we help schools create inclusive learning environments
       where unique thinkers receive the tailored support they need. Through
       collaboration and customized solutions, we unlock every child's potential.
     tag_line: aa
@@ -20,7 +20,7 @@ sections:
     description: >
       As the emphasis on inclusive education grows, supporting neurodivergent
       students remains complex due to fragmented communication and inefficient
-      workflows. At Link2ed, we've developed a solution that unites educators
+      workflows. At Link2Ed, we've developed a solution that unites educators
       and intervention professionals, fostering seamless collaboration. Our
       structured workflow enhances communication, monitors progress, and
       delivers comprehensive support. By bridging coordination gaps, we empower
@@ -47,7 +47,7 @@ sections:
           Murali comes with 25+ years of global experience in the Financial
           Services technology consulting field and has played various leadership
           roles across engineering, consulting, and product development. At
-          Link2ED, Murali focuses on charting the product roadmap and building
+          Link2Ed, Murali focuses on charting the product roadmap and building
           capabilities that addresses the current and emerging needs of our
           customers.
         name: "Muralikrishnan Puthanveedu "
@@ -80,5 +80,5 @@ sections:
         creds: COO
         image: img/malini.webp
     title: Our People
-    sub_heading: The team behind Link2ED
+    sub_heading: The team behind Link2Ed
 ---
