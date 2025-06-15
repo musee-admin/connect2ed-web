@@ -51,7 +51,7 @@ sections:
           capabilities that addresses the current and emerging needs of our
           customers.
         name: "Muralikrishnan Puthanveedu "
-        creds: Co Founder
+        creds: Co-Founder
         tag: The Product person
         image: img/murali-photo.webp
       - tag: The Strategist
