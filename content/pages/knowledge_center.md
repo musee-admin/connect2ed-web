@@ -6,10 +6,11 @@ sections:
     hero_image: img/young-woman-planning-her-workday.webp
   - type: development_graph
     title: The Great Synaptic Surge
-    description: From late pregnancy through childhood and adolescence, the brain
-      forms connections (synapses) at an incredible rate. Different functions
-      develop on unique timelines, with sensory pathways maturing first,
-      followed by language and higher cognitive abilities.
+    description: Early childhood, especially from birth to age 8, is crucial because
+      up to 85% of brain development occurs during this period, laying the
+      foundation for future learning and success. Providing the right care and
+      stimulation in these years is essential for a child's long-term growth and
+      potential.
   - type: stacking_cards
     title: Parents Corner
     sub_heading: Key resources that a parent needs to support their child.
