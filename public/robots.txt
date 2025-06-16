@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: link2ed.in
+
+# Sitemaps
+Sitemap: link2ed.in/sitemap.xml

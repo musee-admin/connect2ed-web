@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "",
+  siteUrl: "link2ed.in",
   generateRobotsTxt: true,
 };
