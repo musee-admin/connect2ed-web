@@ -1,9 +1,9 @@
 import styles from "./Banner.module.css";
-import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
-import { getCssUrl, processAssetUrl, processString } from "../utils";
+import { AnimatePresence, motion } from "motion/react";
+import { processAssetUrl, processString } from "../utils";
 import { LinkButton } from "../uiComponents/Button";
 import classNames from "classnames";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Particles from "@tsparticles/react";
 import { particlesConfig } from "../constants/particlesConfig";
 

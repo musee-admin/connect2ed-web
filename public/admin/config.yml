@@ -754,14 +754,20 @@ collections:
               media_library: { config: { multiple: false } },
             }
           - {
-              label: "Tag Flair",
-              name: "tag_flair",
+              label: "Laptop Image",
+              name: "laptop_image",
               widget: "image",
               media_library: { config: { multiple: false } },
             }
           - {
-              label: "Laptop Image",
-              name: "laptop_image",
+              label: "Left Arrow",
+              name: "left_arrow",
+              widget: "image",
+              media_library: { config: { multiple: false } },
+            }
+          - {
+              label: "Right Arrow",
+              name: "right_arrow",
               widget: "image",
               media_library: { config: { multiple: false } },
             }

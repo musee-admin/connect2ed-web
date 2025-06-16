@@ -1,6 +1,7 @@
 .wrapper {
   background-color: var(--primary-color);
   position: relative;
+  overflow: clip;
 }
 
 .content {

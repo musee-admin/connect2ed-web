@@ -25,15 +25,19 @@
 }
 
 .navigationActions button {
-  font-size: 4rem;
   background: none;
   border: none;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   text-align: center;
   border-radius: 50%;
   color: var(--tertiary-color);
   cursor: pointer;
+  margin: 4rem;
+}
+
+.navigationActions img {
+  fill: red;
 }
 
 .itemsContainer {
@@ -140,10 +144,12 @@
 
 @media screen and (max-width: 1100px) {
   .textContent {
+    position: relative;
     text-align: center;
     width: 100%;
     justify-content: center;
     height: 100%;
+    z-index: 2;
   }
 
   .title {
@@ -181,13 +187,18 @@
     font-weight: 300;
   }
 
-  .imageContainer {
-    display: none;
+  .imageContainer img {
+    max-height: 25%;
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .titleSection {
     height: 20vh;
   }
-  .itemsContainer {
+  .navigationActions button {
+    width: 4rem;
+    height: 4rem;
+    margin: 0rem;
   }
 }

@@ -3,14 +3,11 @@
   position: relative;
 }
 
-.mobileSpacer {
-  display: none;
-}
-
 .particles {
   position: absolute;
   height: 100%;
   width: 100%;
+  z-index: -1;
 }
 
 .primaryWrapper {
@@ -108,6 +105,7 @@
     position: static;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
   }
 
   .title {
@@ -133,10 +131,11 @@
     font-size: 0.75rem;
   }
 
-  .mobileSpacer {
-    display: block;
-    height: 50vh;
-    width: 100%;
-    flex-shrink: 0;
+  .contentWrapper img {
+    max-width: 350px;
+  }
+
+  .extraItem h2 {
+    font-size: 1.5rem;
   }
 }

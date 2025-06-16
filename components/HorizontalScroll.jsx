@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import styles from "./HorizontalScroll.module.css";
 import { processAssetUrl } from "../utils";
 import { Swiggly } from "../uiComponents/Swiggly.jsx";
+import { attributes as designAttributes } from "../content/pages/general-design.md";
 
 export const HorizontalScroll = ({ title, sub_heading, items }) => {
   const scrollRef = useRef(null);
@@ -10,6 +11,8 @@ export const HorizontalScroll = ({ title, sub_heading, items }) => {
   const ghostRef = useRef(null);
   const [scrollRange, setScrollRange] = useState(0);
   const [viewportW, setViewportW] = useState(0);
+
+  const { left_arrow, right_arrow } = designAttributes;
 
   useLayoutEffect(() => {
     scrollRef && setScrollRange(scrollRef.current.scrollWidth);
@@ -44,10 +47,11 @@ export const HorizontalScroll = ({ title, sub_heading, items }) => {
     const elementRect = element.getBoundingClientRect();
     const offset = elementRect.top - bodyRect.top;
     const currentScroll = window.scrollY;
+    const scrollMultiplier = window.innerWidth < 1100 ? 0.53 : 1.5;
     window.scrollTo(
       0,
       Math.min(
-        currentScroll + window.innerHeight,
+        currentScroll + window.innerHeight * scrollMultiplier,
         offset + elementRect.height - window.innerHeight,
       ),
     );
@@ -58,15 +62,23 @@ export const HorizontalScroll = ({ title, sub_heading, items }) => {
     const elementRect = element.getBoundingClientRect();
     const offset = elementRect.top - bodyRect.top;
     const currentScroll = window.scrollY;
-    window.scrollTo(0, Math.max(currentScroll - window.innerHeight, offset));
+    const scrollMultiplier = window.innerWidth < 1100 ? 0.53 : 1.5;
+    window.scrollTo(
+      0,
+      Math.max(currentScroll - window.innerHeight * scrollMultiplier, offset),
+    );
   };
 
   return (
     <div ref={containerRef} className={styles.wrapper}>
       <div className={styles.scrollContainer}>
         <div className={styles.navigationActions}>
-          <button onClick={movePrev}>{"◀"}</button>
-          <button onClick={moveNext}>{"▶"}</button>
+          <button onClick={movePrev}>
+            <img src={processAssetUrl(left_arrow)} alt="left" />
+          </button>
+          <button onClick={moveNext}>
+            <img src={processAssetUrl(right_arrow)} alt="right" />
+          </button>
         </div>
         <div className={styles.titleSection}>
           <p className={styles.subHeading}>{sub_heading}</p>
