@@ -58,7 +58,7 @@ export const Card = ({
 
   return (
     <div
-      style={{ top: `calc(15% + ${100 * i}px)` }}
+      style={{ top: `calc(15% + ${50 * i}px)` }}
       className={styles.cardContainer}
     >
       <motion.div
