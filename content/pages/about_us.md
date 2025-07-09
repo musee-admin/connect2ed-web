@@ -54,6 +54,19 @@ sections:
         creds: Co-Founder
         tag: The Product person
         image: img/murali-photo.webp
+      - tag: The Techie
+        name: Ranjith CV
+        creds: Co-Founder
+        description: Our Chief Architect, Ranjith, brings over 25 years of technology
+          leadership to Link2Ed. Currently leading the Architecture Consulting
+          Practice for a global software giant, he possesses extensive expertise
+          in enterprise architecture, cloud computing, cybersecurity, and
+          digital transformation, with a strong focus on the financial services
+          sector. Ranjith is committed to building scalable, secure, and robust
+          technology platforms that drive Link2Ed’s vision forward, and is
+          widely recognized for his ability to align innovative technology
+          solutions with strategic business objectives.
+        image: img/seevi.jpeg
       - tag: The Strategist
         name: Prasad Hariharan
         creds: CSO
@@ -79,19 +92,6 @@ sections:
           Her personal journey as a parent of a child with ADD and dyslexia has fueled a deep commitment to early intervention and inclusive education. Having witnessed the transformative power of timely support, she is passionate about raising awareness and driving systemic change. Her focus is now to enable schools, parents, and educators through a unified platform designed to assess, track, and collaborate—ensuring that every child receives the support they need to thrive.
         creds: COO
         image: img/malini.webp
-      - tag: The Techie
-        name: Ranjith CV
-        creds: CTO
-        description: Our Chief Architect, Ranjith, brings over 25 years of technology
-          leadership to Link2Ed. Currently leading the Architecture Consulting
-          Practice for a global software giant, he possesses extensive expertise
-          in enterprise architecture, cloud computing, cybersecurity, and
-          digital transformation, with a strong focus on the financial services
-          sector. Ranjith is committed to building scalable, secure, and robust
-          technology platforms that drive Link2Ed’s vision forward, and is
-          widely recognized for his ability to align innovative technology
-          solutions with strategic business objectives.
-        image: img/seevi.jpeg
     title: Our People
     sub_heading: The team behind Link2Ed
 ---
