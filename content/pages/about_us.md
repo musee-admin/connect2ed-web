@@ -42,7 +42,7 @@ sections:
         name: Seema Gangadharan
         creds: Co-Founder
         image: img/whatsapp-image-2025-06-05-at-9.25.06-pm.webp
-        tag: The Counsellor
+        tag: The Subject Matter Expert
       - description: >
           Murali comes with 25+ years of global experience in the Financial
           Services technology consulting field and has played various leadership
@@ -79,6 +79,19 @@ sections:
           Her personal journey as a parent of a child with ADD and dyslexia has fueled a deep commitment to early intervention and inclusive education. Having witnessed the transformative power of timely support, she is passionate about raising awareness and driving systemic change. Her focus is now to enable schools, parents, and educators through a unified platform designed to assess, track, and collaborate—ensuring that every child receives the support they need to thrive.
         creds: COO
         image: img/malini.webp
+      - tag: The Techie
+        name: Ranjith CV
+        creds: CTO
+        description: Our Chief Architect, Ranjith, brings over 25 years of technology
+          leadership to Link2Ed. Currently leading the Architecture Consulting
+          Practice for a global software giant, he possesses extensive expertise
+          in enterprise architecture, cloud computing, cybersecurity, and
+          digital transformation, with a strong focus on the financial services
+          sector. Ranjith is committed to building scalable, secure, and robust
+          technology platforms that drive Link2Ed’s vision forward, and is
+          widely recognized for his ability to align innovative technology
+          solutions with strategic business objectives.
+        image: img/seevi.jpeg
     title: Our People
     sub_heading: The team behind Link2Ed
 ---
