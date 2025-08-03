@@ -56,7 +56,7 @@ sections:
         image: img/murali-photo.webp
       - tag: The Techie
         name: Ranjith CV
-        creds: Co-Founder
+        creds: Co-Founder & CTO
         description: Our Chief Architect, Ranjith, brings over 25 years of technology
           leadership to Link2Ed. Currently leading the Architecture Consulting
           Practice for a global software giant, he possesses extensive expertise
@@ -69,7 +69,7 @@ sections:
         image: img/seevi.webp
       - tag: The Strategist
         name: Prasad Hariharan
-        creds: Co-Founder
+        creds: CSO
         description: Prasad brings in 25+ years of experience in strategy and technology
           transformation with a variety of organizations across multiple
           geographies. With diverse experiences from startups to large global
@@ -90,11 +90,11 @@ sections:
 
 
           Her personal journey as a parent of a child with ADD and dyslexia has fueled a deep commitment to early intervention and inclusive education. Having witnessed the transformative power of timely support, she is passionate about raising awareness and driving systemic change. Her focus is now to enable schools, parents, and educators through a unified platform designed to assess, track, and collaborate—ensuring that every child receives the support they need to thrive.
-        creds: Co-Founder
+        creds: COO
         image: img/malini.webp
       - name: Sivaraman SJ
         tag: The Innovator
-        creds: Co-Founder
+        creds: CIO
         description: Siva, Chief Information Architect at Link2Ed, brings over 20+ years
           of technology leadership and entrepreneurial experience—including
           founding Rekonist and the TeleRAD Group—to our mission. With a track
