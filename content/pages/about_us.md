@@ -66,10 +66,10 @@ sections:
           technology platforms that drive Link2Ed’s vision forward, and is
           widely recognized for his ability to align innovative technology
           solutions with strategic business objectives.
-        image: img/seevi.jpeg
+        image: img/seevi.webp
       - tag: The Strategist
         name: Prasad Hariharan
-        creds: CSO
+        creds: Co-Founder
         description: Prasad brings in 25+ years of experience in strategy and technology
           transformation with a variety of organizations across multiple
           geographies. With diverse experiences from startups to large global
@@ -90,8 +90,22 @@ sections:
 
 
           Her personal journey as a parent of a child with ADD and dyslexia has fueled a deep commitment to early intervention and inclusive education. Having witnessed the transformative power of timely support, she is passionate about raising awareness and driving systemic change. Her focus is now to enable schools, parents, and educators through a unified platform designed to assess, track, and collaborate—ensuring that every child receives the support they need to thrive.
-        creds: COO
+        creds: Co-Founder
         image: img/malini.webp
+      - name: Sivaraman SJ
+        tag: The Innovator
+        creds: Co-Founder
+        description: Siva, Chief Information Architect at Link2Ed, brings over 20+ years
+          of technology leadership and entrepreneurial experience—including
+          founding Rekonist and the TeleRAD Group—to our mission. With a track
+          record of delivering enterprise-grade solutions for leading global
+          financial services clients, Siva is passionate about applying his
+          full-stack expertise to create scalable, secure platforms that advance
+          Link2Ed’s social impact. Widely recognized for his problem-solving
+          abilities and commitment to stakeholder satisfaction, Siva’s
+          techno-functional focus ensures our solutions drive strategic
+          objectives and help shape the future of education.
+        image: img/whatsapp-image-2025-07-31-at-8.25.11-pm.jpeg
     title: Our People
     sub_heading: The team behind Link2Ed
 ---
