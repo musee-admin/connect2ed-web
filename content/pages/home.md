@@ -42,8 +42,9 @@ sections:
         video: img/child-writing.mp4
         sub_heading: Timely actions shape brighter futures.
   - type: horizontal_scroll
-    title: Milestone Celebrations
-    sub_heading: Its a collaborative journey with extensive support
+    title: The Journey
+    sub_heading: From first concern to long-term thriving,Link2Ed supports each step
+      of a student's inclusion journey.
     items:
       - title: Discovery
         description: Recognizing early signs and seeking professional assessments to
