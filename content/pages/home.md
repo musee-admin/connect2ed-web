@@ -42,37 +42,38 @@ sections:
         video: img/child-writing.mp4
         sub_heading: Timely actions shape brighter futures.
   - type: horizontal_scroll
-    title: The Journey
-    sub_heading: From first concern to long-term thriving,Link2Ed supports each step
-      of a student's inclusion journey.
+    title: A Structured Journey. At Every Stage.
+    sub_heading: Link2Ed supports your team through every phase of a student’s
+      inclusion journey.
     items:
       - title: Discovery
-        description: Recognizing early signs and seeking professional assessments to
-          gain clarity
+        description: Link2Ed platform helps flag early signs using built-in screening
+          checklists aligned to best practices
         image: img/group-49.webp
         sub_heading: Unveiling and understanding initial challenges
       - title: Acceptance
-        description: Understanding and appreciating the distinct qualities each child brings
+        description: Link2Ed platform helps document and share student profiles across
+          your multidisciplinary team
         image: img/group-51.webp
         sub_heading: Embracing and valuing unique strengths
       - title: Augmentation
-        description: Ensuring that every child receives the necessary support and
-          accommodations
+        description: "Link2Ed platform helps record accommodations, rights, and support
+          plans in one place "
         image: img/group-61.webp
         sub_heading: Championing the child's rights and needs
       - title: Interventions
-        description: Providing specialized support tailored to individual learning and
-          behavioral needs
+        description: Link2Ed platform helps assign, track, and monitor targeted
+          strategies per student.
         image: img/group-43.webp
         sub_heading: Implementing targeted strategies for growth
       - title: Adaptations
-        description: Designing environments that cater to diverse learning styles and
-          requirements
+        description: Link2Ed platform helps build flexible education plans tailored to
+          individual learning profiles.
         image: img/group-55.webp
         sub_heading: Crafting flexible and supportive learning spaces
       - title: Exemptions
-        description: Adjusting academic and social expectations to better suit each
-          child's unique profile
+        description: "Link2Ed platform helps log and manage academic adjustments with
+          full audit trails "
         image: img/group-77.webp
         sub_heading: Aligning expectations with individual capabilities
   - sub_heading: Addressing challenges through connection and collaboration
