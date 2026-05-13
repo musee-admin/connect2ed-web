@@ -1,26 +1,28 @@
 ---
 sections:
   - type: hero
-    title: Built From the Inside Out
-    description: Link2Ed was created by people who have lived and worked at the
+    title: Empowering inclusive education
+    description: About Link2Ed
+    hero_image: img/passersby-people-working-around.webp
+    left_description: Link2Ed was created by people who have lived and worked at the
       intersection of education, child psychology, and technology, and saw
       firsthand what was missing.
-    hero_image: img/passersby-people-working-around.webp
-    left_description: ""
-    left_title: ""
+    left_title: Built From the Inside Out
   - type: hero
     title: Our Story
-    description: >
-      As the push for inclusive education grows across India, school psychology
-      and special education teams are under increasing pressure, with fewer
-      tools, fragmented communication, and no standardised systems to rely on.
-
-
-      We built Link2Ed because we believed schools deserved better. Not another generic school management tool, but a platform designed specifically for the professionals who support neurodivergent learners every single day.
+    description: "\n\n\n"
+    hero_image: img/Counsellor .webp
+    left_description: As the push for inclusive education grows across India, school
+      psychology and special education teams are under increasing pressure, with
+      fewer tools, fragmented communication, and no standardised systems to rely
+      on.
+    right_description: >-
+      We built Link2Ed because we believed schools deserved better. Not another
+      generic school management tool, but a platform designed specifically for
+      the professionals who support neurodivergent learners every single day.
 
 
       Every feature in Link2Ed has been shaped by psychologists, experienced special educators, and school counsellors. Because the people using it should define how it works.
-    hero_image: img/Counsellor .webp
   - type: rolling_hills
     color: blue
     title: Our Vision
@@ -30,6 +32,19 @@ sections:
       collaboration and customized solutions, we unlock every child's potential.
     tag_line: aa
     image: img/family-testing-a-smart-home-system.webp
+  - type: text_image
+    color: pink
+    description: >
+      As the emphasis on inclusive education grows, supporting neurodivergent
+      students remains complex due to fragmented communication and inefficient
+      workflows. At Link2Ed, we've developed a solution that unites educators
+      and intervention professionals, fostering seamless collaboration. Our
+      structured workflow enhances communication, monitors progress, and
+      delivers comprehensive support. By bridging coordination gaps, we empower
+      educators to cultivate
+    sub_heading: Addressing challenges through connection and collaboration.
+    title: Dedicated to Inclusive Education for Every Learner
+    image: img/people-working-in-creative-office-space.webp
   - type: people
     items:
       - description: A subject matter expert in child and adolescent psychology, Ms.
@@ -110,17 +125,4 @@ sections:
         image: img/whatsapp-image-2025-07-31-at-8.25.11-pm.jpeg
     title: Our People
     sub_heading: The team behind Link2Ed
-  - type: text_image
-    color: pink
-    description: >
-      As the emphasis on inclusive education grows, supporting neurodivergent
-      students remains complex due to fragmented communication and inefficient
-      workflows. At Link2Ed, we've developed a solution that unites educators
-      and intervention professionals, fostering seamless collaboration. Our
-      structured workflow enhances communication, monitors progress, and
-      delivers comprehensive support. By bridging coordination gaps, we empower
-      educators to cultivate
-    sub_heading: Addressing challenges through connection and collaboration.
-    title: Dedicated to Inclusive Education for Every Learner
-    image: img/people-working-in-creative-office-space.webp
 ---
