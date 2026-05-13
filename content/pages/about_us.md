@@ -1,13 +1,7 @@
 ---
 sections:
-  - left_title: Built From the Inside Out
-    left_description: Link2Ed was created by people who have lived and worked at the
-      intersection of education, child psychology, and technology, and saw
-      firsthand what was missing.
-    right_title: Our Story
-    hero_image: img/passersby-people-working-around.webp
-    title: Built From the Inside Out
-    right_description: >
+  - left_title: "Our Story:"
+    left_description: >-
       As the push for inclusive education grows across India, school psychology
       and special education teams are under increasing pressure, with fewer
       tools, fragmented communication, and no standardised systems to rely on.
@@ -17,10 +11,14 @@ sections:
 
 
       Every feature in Link2Ed has been shaped by psychologists, experienced special educators, and school counsellors. Because the people using it should define how it works.
+    right_title: "Built From the Inside Out:"
+    hero_image: img/passersby-people-working-around.webp
+    title: One platform. Every stakeholder. Every child.
+    right_description: >
+      
+      Link2Ed was created by people who have lived and worked at the intersection of education, child psychology, and technology, and saw firsthand what was missing.
     type: hero
-    cta_text: Link2Ed was created by people who have lived and worked at the
-      intersection of education, child psychology, and technology, and saw
-      firsthand what was missing.
+    cta_text: ""
     description: About Link2Ed
   - type: rolling_hills
     color: blue
