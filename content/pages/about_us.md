@@ -128,6 +128,6 @@ sections:
           objectives and help shape the future of education.
         image: img/whatsapp-image-2025-07-31-at-8.25.11-pm.jpeg
     title: The People Behind the Platform
-    sub_heading: Deep expertise in child psychology, education, and technology —
-      with one shared mission.
+    sub_heading: Expertise in child psychology, education, and technology, and
+      united by one shared mission.
 ---
