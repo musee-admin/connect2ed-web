@@ -1,28 +1,27 @@
 ---
 sections:
-  - type: hero
-    title: Empowering inclusive education
-    description: About Link2Ed
-    hero_image: img/passersby-people-working-around.webp
+  - left_title: Built From the Inside Out
     left_description: Link2Ed was created by people who have lived and worked at the
       intersection of education, child psychology, and technology, and saw
       firsthand what was missing.
-    left_title: Built From the Inside Out
-  - type: hero
-    title: Our Story
-    description: "\n\n\n"
-    hero_image: img/Counsellor .webp
-    left_description: As the push for inclusive education grows across India, school
-      psychology and special education teams are under increasing pressure, with
-      fewer tools, fragmented communication, and no standardised systems to rely
-      on.
-    right_description: >-
-      We built Link2Ed because we believed schools deserved better. Not another
-      generic school management tool, but a platform designed specifically for
-      the professionals who support neurodivergent learners every single day.
+    right_title: Our Story
+    hero_image: img/passersby-people-working-around.webp
+    title: Built From the Inside Out
+    right_description: >
+      As the push for inclusive education grows across India, school psychology
+      and special education teams are under increasing pressure, with fewer
+      tools, fragmented communication, and no standardised systems to rely on.
+
+
+      We built Link2Ed because we believed schools deserved better. Not another generic school management tool, but a platform designed specifically for the professionals who support neurodivergent learners every single day.
 
 
       Every feature in Link2Ed has been shaped by psychologists, experienced special educators, and school counsellors. Because the people using it should define how it works.
+    type: hero
+    cta_text: Link2Ed was created by people who have lived and worked at the
+      intersection of education, child psychology, and technology, and saw
+      firsthand what was missing.
+    description: About Link2Ed
   - type: rolling_hills
     color: blue
     title: Our Vision
