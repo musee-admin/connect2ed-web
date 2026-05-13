@@ -58,35 +58,37 @@ sections:
           based frameworks that adapt to each child’s unique profile.
         image: img/school-backpack-with-school-supplies.webp
   - type: demo
-    title: How we do it
-    sub_heading: Our Solution
+    title: "Feature Deep Dive:"
+    sub_heading: Everything your team needs. Nothing they don't.
     items:
       - title: Personalized User Journeys
-        description: Monitor individual progress and gather specific insights for each
-          student
+        description: Each stakeholder sees only what's relevant to their role,
+          counsellor, special educator, therapist, parent, or administrator.
         video: img/formal-assesment.mp4
         video_length: 3
       - title: Intuitive Dashboards
-        description: Access key information swiftly to facilitate informed decisions
+        description: Live views of student progress, caseload status, and team activity,
+          for practitioners and leadership alike.
         video: img/dashboard.mp4
         video_length: 3
       - title: Collaborative Workflows
-        description: Promote seamless communication among educators, therapists, and
-          other professionals
+        description: Structured handoffs, shared notes, and real-time updates keep the
+          whole team aligned without the email chains.
         video: img/notes.mp4
         video_length: 3
       - title: Multi-Mode Observation
-        description: Document significant events to guide effective intervention strategies
+        description: Record observations in the format that works,text, checklists, or
+          structured templates, and from any device.
         video_length: 3
         video: img/student-info.mp4
-      - title: Standardized Checklists
-        description: Utilize pre-configured tools to ensure consistent and objective
-          evaluations
+      - title: Standardised Checklists
+        description: Evidence-based, professionally designed checklists for consistent
+          assessment and documentation across your school.
         video_length: 3
         video: img/checklist.mp4
       - title: Flexible Education Plans
-        description: " Develop adaptable learning strategies with straightforward
-          scheduling and reporting features"
+        description: Build, update, and share Individual Education Plans (IEPs)
+          collaboratively, with version history and access controls.
         video: img/iep.mp4
         video_length: 3
 ---
