@@ -2,8 +2,7 @@
 sections:
   - type: hero
     title: A smarter way to support every student
-    description: From scattered notes and emails to one connected workflow, built
-      for every learner.
+    description: Everyone who supports a child, connected in one place.
     hero_image: img/office-worker-having-an-idea.webp
     left_title: Built for the Way Your Team Actually Works.
     left_description: Link2Ed brings together every tool your school psychology and
