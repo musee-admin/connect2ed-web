@@ -8,6 +8,36 @@ sections:
     left_description: Link2Ed brings together every tool your school psychology and
       special education department needs,  without the complexity, the scattered
       files, or the missed handoffs.
+  - title_1: Counsellors & Special Educators
+    title_2: Therapists & External Specialists
+    title_3: Principals & School Leadership
+    description_1: >-
+      You carry a full caseload, manage complex documentation, and coordinate
+      with a dozen different people per student. Link2Ed gives you structured
+      tools to manage intake, track sessions, maintain IEPs, and communicate
+      with the wider team, without the admin overload.
+
+
+      Key features: Standardised intake forms · Session notes · IEP builder · Progress tracking · Referral workflows
+    description_2: >-
+      You work across multiple schools and need to stay aligned with school
+      teams without the back-and-forth. Link2Ed creates a shared space for
+      observations, recommendations, and progress updates visible to everyone
+      who needs it.
+
+
+      Key features: Shared observation logs · Secure file access · Collaborative care plans · Multi-school support
+    description_3: >-
+      You need to know your department is running well, students are being
+      supported, and documentation is audit-ready, without chasing updates.
+      Link2Ed gives you a live view of everything that matters.
+
+
+      Key features: Real-time dashboard · Caseload summaries · Compliance tracking · Staff workload visibility · Audit trails
+    hero_image: img/passersby-people-working-around.webp
+    title: Who is it for>
+    type: banner
+    description: Designed for every member of the support team
   - type: stacking_cards
     title: Supporting Unique Thinkers
     sub_heading: A holistic approach & a seamless, team-driven process.
