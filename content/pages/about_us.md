@@ -34,16 +34,21 @@ sections:
   - type: text_image
     color: pink
     description: >
-      As the emphasis on inclusive education grows, supporting neurodivergent
-      students remains complex due to fragmented communication and inefficient
-      workflows. At Link2Ed, we've developed a solution that unites educators
-      and intervention professionals, fostering seamless collaboration. Our
-      structured workflow enhances communication, monitors progress, and
-      delivers comprehensive support. By bridging coordination gaps, we empower
-      educators to cultivate
+      
+      Inclusive education means more than accommodating different learning styles. It means ensuring that every child, whether navigating a learning difficulty or facing a mental health challenge, has the support they need to thrive.
+
+
+      For the counsellors, special educators, therapists, and families working to make that happen, the biggest barrier isn't expertise. It's coordination.
+
+
+      Fragmented communication, scattered documentation, and disconnected workflows mean that even the best support teams spend more time managing information than helping children.
+
+
+      Link2Ed connects every member of a student's support network into one structured, collaborative workflow. The right people have the right information at the right time. Faster interventions, stronger outcomes, and schools where every learner truly thrives.
     sub_heading: Addressing challenges through connection and collaboration.
-    title: Dedicated to Inclusive Education for Every Learner
+    title: Dedicated to every learner. Built for the teams who support them.
     image: img/people-working-in-creative-office-space.webp
+    tag_line: ""
   - type: people
     items:
       - description: A subject matter expert in child and adolescent psychology, Ms.
