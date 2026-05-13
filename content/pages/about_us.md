@@ -17,7 +17,10 @@ sections:
     title: One platform. Every stakeholder. Every child.
     right_description: >
       
-      Link2Ed was created by people who have lived and worked at the intersection of education, child psychology, and technology, and saw firsthand what was missing. Our founding team includes people, who have witnessed the transformative power of timely support, and knows what it means when the system works — and what's lost when it doesn't.
+      Link2Ed was created by people who have lived and worked at the intersection of education, child psychology, and technology, and saw firsthand what was missing. 
+
+
+      Our founding team includes people, who have witnessed the transformative power of timely support, and knows what it means when the system works — and what's lost when it doesn't.
     type: hero
     cta_text: ""
     description: About Link2Ed
@@ -38,7 +41,7 @@ sections:
       Inclusive education means more than accommodating different learning styles. It means ensuring that every child, whether navigating a learning difficulty or facing a mental health challenge, has the support they need to thrive.
 
 
-      For the counsellors, special educators, therapists, and families working to make that happen, the biggest barrier isn't expertise. It's coordination.
+      For the counsellors, special educators, therapists, and families working to make that happen, the biggest barrier isn't expertise. It's coordination. 
 
 
       Fragmented communication, scattered documentation, and disconnected workflows mean that even the best support teams spend more time managing information than helping children.
