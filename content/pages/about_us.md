@@ -2,12 +2,13 @@
 sections:
   - left_title: "Our Story:"
     left_description: >-
-      As the push for inclusive education grows across India, school psychology
-      and special education teams are under increasing pressure, with fewer
-      tools, fragmented communication, and no standardised systems to rely on.
+      As the push for inclusive education as well as student mental wellbeing
+      grows across India, school psychology and special education teams are
+      under increasing pressure. With fewer tools, fragmented communication, and
+      no standardised systems to rely on, their work-life becomes stressful.
 
 
-      We built Link2Ed because we believed schools deserved better. Not another generic school management tool, but a platform designed specifically for the professionals who support neurodivergent learners every single day.
+      We built Link2Ed because we believed schools deserved better. Not another generic school management tool, but a platform designed specifically for the professionals who support children with mental wellbeing needs  every single day.
 
 
       Every feature in Link2Ed has been shaped by psychologists, experienced special educators, and school counsellors. Because the people using it should define how it works.
@@ -24,10 +25,12 @@ sections:
     color: blue
     title: Our Vision
     sub_heading: Personalized support to help every child thrive
-    description: At Link2Ed, we help schools create inclusive learning environments
-      where unique thinkers receive the tailored support they need. Through
-      collaboration and customized solutions, we unlock every child's potential.
-    tag_line: aa
+    description: A future where every school has the systems, the structure, and the
+      support to ensure no student who faces learning difficulty or
+      psychological stress is overlooked, underserved, or left behind.
+    tag_line: Our founding team includes people, who have witnessed the
+      transformative power of timely support, and knows what it means when the
+      system works — and what's lost when it doesn't.
     image: img/family-testing-a-smart-home-system.webp
   - type: text_image
     color: pink
