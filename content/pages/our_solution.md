@@ -13,25 +13,25 @@ sections:
     sub_heading: A holistic approach & a seamless, team-driven process.
     items:
       - title: Multidisciplinary Collaboration
-        sub_heading: Uniting experts for well-rounded support.
-        description: Successful intervention requires a team effort. Our approach brings
-          together educators, therapists, counselors, and specialists to create
-          a 360-degree support system that meets each child’s distinct learning
-          needs.
+        sub_heading: Stop working in silos
+        description: Link2Ed connects psychologists, special educators, counsellors,
+          therapists, and classroom teachers in one structured workflow. Assign
+          roles, share observations, and coordinate support plans, all within a
+          secure, permission-based system where confidentiality is never
+          compromised.
         image: img/woman-and-a-man-analyze-data.webp
       - title: Family-Professional Partnership
-        sub_heading: Collaboration that extends beyond the classroom.
-        description: Families play a vital role in a child’s development. By integrating
-          parental insights with professional expertise, we co-create support
-          strategies that ensure consistency, reinforcement, and holistic
-          progress at home and school.
+        sub_heading: Parents are not bystanders
+        description: Link2Ed gives families a dedicated window into their child’s
+          progress. Details on what goals are set, what strategies are being
+          used, and how their child is developing. Professionals and families
+          stay aligned without the back-and-forth of emails and parent meetings.
         image: img/young-woman-carrying-her-child.webp
       - title: Adaptive Learning Environments
-        sub_heading: Flexible spaces designed for diverse learning styles.
-        description: Every child learns differently. Our methodology emphasizes creating
-          adaptable learning environments that cater to individual
-          strengths—whether through personalized instruction, assistive
-          technology, or flexible teaching methods that foster growth.
+        sub_heading: No two students are the same
+        description: Link2Ed enables your team to build truly personalised education
+          plans. With structured templates, flexible goal-setting, and evidence
+          based frameworks that adapt to each child’s unique profile.
         image: img/school-backpack-with-school-supplies.webp
   - type: demo
     title: How we do it
