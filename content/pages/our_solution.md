@@ -8,6 +8,9 @@ sections:
     left_description: Link2Ed brings together every tool your school psychology and
       special education department needs,  without the complexity, the scattered
       files, or the missed handoffs.
+    right_title: A structured workflow from first concern to long-term support
+    right_description: Link2Ed guides your team through every step, ensuring nothing
+      is missed and nothing is lost.
   - title_1: Counsellors & Special Educators
     title_2: Therapists & External Specialists
     title_3: Parents & Guardians
