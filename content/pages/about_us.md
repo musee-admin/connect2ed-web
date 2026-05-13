@@ -17,7 +17,7 @@ sections:
     title: One platform. Every stakeholder. Every child.
     right_description: >
       
-      Link2Ed was created by people who have lived and worked at the intersection of education, child psychology, and technology, and saw firsthand what was missing.
+      Link2Ed was created by people who have lived and worked at the intersection of education, child psychology, and technology, and saw firsthand what was missing. Our founding team includes people, who have witnessed the transformative power of timely support, and knows what it means when the system works — and what's lost when it doesn't.
     type: hero
     cta_text: ""
     description: About Link2Ed
@@ -25,12 +25,11 @@ sections:
     color: blue
     title: Our Vision
     sub_heading: Personalized support to help every child thrive
-    description: A future where every school has the systems, the structure, and the
+    description: >
+      A future where every school has the systems, the structure, and the
       support to ensure no student who faces learning difficulty or
       psychological stress is overlooked, underserved, or left behind.
-    tag_line: Our founding team includes people, who have witnessed the
-      transformative power of timely support, and knows what it means when the
-      system works — and what's lost when it doesn't.
+    tag_line: aa
     image: img/family-testing-a-smart-home-system.webp
   - type: text_image
     color: pink
@@ -51,11 +50,13 @@ sections:
           Seema Gangadharan is also an Early Intervention Specialist. She is a
           certified Positive Parenting Coach with years of experience as a
           school counsellor and a strong background in supporting inclusive
-          education. Recognized for pioneering the establishment of a sensory
+          education. Recognised for pioneering the establishment of a sensory
           integration and education wing at a leading Bangalore school, she
           brings deep expertise and innovative insights to our software
           application ensuring the platform supports best practices and fosters
-          the successful mainstreaming of neurodivergent students.
+          the successful mainstreaming of neurodivergent students.Seema ensures
+          that every feature on the Link2Ed platform reflects real-world best
+          practices, and not assumptions
         name: Seema Gangadharan
         creds: Co-Founder
         image: img/whatsapp-image-2025-06-05-at-9.25.06-pm.webp
@@ -66,7 +67,8 @@ sections:
           roles across engineering, consulting, and product development. At
           Link2Ed, Murali focuses on charting the product roadmap and building
           capabilities that addresses the current and emerging needs of our
-          customers.
+          customers. Murali ensures Link2Ed evolves with the needs of schools,
+          and not ahead of them
         name: "Muralikrishnan Puthanveedu "
         creds: Co-Founder
         tag: The Product person
@@ -81,8 +83,10 @@ sections:
           digital transformation, with a strong focus on the financial services
           sector. Ranjith is committed to building scalable, secure, and robust
           technology platforms that drive Link2Ed’s vision forward, and is
-          widely recognized for his ability to align innovative technology
-          solutions with strategic business objectives.
+          widely recognised for his ability to align innovative technology
+          solutions with strategic business objectives. Ranjith is the reason
+          Link2Ed is built to enterprise grade security and scalability
+          standards, because student data deserves nothing less.
         image: img/seevi.webp
       - tag: The Strategist
         name: Prasad Hariharan
@@ -123,6 +127,9 @@ sections:
           techno-functional focus ensures our solutions drive strategic
           objectives and help shape the future of education.
         image: img/whatsapp-image-2025-07-31-at-8.25.11-pm.jpeg
-    title: Our People
-    sub_heading: The team behind Link2Ed
+    title: The People Behind the Platform
+    sub_heading: A team that brings together deep expertise in child psychology,
+      special education, enterprise technology, and strategic leadership —
+      united by a shared belief that every child deserves a school system built
+      for them.
 ---
