@@ -1,5 +1,26 @@
 ---
 sections:
+  - left_title: Every Student Deserves to Be Understood
+    left_description: Link2Ed is a purpose-built platform for school psychology and
+      special education teams — bringing collaboration, progress tracking,
+      standardised workflows, and secure data management into one place.
+    cta_link: /contact_us
+    right_title: The Need Is Real. The Window Is Now.
+    hero_image: img/woman-and-a-man-analyze-data.webp
+    title: School Psychology & Special Education. Streamlined.
+    right_description: >-
+      5–15% of school-aged children face specific learning disabilities — yet
+      most schools lack the systems to identify, track, and support them
+      effectively.
+
+
+      Early identification before age 10 is the single most impactful intervention a school can make. 
+
+
+      Link2Ed gives your team the tools to act on that window — systematically and confidently.
+    type: hero
+    cta_text: Book a Demo
+    description: Built for the Professionals Who Show Up for Every Child
   - cta_link: /contact_us
     title_1: Fragmented communication
     title_2: Documentation chaos
