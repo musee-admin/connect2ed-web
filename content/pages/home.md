@@ -9,26 +9,26 @@ sections:
     hero_image: img/woman-and-a-man-analyze-data.webp
     title: School Psychology & Special Education. Streamlined.
     right_description: >-
-      5–15% of school-aged children face specific learning disabilities — yet
+      5 to 15% of school-aged children face specific learning disabilities, yet
       most schools lack the systems to identify, track, and support them
       effectively.
 
 
-      Early identification before age 10 is the single most impactful intervention a school can make. 
+      Early identification before age 10 is the single most impactful intervention a school can make.
 
 
-      Link2Ed gives your team the tools to act on that window — systematically and confidently.
+      Link2Ed gives your team the tools to act on that window, systematically and confidently.
     type: hero
     cta_text: Book a Demo
     description: Built for the Professionals Who Show Up for Every Child
   - cta_link: /our-solution
     title_1: Fragmented communication
-    title_2: Documentation chaos
+    title_2: Documentation chaos - Multiple IEP versions, missing session notes, and
+      no single source of truth slow everything down.
     title_3: No visibility for leadership
     title_4: Parents left out of the loop
     description_1: Every stakeholder has a piece of the picture. Nobody has the whole one.
-    description_2: Multiple IEP versions, missing session notes, and no single
-      source of truth slow everything down.
+    description_2: ""
     description_3: Principals can't see what's working, what's overdue, or where
       support is needed most.
     description_4: Families are often the last to know — even when they're the most
