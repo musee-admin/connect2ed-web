@@ -22,16 +22,20 @@ sections:
     cta_text: Book a Demo
     description: Built for the Professionals Who Show Up for Every Child
   - cta_link: /our-solution
-    title_1: Fragmented communication
-    title_2: Documentation chaos - Multiple IEP versions, missing session notes, and
-      no single source of truth slow everything down.
-    title_3: No visibility for leadership
-    title_4: Parents left out of the loop
+    title_1: Fragmented communication  -  Every stakeholder has a piece of the
+      picture. Nobody has the whole one.
+    title_2: Documentation chaos  -   Multiple IEP versions, missing session notes,
+      and no single source of truth slow everything down.
+    title_3: No visibility for leadership  -  Principals can't see what's working,
+      what's overdue, or where support is needed most.
+    title_4: Parents left out of the loop  -  Families are often the last to know,
+      even when they're the most invested in their child's progress.
     description_1: Every stakeholder has a piece of the picture. Nobody has the whole one.
-    description_2: ""
+    description_2: Multiple IEP versions, missing session notes, and no single
+      source of truth slow everything down
     description_3: Principals can't see what's working, what's overdue, or where
       support is needed most.
-    description_4: Families are often the last to know — even when they're the most
+    description_4: Families are often the last to know, even when they're the most
       invested in their child's progress.
     hero_image: img/hero-image.webp
     title: Every child deserves better than WhatsApp and spreadsheets.
