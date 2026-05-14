@@ -1,28 +1,21 @@
 ---
 sections:
-  - title_1: "Fostering inclusive learning environments "
-    title_2: Collaboration and cohesive communication
-    title_3: Standardization of counselling & special education practices
-    title_4: Connecting links for greater milestones
-    description_1: Every student can participate, connect, and thrive—no matter
-      their abilities or learning style. Our app empowers educators and learners
-      with accessible tools and personalized supports, ensuring everyone has an
-      equal opportunity to succeed
-    description_2: Dedicated spaces for parents and educators to communicate, share
-      resources, and coordinate interventions further strengthen the
-      collaborative support network around each student
-    description_3: By offering structured digital tools, progress tracking, and
-      accessible resources, the app enhances collaboration among educators,
-      therapists, and families—promoting best practices and improving outcomes
-      for all learners
-    description_4: With features like real-time progress monitoring, automated
-      alerts, and integrated communication tools, it ensures every stakeholder
-      stays aligned and informed—making it easier to coordinate efforts and
-      celebrate each step toward student success
+  - title_1: Fragmented communication
+    title_2: Documentation chaos
+    title_3: No visibility for leadership
+    title_4: Parents left out of the loop
+    description_1: Every stakeholder has a piece of the picture. Nobody has the whole one.
+    description_2: Multiple IEP versions, missing session notes, and no single
+      source of truth slow everything down.
+    description_3: Principals can't see what's working, what's overdue, or where
+      support is needed most.
+    description_4: Families are often the last to know — even when they're the most
+      invested in their child's progress.
     hero_image: img/hero-image.webp
-    title: Building Bridges for
+    title: Every child deserves the right support. Most schools manage it through
+      WhatsApp and spreadsheets
     type: banner
-    description: Infinite Empowerment. Inclusive Experiences.
+    description: Everyone who supports a child, connected in one place.
   - type: video_scroll
     items:
       - description: Studies indicate that 5-15% of school-aged children face specific
