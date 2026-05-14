@@ -14,7 +14,7 @@ sections:
     hero_image: img/hero-image.webp
     title: Every child deserves better than WhatsApp and spreadsheets.
     type: banner
-    description: Everyone who supports a child, connected in one place.
+    description: Every supporter. One place.
   - type: video_scroll
     items:
       - description: Studies indicate that 5-15% of school-aged children face specific
