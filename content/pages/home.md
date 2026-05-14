@@ -21,7 +21,7 @@ sections:
     type: hero
     cta_text: Book a Demo
     description: Built for the Professionals Who Show Up for Every Child
-  - cta_link: /contact-us
+  - cta_link: /our-solution
     title_1: Fragmented communication
     title_2: Documentation chaos
     title_3: No visibility for leadership
@@ -36,7 +36,7 @@ sections:
     hero_image: img/hero-image.webp
     title: Every child deserves better than WhatsApp and spreadsheets.
     type: banner
-    cta_text: Book a demo
+    cta_text: Our Solution
     description: Every supporter. One place.
   - type: video_scroll
     items:
