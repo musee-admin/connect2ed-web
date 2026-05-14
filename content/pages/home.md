@@ -1,6 +1,7 @@
 ---
 sections:
-  - title_1: Fragmented communication
+  - cta_link: /contact_us
+    title_1: Fragmented communication
     title_2: Documentation chaos
     title_3: No visibility for leadership
     title_4: Parents left out of the loop
@@ -14,6 +15,7 @@ sections:
     hero_image: img/hero-image.webp
     title: Every child deserves better than WhatsApp and spreadsheets.
     type: banner
+    cta_text: Book a demo
     description: Every supporter. One place.
   - type: video_scroll
     items:
