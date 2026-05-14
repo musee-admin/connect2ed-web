@@ -12,8 +12,7 @@ sections:
     description_4: Families are often the last to know — even when they're the most
       invested in their child's progress.
     hero_image: img/hero-image.webp
-    title: Every child deserves the right support. Most schools manage it through
-      WhatsApp and spreadsheets
+    title: Every child deserves better than WhatsApp and spreadsheets.
     type: banner
     description: Everyone who supports a child, connected in one place.
   - type: video_scroll
