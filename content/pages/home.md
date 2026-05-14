@@ -7,7 +7,7 @@ sections:
     cta_link: /contact-us
     right_title: The Need Is Real. The Window Is Now.
     hero_image: img/woman-and-a-man-analyze-data.webp
-    title: School Psychology & Special Education. Streamlined.
+    title: A platform built so the right support reaches every child, faster.
     right_description: >-
       5 to 15% of school-aged children face specific learning disabilities, yet
       most schools lack the systems to identify, track, and support them
@@ -20,7 +20,7 @@ sections:
       Link2Ed gives your team the tools to act on that window, systematically and confidently.
     type: hero
     cta_text: Book a Demo
-    description: Built for the Professionals Who Show Up for Every Child
+    description: Less paperwork. More impact.
   - cta_link: /our-solution
     title_1: Fragmented communication  -  Every stakeholder has a piece of the
       picture. Nobody has the whole one.
