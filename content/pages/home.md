@@ -123,23 +123,4 @@ sections:
     image: img/group-80.webp
     cta_text: See How We Help
     cta_link: our-solution
-  - title_1: Every Student Deserves to Be Understood
-    title_2: The Need Is Real.
-    title_3: The Window Is Now.
-    description_1: Link2Ed is a purpose-built platform for school psychology and
-      special education teams — bringing collaboration, progress tracking,
-      standardised workflows, and secure data management into one place.
-    description_2: 5 to 15% of school-aged children face specific learning
-      disabilities, yet most schools lack the systems to identify, track, and
-      support them effectively.
-    description_3: >-
-      Early identification before age 10 is the single most impactful
-      intervention a school can make.
-
-
-      Link2Ed gives your team the tools to act on that window, systematically and confidently.
-    hero_image: img/woman-and-a-man-analyze-data.webp
-    title: A platform built so the right support reaches every child, faster.
-    type: banner
-    description: Less paperwork. More impact.
 ---
