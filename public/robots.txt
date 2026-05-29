@@ -6,4 +6,4 @@ Allow: /
 Host: link2ed.in
 
 # Sitemaps
-Sitemap: link2ed.in/sitemap.xml
+Sitemap: https://link2ed.in/sitemap.xml
