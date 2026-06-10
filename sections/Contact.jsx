@@ -38,7 +38,7 @@ export const Contact = ({ eyebrow, title, description }) => {
         </Reveal>
 
         <Reveal delay={120} className={styles.formCard}>
-          <FilloutStandardEmbed filloutId={FILLOUT_FORM_ID} />
+          <FilloutStandardEmbed filloutId={FILLOUT_FORM_ID} dynamicResize />
         </Reveal>
       </div>
     </section>
