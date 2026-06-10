@@ -1,126 +1,131 @@
 ---
+seo:
+  title: School Psychology & Special Education Platform
+  description: Link2Ed is a purpose-built platform for school psychology and
+    special education teams — collaboration, progress tracking, standardised
+    workflows, and secure data management in one place.
 sections:
-  - left_title: Every Student Deserves to Be Understood
-    left_description: Link2Ed is a purpose-built platform for school psychology and
-      special education teams — bringing collaboration, progress tracking,
-      standardised workflows, and secure data management into one place.
-    cta_link: ""
-    right_title: The Need Is Real. The Window Is Now.
-    hero_image: img/woman-and-a-man-analyze-data.webp
+  - type: hero
+    eyebrow: Less paperwork. More impact.
     title: A platform built so the right support reaches every child, faster.
-    right_description: >-
-      5 to 15% of school-aged children face specific learning disabilities, yet
-      most schools lack the systems to identify, track, and support them
-      effectively.
-
-
-      Early identification before age 10 is the single most impactful intervention a school can make.
-
-
-      Link2Ed gives your team the tools to act on that window, systematically and confidently.
-    type: hero
-    cta_text: ""
-    description: Less paperwork. More impact.
-  - cta_link: /our-solution
-    title_1: Fragmented communication  -  Every stakeholder has a piece of the
-      picture. Nobody has the whole one.
-    title_2: Documentation chaos  -   Multiple IEP versions, missing session notes,
-      and no single source of truth slow everything down.
-    title_3: No visibility for leadership  -  Principals can't see what's working,
-      what's overdue, or where support is needed most.
-    title_4: Parents left out of the loop  -  Families are often the last to know,
-      even when they're the most invested in their child's progress.
-    description_1: Every stakeholder has a piece of the picture. Nobody has the whole one.
-    description_2: Multiple IEP versions, missing session notes, and no single
-      source of truth slow everything down
-    description_3: Principals can't see what's working, what's overdue, or where
-      support is needed most.
-    description_4: Families are often the last to know, even when they're the most
-      invested in their child's progress.
-    hero_image: img/hero-image.webp
+    lead: Link2Ed is a purpose-built platform for school psychology and special
+      education teams — bringing collaboration, progress tracking, standardised
+      workflows, and secure data management into one place.
+    image: img/woman-and-a-man-analyze-data.webp
+    image_alt: A school support team reviewing student progress together
+    primary_cta_text: Book a Demo
+    primary_cta_link: /contact-us
+    secondary_cta_text: Explore the Platform
+    secondary_cta_link: /our-solution
+    stats:
+      - value: 5–15%
+        label: of school-aged children face specific learning disabilities
+      - value: Before age 10
+        label: early identification is the single most impactful intervention a
+          school can make
+      - value: One platform
+        label: gives your team the tools to act on that window, systematically
+          and confidently
+  - type: feature_grid
+    tone: dark
+    eyebrow: Every supporter. One place.
     title: Every child deserves better than WhatsApp and spreadsheets.
-    type: banner
-    cta_text: Our Solution
-    description: Every supporter. One place.
-  - type: video_scroll
+    cta_text: See Our Solution
+    cta_link: /our-solution
     items:
-      - description: Studies indicate that 5-15% of school-aged children face specific
-          learning disabilities, highlighting a significant educational
-          challenge.​
-        title: Prevalence of Learning Challenges
+      - title: Fragmented communication
+        description: Every stakeholder has a piece of the picture. Nobody has
+          the whole one.
+      - title: Documentation chaos
+        description: Multiple IEP versions, missing session notes, and no
+          single source of truth slow everything down.
+      - title: No visibility for leadership
+        description: Principals can't see what's working, what's overdue, or
+          where support is needed most.
+      - title: Parents left out of the loop
+        description: Families are often the last to know, even when they're the
+          most invested in their child's progress.
+  - type: media_cards
+    eyebrow: Why this matters
+    title: The case for systematic, early support
+    items:
+      - title: Prevalence of Learning Challenges
+        sub_heading: The scope to better support every learner
+        description: Studies indicate that 5–15% of school-aged children face
+          specific learning disabilities, highlighting a significant
+          educational challenge.
         video: img/students-walking.mp4
-        sub_heading: The scope to better support every learner.
-      - description: Where multi-actor collaboration ensures every student’s uniqueness
-          shapes a stronger, kinder community.
-        title: The Heart of an Inclusive School Community
+      - title: The Heart of an Inclusive School Community
+        sub_heading: Fostering belonging & enhancing student support
+        description: Where multi-actor collaboration ensures every student's
+          uniqueness shapes a stronger, kinder community.
         video: img/video-of-three-indian-kids-running-outdoor-2023-11-27-04-50-28-utc.mp4
-        sub_heading: Fostering Belonging & Enhancing student support.
-      - description: Early identification and intervention during formative years (up to
-          age 10) are vital for a child's developmental path.​
-        title: Critical Intervention Window
+      - title: Critical Intervention Window
+        sub_heading: Timely actions shape brighter futures
+        description: Early identification and intervention during formative
+          years (up to age 10) are vital for a child's developmental path.
         video: img/child-writing.mp4
-        sub_heading: Timely actions shape brighter futures.
-  - type: horizontal_scroll
+  - type: steps
     title: A Structured Journey. At Every Stage.
-    sub_heading: Link2Ed supports your team through every phase of a student’s
+    description: Link2Ed supports your team through every phase of a student's
       inclusion journey.
     items:
       - title: Discovery
-        description: Link2Ed platform helps flag early signs using built-in screening
-          checklists aligned to best practices
-        image: img/group-49.webp
         sub_heading: Unveiling and understanding initial challenges
+        description: Link2Ed helps flag early signs using built-in screening
+          checklists aligned to best practices.
+        image: img/group-49.webp
       - title: Acceptance
-        description: Link2Ed platform helps document and share student profiles across
-          your multidisciplinary team
-        image: img/group-51.webp
         sub_heading: Embracing and valuing unique strengths
+        description: Link2Ed helps document and share student profiles across
+          your multidisciplinary team.
+        image: img/group-51.webp
       - title: Augmentation
-        description: "Link2Ed platform helps record accommodations, rights, and support
-          plans in one place "
-        image: img/group-61.webp
         sub_heading: Championing the child's rights and needs
+        description: Link2Ed helps record accommodations, rights, and support
+          plans in one place.
+        image: img/group-61.webp
       - title: Interventions
-        description: Link2Ed platform helps assign, track, and monitor targeted
+        sub_heading: Implementing targeted strategies for growth
+        description: Link2Ed helps assign, track, and monitor targeted
           strategies per student.
         image: img/group-43.webp
-        sub_heading: Implementing targeted strategies for growth
       - title: Adaptations
-        description: Link2Ed platform helps build flexible education plans tailored to
+        sub_heading: Crafting flexible and supportive learning spaces
+        description: Link2Ed helps build flexible education plans tailored to
           individual learning profiles.
         image: img/group-55.webp
-        sub_heading: Crafting flexible and supportive learning spaces
       - title: Exemptions
-        description: "Link2Ed platform helps log and manage academic adjustments with
-          full audit trails "
-        image: img/group-77.webp
         sub_heading: Aligning expectations with individual capabilities
-  - sub_heading: Addressing challenges through connection and collaboration
-    color: pink
-    cta_link: /about-us
+        description: Link2Ed helps log and manage academic adjustments with
+          full audit trails.
+        image: img/group-77.webp
+  - type: feature_split
+    eyebrow: Addressing challenges through connection and collaboration
     title: Dedicated to Inclusive Education for Every Learner
-    tag_line: |-
-      We’ve designed 
-      an integrated platform
-    type: rolling_hills
-    image: img/group-of-people-discussing-something.webp
-    cta_text: About Us
     description: As the emphasis on inclusive education grows, supporting
       neurodivergent students remains complex due to fragmented communication
       and inefficient workflows. At Link2Ed, we've developed a solution that
       unites educators and intervention professionals, fostering seamless
       collaboration. Our structured workflow enhances communication, monitors
       progress, and delivers comprehensive support. By bridging coordination
-      gaps, we empower educators to cultivate
-  - type: text_image
-    color: blue
+      gaps, we empower educators to cultivate classrooms where every learner
+      can thrive.
+    image: img/group-of-people-discussing-something.webp
+    image_alt: A group of educators discussing student support
+    image_side: right
+    cta_text: About Us
+    cta_link: /about-us
+  - type: feature_split
+    eyebrow: Uniting educators, specialists, and families
     title: Supporting Every Child, Together
-    sub_heading: Uniting educators, specialists, and families.
     description: We make it easier to understand, support, and nurture unique
       thinkers. With simple tools for collaboration, progress tracking, and
       personalized learning, we help create a learning environment where every
       child can flourish.
     image: img/group-80.webp
+    image_alt: Educators and families working together
+    image_side: left
     cta_text: See How We Help
-    cta_link: our-solution
+    cta_link: /our-solution
 ---

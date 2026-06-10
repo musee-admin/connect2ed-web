@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: link2ed.in
+Host: https://link2ed.in
 
 # Sitemaps
 Sitemap: https://link2ed.in/sitemap.xml

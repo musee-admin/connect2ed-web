@@ -1,77 +1,57 @@
 import { Fragment } from "react";
-import { Hero } from "./components/Hero";
-import { Banner } from "./components/Banner.jsx";
-import { RollingHills } from "./components/RollingHills";
-import { HorizontalScroll } from "./components/HorizontalScroll";
-import { Demo } from "./components/Demo";
-import { VideoScroll } from "./components/VideoScroll";
-import { StackingCards } from "./components/StackingCards";
-import { TextImage } from "./components/TextImage";
-import { People } from "./components/People";
-import { ContactUsForm } from "./components/ContactUsForm";
-import { Faqs } from "./components/Faqs";
-import { DevelopmentGraph } from "./components/DevelopmentGraph";
-import { EcosystemPlayers } from "./components/EcosystemPlayers";
+import { Hero } from "./sections/Hero";
+import { IntroColumns } from "./sections/IntroColumns";
+import { FeatureGrid } from "./sections/FeatureGrid";
+import { MediaCards } from "./sections/MediaCards";
+import { Steps } from "./sections/Steps";
+import { FeatureSplit } from "./sections/FeatureSplit";
+import { Cards } from "./sections/Cards";
+import { Team } from "./sections/Team";
+import { Ecosystem } from "./sections/Ecosystem";
+import { Faqs } from "./sections/Faqs";
+import { StatCallout } from "./sections/StatCallout";
+import { Contact } from "./sections/Contact";
 
-export const processString = (value) => {
-  if (typeof value !== "string" || value.indexOf("\n") < 0) {
+const SECTION_COMPONENTS = {
+  hero: Hero,
+  intro_columns: IntroColumns,
+  feature_grid: FeatureGrid,
+  media_cards: MediaCards,
+  steps: Steps,
+  feature_split: FeatureSplit,
+  cards: Cards,
+  team: Team,
+  ecosystem: Ecosystem,
+  faqs: Faqs,
+  stat_callout: StatCallout,
+  contact: Contact,
+};
+
+export const renderSections = (sections) =>
+  sections?.map((section, index) => {
+    const Section = SECTION_COMPONENTS[section.type];
+    return Section ? <Section key={index} {...section} /> : null;
+  });
+
+/* Render plain text with blank-line separation as paragraphs. */
+export const paragraphs = (value) => {
+  if (typeof value !== "string") {
     return value;
   }
-
-  const newValue = value.split("\n").map((el, index) => (
-    <Fragment key={index}>
-      {el}
-      <br />
-    </Fragment>
-  ));
-  return newValue;
+  return value
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter(Boolean)
+    .map((block, index) => (
+      <p key={index}>
+        {block.split("\n").map((line, lineIndex, lines) => (
+          <Fragment key={lineIndex}>
+            {line}
+            {lineIndex < lines.length - 1 && <br />}
+          </Fragment>
+        ))}
+      </p>
+    ));
 };
 
-export const renderSections = (sections) => {
-  const items = sections?.map((section, index) => {
-    if (section.type === "hero") {
-      return <Hero key={index} {...section} />;
-    }
-    if (section.type === "banner") {
-      return <Banner key={index} {...section} />;
-    }
-    if (section.type === "rolling_hills") {
-      return <RollingHills key={index} {...section} />;
-    }
-    if (section.type === "horizontal_scroll") {
-      return <HorizontalScroll key={index} {...section} />;
-    }
-    if (section.type === "demo") {
-      return <Demo key={index} {...section} />;
-    }
-    if (section.type === "video_scroll") {
-      return <VideoScroll key={index} {...section} />;
-    }
-    if (section.type === "stacking_cards") {
-      return <StackingCards key={index} {...section} />;
-    }
-    if (section.type === "text_image") {
-      return <TextImage key={index} {...section} />;
-    }
-    if (section.type === "people") {
-      return <People key={index} {...section} />;
-    }
-    if (section.type === "contact_us") {
-      return <ContactUsForm key={index} {...section} />;
-    }
-    if (section.type === "faqs") {
-      return <Faqs key={index} {...section} />;
-    }
-    if (section.type === "development_graph") {
-      return <DevelopmentGraph key={index} {...section} />;
-    }
-    if (section.type === "ecosystem_players") {
-      return <EcosystemPlayers key={index} {...section} />;
-    }
-    return null;
-  });
-  return items;
-};
-
-export const processAssetUrl = (url) => `/${url}`;
-export const getCssUrl = (url) => `url(/${url})`;
+export const assetUrl = (url) => (url?.startsWith("/") ? url : `/${url}`);

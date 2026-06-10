@@ -1,0 +1,51 @@
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.5rem;
+  counter-reset: step;
+}
+
+.card {
+  height: 100%;
+  padding: 1.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, var(--paper-soft) 0%, #fff 45%);
+}
+
+.illustration {
+  height: 120px;
+  width: auto;
+  margin-bottom: 1.25rem;
+}
+
+.stepNumber {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-600);
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.kicker {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--teal-600);
+  font-weight: 500;
+}
+
+.cardText {
+  margin-top: 0.7rem;
+  color: var(--ink-500);
+  font-size: 0.97rem;
+}

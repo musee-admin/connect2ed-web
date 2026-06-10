@@ -1,0 +1,33 @@
+.heading {
+  max-width: 46rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.center .lede {
+  margin-inline: auto;
+}
+
+.title {
+  font-size: clamp(1.85rem, 3.6vw, 2.7rem);
+  font-weight: 600;
+}
+
+.lede {
+  margin-top: 1.1rem;
+  font-size: 1.1rem;
+  color: var(--ink-500);
+  max-width: 40rem;
+}
+
+.onDark .title {
+  color: var(--on-navy);
+}
+
+.onDark .lede {
+  color: var(--on-navy-muted);
+}

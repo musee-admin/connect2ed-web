@@ -1,0 +1,73 @@
+.studentCard {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  max-width: 44rem;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  padding: 1.75rem 2rem;
+  background: var(--brand-100);
+  border-radius: var(--radius-lg);
+}
+
+.studentImage {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.intro {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink-900);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  height: 100%;
+  padding: 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--paper-tint);
+  flex-shrink: 0;
+}
+
+.role {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.quote {
+  color: var(--ink-500);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .studentCard {
+    flex-direction: column;
+    text-align: center;
+  }
+}

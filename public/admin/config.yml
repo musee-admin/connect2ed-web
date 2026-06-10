@@ -1,653 +1,312 @@
 defs:
+  - seoRef: &seo-ref
+      label: "SEO"
+      name: "seo"
+      widget: "object"
+      collapsed: true
+      fields:
+        - { label: "Page Title", name: "title", widget: "string" }
+        - { label: "Meta Description", name: "description", widget: "text" }
+
   - typesRef: &types-ref
-      - label: "Sections"
-        name: "sections"
-        widget: "list"
-        collapsed: true
-        types:
-          - label: "Hero"
-            name: "hero"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - {
-                  label: "Description",
-                  name: "description",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Hero Image",
-                  name: "hero_image",
-                  widget: "image",
-                  media_library: { config: { multiple: false } },
-                }
-              - {
-                  label: "Button Text",
-                  name: "cta_text",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Button Link",
-                  name: "cta_link",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Left Content Title",
-                  name: "left_title",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Left Content Description",
-                  name: "left_description",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Right Content Title",
-                  name: "right_title",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Right Content Description",
-                  name: "right_description",
-                  widget: "text",
-                  required: false,
-                }
+      label: "Sections"
+      name: "sections"
+      widget: "list"
+      collapsed: true
+      types:
+        - label: "Hero"
+          name: "hero"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Lead Text", name: "lead", widget: "text", required: false }
+            - {
+                label: "Image",
+                name: "image",
+                widget: "image",
+                required: false,
+                media_library: { config: { multiple: false } },
+              }
+            - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+            - { label: "Primary Button Text", name: "primary_cta_text", widget: "string", required: false }
+            - { label: "Primary Button Link", name: "primary_cta_link", widget: "string", required: false }
+            - { label: "Secondary Button Text", name: "secondary_cta_text", widget: "string", required: false }
+            - { label: "Secondary Button Link", name: "secondary_cta_link", widget: "string", required: false }
+            - {
+                label: "Stats",
+                name: "stats",
+                widget: "list",
+                required: false,
+                fields:
+                  [
+                    { label: "Value", name: "value", widget: "string" },
+                    { label: "Label", name: "label", widget: "string" },
+                  ],
+              }
 
-          - label: "Banner"
-            name: "banner"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - {
-                  label: "Description",
-                  name: "description",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Hero Image",
-                  name: "hero_image",
-                  widget: "image",
-                  media_library: { config: { multiple: false } },
-                }
-              - {
-                  label: "Button Text",
-                  name: "cta_text",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Button Link",
-                  name: "cta_link",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Title 1",
-                  name: "title_1",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Description 1",
-                  name: "description_1",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Title 2",
-                  name: "title_2",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Description 2",
-                  name: "description_2",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Title 3",
-                  name: "title_3",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Description 3",
-                  name: "description_3",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Title 4",
-                  name: "title_4",
-                  widget: "string",
-                  required: false,
-                }
-              - {
-                  label: "Description 4",
-                  name: "description_4",
-                  widget: "text",
-                  required: false,
-                }
+        - label: "Intro Columns"
+          name: "intro_columns"
+          widget: object
+          summary: "Intro columns"
+          fields:
+            - {
+                label: "Columns",
+                name: "items",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Body", name: "body", widget: "text" },
+                  ],
+              }
 
-          - label: "Rolling Hills"
-            name: "rolling_hills"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - {
-                  label: "Color",
-                  name: "color",
-                  widget: "select",
-                  options: ["blue", "pink", "yellow"],
-                  default: "blue",
-                }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Tag Line", name: "tag_line", widget: "text" }
-              - {
-                  label: "Button Text",
-                  name: "cta_text",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Button Link",
-                  name: "cta_link",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Image",
-                  name: "image",
-                  widget: "image",
-                  media_library: { config: { multiple: false } },
-                }
+        - label: "Feature Grid"
+          name: "feature_grid"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - {
+                label: "Tone",
+                name: "tone",
+                widget: "select",
+                options: ["light", "dark"],
+                default: "light",
+                required: false,
+              }
+            - { label: "Button Text", name: "cta_text", widget: "string", required: false }
+            - { label: "Button Link", name: "cta_link", widget: "string", required: false }
+            - {
+                label: "Items",
+                name: "items",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Description", name: "description", widget: "text" },
+                  ],
+              }
 
-          - label: "Text Image"
-            name: "text_image"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - {
-                  label: "Color",
-                  name: "color",
-                  widget: "select",
-                  options: ["blue", "pink", "yellow"],
-                  default: "blue",
-                }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
-              - { label: "Description", name: "description", widget: "text" }
-              - {
-                  label: "Tag Line",
-                  name: "tag_line",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Image",
-                  name: "image",
-                  widget: "image",
-                  media_library: { config: { multiple: false } },
-                }
-              - {
-                  label: "Button Text",
-                  name: "cta_text",
-                  widget: "text",
-                  required: false,
-                }
-              - {
-                  label: "Button Link",
-                  name: "cta_link",
-                  widget: "text",
-                  required: false,
-                }
+        - label: "Media Cards (videos)"
+          name: "media_cards"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - {
+                label: "Items",
+                name: "items",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Kicker", name: "sub_heading", widget: "string", required: false },
+                    { label: "Description", name: "description", widget: "text" },
+                    {
+                      label: "Video",
+                      name: "video",
+                      widget: "file",
+                      media_library: { config: { multiple: false } },
+                    },
+                  ],
+              }
 
-          - label: "HorizontalScroll"
-            name: "horizontal_scroll"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
-              - {
-                  label: "Items",
-                  name: "items",
-                  widget: "list",
-                  fields:
-                    [
-                      { label: "Title", name: "title", widget: "string" },
-                      {
-                        label: "Sub Heading",
-                        name: "sub_heading",
-                        widget: "string",
-                      },
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-          - label: "FAQs"
-            name: "faqs"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
-              - {
-                  label: "Questions",
-                  name: "questions",
-                  widget: "list",
-                  fields:
-                    [
-                      { label: "Question", name: "question", widget: "text" },
-                      { label: "Answer", name: "answer", widget: "text" },
-                    ],
-                }
-          - label: "VideoScroll"
-            name: "video_scroll"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - {
-                  label: "Items",
-                  name: "items",
-                  widget: "list",
-                  fields:
-                    [
-                      { label: "Title", name: "title", widget: "string" },
-                      {
-                        label: "Sub Heading",
-                        name: "sub_heading",
-                        widget: "string",
-                      },
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-                      {
-                        label: "Video",
-                        name: "video",
-                        widget: "file",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-          - label: "Stacking Cards"
-            name: "stacking_cards"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
-              - {
-                  label: "Items",
-                  name: "items",
-                  widget: "list",
-                  fields:
-                    [
-                      { label: "Title", name: "title", widget: "string" },
-                      {
-                        label: "Sub Heading",
-                        name: "sub_heading",
-                        widget: "text",
-                      },
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-          - label: "Demo"
-            name: "demo"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
-              - {
-                  label: "Items",
-                  name: "items",
-                  widget: "list",
-                  fields:
-                    [
-                      { label: "Title", name: "title", widget: "string" },
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-                      {
-                        label: "Video",
-                        name: "video",
-                        widget: "file",
-                        media_library: { config: { multiple: false } },
-                      },
-                      {
-                        label: "Video Length (in seconds)",
-                        name: "video_length",
-                        widget: "number",
-                      },
-                    ],
-                }
-          - label: "People"
-            name: "people"
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
-              - {
-                  label: "Items",
-                  name: "items",
-                  widget: "list",
-                  fields:
-                    [
-                      { label: "Tag Line", name: "tag", widget: "string" },
-                      { label: "Name", name: "name", widget: "string" },
-                      { label: "Credentials", name: "creds", widget: "string" },
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-          - label: "Contact Us"
-            name: "contact_us"
-            widget: object
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Sub Heading", name: "sub_heading", widget: "text" }
-              - {
-                  label: "Name",
-                  name: "name",
-                  widget: "hidden",
-                  required: false,
-                }
-          - label: "Development Graph"
-            name: "development_graph"
-            widget: object
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-          - label: "Ecosystem Players"
-            name: "ecosystem_players"
-            widget: object
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - {
-                  label: "Student Image",
-                  name: "student_image",
-                  widget: "image",
-                  media_library: { config: { multiple: false } },
-                }
-              - {
-                  label: "School Counsellor",
-                  name: "school_counsellor",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
+        - label: "Steps"
+          name: "steps"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - {
+                label: "Items",
+                name: "items",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Sub Heading", name: "sub_heading", widget: "string", required: false },
+                    { label: "Description", name: "description", widget: "text" },
+                    {
+                      label: "Illustration",
+                      name: "image",
+                      widget: "image",
+                      required: false,
+                      media_library: { config: { multiple: false } },
+                    },
+                  ],
+              }
 
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Special Educator",
-                  name: "special_educator",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
+        - label: "Feature Split (text + image)"
+          name: "feature_split"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text" }
+            - {
+                label: "Image",
+                name: "image",
+                widget: "image",
+                media_library: { config: { multiple: false } },
+              }
+            - { label: "Image Alt Text", name: "image_alt", widget: "string", required: false }
+            - {
+                label: "Image Side",
+                name: "image_side",
+                widget: "select",
+                options: ["left", "right"],
+                default: "right",
+              }
+            - { label: "Button Text", name: "cta_text", widget: "string", required: false }
+            - { label: "Button Link", name: "cta_link", widget: "string", required: false }
 
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Class Teacher",
-                  name: "class_teacher",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
+        - label: "Cards (images)"
+          name: "cards"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - {
+                label: "Items",
+                name: "items",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Kicker", name: "sub_heading", widget: "string", required: false },
+                    { label: "Description", name: "description", widget: "text", required: false },
+                    {
+                      label: "Image",
+                      name: "image",
+                      widget: "image",
+                      required: false,
+                      media_library: { config: { multiple: false } },
+                    },
+                  ],
+              }
 
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Subject Teachers",
-                  name: "subject_teachers",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
+        - label: "Team"
+          name: "team"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - {
+                label: "People",
+                name: "items",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Tag Line", name: "tag", widget: "string", required: false },
+                    { label: "Name", name: "name", widget: "string" },
+                    { label: "Credentials", name: "creds", widget: "string" },
+                    { label: "Bio", name: "description", widget: "text" },
+                    {
+                      label: "Photo",
+                      name: "image",
+                      widget: "image",
+                      media_library: { config: { multiple: false } },
+                    },
+                  ],
+              }
 
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Child Psychologist",
-                  name: "child_psychologist",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
+        - label: "Ecosystem"
+          name: "ecosystem"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - { label: "Intro Note", name: "intro", widget: "text", required: false }
+            - {
+                label: "Student Image",
+                name: "student_image",
+                widget: "image",
+                required: false,
+                media_library: { config: { multiple: false } },
+              }
+            - {
+                label: "Members",
+                name: "members",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Role", name: "role", widget: "string" },
+                    { label: "Description", name: "description", widget: "text" },
+                    {
+                      label: "Image",
+                      name: "image",
+                      widget: "image",
+                      required: false,
+                      media_library: { config: { multiple: false } },
+                    },
+                  ],
+              }
 
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Parent",
-                  name: "parent",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
+        - label: "FAQs"
+          name: "faqs"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - {
+                label: "Questions",
+                name: "questions",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Question", name: "question", widget: "text" },
+                    { label: "Answer", name: "answer", widget: "text" },
+                  ],
+              }
 
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Behavioural Therapist",
-                  name: "behavioural_therapist",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
+        - label: "Stat Callout"
+          name: "stat_callout"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Stat Value", name: "stat_value", widget: "string" }
+            - { label: "Stat Label", name: "stat_label", widget: "string" }
+            - { label: "Description", name: "description", widget: "text" }
 
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Occupational Therapist",
-                  name: "occupational_therapist",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Speech Therapist",
-                  name: "speech_therapist",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Assessment Agencies",
-                  name: "assessment_agencies",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
-              - {
-                  label: "Shadow Teacher",
-                  name: "shadow_teacher",
-                  widget: "object",
-                  fields:
-                    [
-                      {
-                        label: "Description",
-                        name: "description",
-                        widget: "text",
-                      },
-
-                      {
-                        label: "Image",
-                        name: "image",
-                        widget: "image",
-                        media_library: { config: { multiple: false } },
-                      },
-                    ],
-                }
+        - label: "Contact"
+          name: "contact"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
 
 local_backend: true
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
 media_folder: public/img
 public_folder: img
 collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "Basic"
+      - label: "Site Settings"
         name: "basic"
         file: "content/pages/basic.md"
         fields:
@@ -665,7 +324,7 @@ collections:
             name: "name"
             widget: "string"
 
-          - label: "Footer Message"
+          - label: "Footer CTA Message"
             name: "message"
             widget: "string"
 
@@ -704,70 +363,41 @@ collections:
       - label: "Home"
         name: "home"
         file: "content/pages/home.md"
-        fields: *types-ref
+        fields:
+          - *seo-ref
+          - *types-ref
 
       - label: "Our Solution"
         name: "our_solution"
         file: "content/pages/our_solution.md"
-        fields: *types-ref
+        fields:
+          - *seo-ref
+          - *types-ref
 
       - label: "Knowledge Center"
         name: "knowledge_center"
         file: "content/pages/knowledge_center.md"
-        fields: *types-ref
+        fields:
+          - *seo-ref
+          - *types-ref
 
       - label: "Our Ecosystem"
         name: "our_ecosystem"
         file: "content/pages/our_ecosystem.md"
-        fields: *types-ref
+        fields:
+          - *seo-ref
+          - *types-ref
 
       - label: "About Us"
         name: "about_us"
         file: "content/pages/about_us.md"
-        fields: *types-ref
+        fields:
+          - *seo-ref
+          - *types-ref
 
       - label: "Contact Us"
         name: "contact_us"
         file: "content/pages/contact_us.md"
-        fields: *types-ref
-
-      - label: "General Design Elements"
-        name: "general_design"
-        file: "content/pages/general-design.md"
         fields:
-          - {
-              label: "Blue Rolling Hills",
-              name: "blue_rolling_hills",
-              widget: "image",
-              media_library: { config: { multiple: false } },
-            }
-          - {
-              label: "Pink Rolling Hills",
-              name: "pink_rolling_hills",
-              widget: "image",
-              media_library: { config: { multiple: false } },
-            }
-          - {
-              label: "Yellow Rolling Hills",
-              name: "yellow_rolling_hills",
-              widget: "image",
-              media_library: { config: { multiple: false } },
-            }
-          - {
-              label: "Laptop Image",
-              name: "laptop_image",
-              widget: "image",
-              media_library: { config: { multiple: false } },
-            }
-          - {
-              label: "Left Arrow",
-              name: "left_arrow",
-              widget: "image",
-              media_library: { config: { multiple: false } },
-            }
-          - {
-              label: "Right Arrow",
-              name: "right_arrow",
-              widget: "image",
-              media_library: { config: { multiple: false } },
-            }
+          - *seo-ref
+          - *types-ref

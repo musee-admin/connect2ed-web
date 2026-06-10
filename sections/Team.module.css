@@ -1,0 +1,63 @@
+.section {
+  background: var(--paper-soft);
+  border-block: 1px solid var(--line);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.2rem;
+}
+
+.photo {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--brand-100);
+  flex-shrink: 0;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal-600);
+  margin-bottom: 0.2rem;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.creds {
+  color: var(--brand-600);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 0.1rem;
+}
+
+.bio {
+  display: grid;
+  gap: 0.8rem;
+  color: var(--ink-500);
+  font-size: 0.95rem;
+}

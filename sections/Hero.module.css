@@ -1,0 +1,101 @@
+.hero {
+  background:
+    radial-gradient(60rem 30rem at 85% -10%, var(--brand-100) 0%, transparent 60%),
+    linear-gradient(180deg, var(--paper-soft) 0%, var(--paper) 100%);
+  padding-block: clamp(4rem, 9vw, 7rem) clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.compact {
+  padding-block: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.compact .inner {
+  grid-template-columns: 1fr;
+}
+
+.compact .content {
+  max-width: 52rem;
+}
+
+.title {
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  font-weight: 700;
+}
+
+.lead {
+  margin-top: 1.4rem;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  color: var(--ink-500);
+  max-width: 34rem;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2.2rem;
+}
+
+.media {
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--line);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1px;
+  margin: clamp(3rem, 6vw, 4.5rem) 0 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.stat {
+  background: #fff;
+  padding: 1.6rem 1.8rem;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.4rem;
+}
+
+.statValue {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand-600);
+  line-height: 1;
+}
+
+.statLabel {
+  color: var(--ink-500);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    aspect-ratio: 16 / 10;
+  }
+}
