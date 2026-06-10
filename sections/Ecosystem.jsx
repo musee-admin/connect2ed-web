@@ -63,6 +63,9 @@ export const Ecosystem = ({ eyebrow, title, description, student_image, members 
   const flowFrom = orbitPoint(active, members.length, LINE_START_RADIUS);
   const flowTo = orbitPoint(active, members.length, LINE_END_RADIUS);
 
+  const activeY = nodePosition(active, members.length).y;
+  const bubbleAbove = activeY > 50;
+
   return (
     <section className="section">
       <div className="container">
@@ -150,7 +153,7 @@ export const Ecosystem = ({ eyebrow, title, description, student_image, members 
             </div>
           </div>
 
-          <div className={styles.bubbles}>
+          <div className={`${styles.bubbles} ${bubbleAbove ? styles.bubblesTop : ""}`}>
             {members.map((member, index) => (
               <article
                 key={index}

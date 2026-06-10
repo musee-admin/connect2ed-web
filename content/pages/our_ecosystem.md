@@ -24,7 +24,7 @@ sections:
         description: A supportive hand throughout my educational & social
           journey. Helps me talk about my feelings and worries, and supports my
           emotional well-being
-        image: img/Counsellor .webp
+        image: img/Counsellor.webp
       - role: Special Educator
         description: Works with me using special strategies and tools to help
           me learn in a way that suits me best
