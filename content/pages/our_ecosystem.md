@@ -18,8 +18,6 @@ sections:
     title: Who We Work With
     description: Every role in a child's support network, described in the
       child's own words.
-    intro: At the centre of everything is the student. Here is what each member
-      of the network does for them, in their words.
     student_image: img/student.webp
     members:
       - role: School Counsellor
