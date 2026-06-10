@@ -117,6 +117,31 @@ defs:
                   ],
               }
 
+        - label: "Feature Tour (large demo videos)"
+          name: "feature_tour"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - {
+                label: "Features",
+                name: "items",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Description", name: "description", widget: "text" },
+                    {
+                      label: "Demo Video",
+                      name: "video",
+                      widget: "file",
+                      media_library: { config: { multiple: false } },
+                    },
+                  ],
+              }
+
         - label: "Video Showcase (fullscreen)"
           name: "video_showcase"
           widget: object

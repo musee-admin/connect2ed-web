@@ -4,6 +4,7 @@ import { IntroColumns } from "./sections/IntroColumns";
 import { FeatureGrid } from "./sections/FeatureGrid";
 import { MediaCards } from "./sections/MediaCards";
 import { VideoShowcase } from "./sections/VideoShowcase";
+import { FeatureTour } from "./sections/FeatureTour";
 import { Steps } from "./sections/Steps";
 import { FeatureSplit } from "./sections/FeatureSplit";
 import { Cards } from "./sections/Cards";
@@ -19,6 +20,7 @@ const SECTION_COMPONENTS = {
   feature_grid: FeatureGrid,
   media_cards: MediaCards,
   video_showcase: VideoShowcase,
+  feature_tour: FeatureTour,
   steps: Steps,
   feature_split: FeatureSplit,
   cards: Cards,

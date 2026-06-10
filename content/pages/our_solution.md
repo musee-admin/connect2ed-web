@@ -78,7 +78,7 @@ sections:
           and evidence-based frameworks that adapt to each child's unique
           profile.
         image: img/school-backpack-with-school-supplies.webp
-  - type: media_cards
+  - type: feature_tour
     eyebrow: Feature deep dive
     title: Everything your team needs. Nothing they don't.
     items:

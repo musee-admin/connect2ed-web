@@ -1,0 +1,244 @@
+/* Tall scroll track; the stage pins while scroll advances the features */
+.track {
+  position: relative;
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--paper-soft);
+  border-block: 1px solid var(--line);
+}
+
+.inner {
+  width: 100%;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: clamp(1.75rem, 4vh, 3rem);
+}
+
+.heading {
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  font-weight: 600;
+}
+
+.lede {
+  margin-top: 0.8rem;
+  color: var(--ink-500);
+  font-size: 1.05rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.45fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+/* Feature accordion --------------------------------------------------------- */
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  border-bottom: 1px solid var(--line);
+}
+
+.itemButton {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.05rem 0.25rem;
+  border: 0;
+  background: none;
+  text-align: left;
+}
+
+.itemIndex {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-500);
+  transition: color 0.3s ease;
+}
+
+.itemTitle {
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--ink-700);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.itemButton:hover .itemTitle {
+  color: var(--ink-900);
+}
+
+.itemActive .itemIndex {
+  color: var(--brand-600);
+}
+
+.itemActive .itemTitle {
+  color: var(--brand-700);
+  transform: translateX(4px);
+}
+
+/* Smooth expand/collapse via grid rows */
+.itemBody {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.itemBodyOpen {
+  grid-template-rows: 1fr;
+}
+
+.itemBodyInner {
+  overflow: hidden;
+}
+
+.itemText {
+  padding: 0 0.25rem 1.1rem 2.55rem;
+  color: var(--ink-500);
+  font-size: 0.96rem;
+}
+
+.progress {
+  display: block;
+  height: 3px;
+  margin: 0 0.25rem 1.1rem 2.55rem;
+  border-radius: 3px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  background: var(--brand-600);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* App window frame ----------------------------------------------------------- */
+
+.frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  background: var(--navy-900);
+}
+
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1rem;
+}
+
+.chromeDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--navy-800);
+}
+
+.chromePill {
+  margin-left: 0.75rem;
+  flex: 1;
+  max-width: 22rem;
+  padding: 0.3rem 1rem;
+  border-radius: 999px;
+  background: var(--navy-800);
+  color: var(--on-navy-muted);
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.screen {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #fff;
+}
+
+.shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0;
+  /* Stays visible beneath the incoming wipe, then hides once covered */
+  transition: opacity 0s linear 0.75s;
+}
+
+.shotActive {
+  z-index: 2;
+  opacity: 1;
+  transition: none;
+  animation: wipeIn 0.75s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+@keyframes wipeIn {
+  from {
+    clip-path: inset(0 100% 0 0);
+    transform: scale(1.04);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .frame {
+    order: -1;
+  }
+
+  .header {
+    margin-bottom: 1.25rem;
+  }
+
+  .itemButton {
+    padding-block: 0.7rem;
+  }
+
+  .screen {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .itemBody,
+  .itemTitle,
+  .itemIndex {
+    transition: none;
+  }
+
+  .shotActive {
+    animation: none;
+  }
+}
