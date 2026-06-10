@@ -10,6 +10,7 @@ export const FeatureSplit = ({
   image,
   image_alt,
   image_side,
+  image_fit,
   cta_text,
   cta_link,
 }) => (
@@ -29,7 +30,11 @@ export const FeatureSplit = ({
       </Reveal>
       {image && (
         <Reveal delay={120} className={styles.media}>
-          <img src={assetUrl(image)} alt={image_alt || title} className={styles.image} />
+          <img
+            src={assetUrl(image)}
+            alt={image_alt || title}
+            className={`${styles.image} ${image_fit === "contain" ? styles.contain : ""}`}
+          />
         </Reveal>
       )}
     </div>

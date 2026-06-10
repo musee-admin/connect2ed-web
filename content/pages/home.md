@@ -126,6 +126,7 @@ sections:
     image: img/group-80.webp
     image_alt: Educators and families working together
     image_side: left
+    image_fit: contain
     cta_text: See How We Help
     cta_link: /our-solution
 ---

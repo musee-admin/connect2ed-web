@@ -166,6 +166,15 @@ defs:
                 options: ["left", "right"],
                 default: "right",
               }
+            - {
+                label: "Image Fit",
+                name: "image_fit",
+                widget: "select",
+                options: ["cover", "contain"],
+                default: "cover",
+                required: false,
+                hint: "Use 'contain' for illustrations that must not be cropped",
+              }
             - { label: "Button Text", name: "cta_text", widget: "string", required: false }
             - { label: "Button Link", name: "cta_link", widget: "string", required: false }
 
