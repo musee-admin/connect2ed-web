@@ -117,6 +117,32 @@ defs:
                   ],
               }
 
+        - label: "Video Showcase (fullscreen)"
+          name: "video_showcase"
+          widget: object
+          summary: "{{fields.title}}"
+          fields:
+            - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Description", name: "description", widget: "text", required: false }
+            - {
+                label: "Items",
+                name: "items",
+                widget: "list",
+                fields:
+                  [
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Kicker", name: "sub_heading", widget: "string", required: false },
+                    { label: "Description", name: "description", widget: "text" },
+                    {
+                      label: "Video",
+                      name: "video",
+                      widget: "file",
+                      media_library: { config: { multiple: false } },
+                    },
+                  ],
+              }
+
         - label: "Steps"
           name: "steps"
           widget: object

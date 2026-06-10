@@ -45,7 +45,7 @@ sections:
       - title: Parents left out of the loop
         description: Families are often the last to know, even when they're the
           most invested in their child's progress.
-  - type: media_cards
+  - type: video_showcase
     eyebrow: Why this matters
     title: The case for systematic, early support
     items:

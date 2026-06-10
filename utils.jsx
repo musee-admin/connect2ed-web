@@ -3,6 +3,7 @@ import { Hero } from "./sections/Hero";
 import { IntroColumns } from "./sections/IntroColumns";
 import { FeatureGrid } from "./sections/FeatureGrid";
 import { MediaCards } from "./sections/MediaCards";
+import { VideoShowcase } from "./sections/VideoShowcase";
 import { Steps } from "./sections/Steps";
 import { FeatureSplit } from "./sections/FeatureSplit";
 import { Cards } from "./sections/Cards";
@@ -17,6 +18,7 @@ const SECTION_COMPONENTS = {
   intro_columns: IntroColumns,
   feature_grid: FeatureGrid,
   media_cards: MediaCards,
+  video_showcase: VideoShowcase,
   steps: Steps,
   feature_split: FeatureSplit,
   cards: Cards,
