@@ -1,51 +1,328 @@
-.grid {
+/* Tall scroll track; the stage inside pins while scroll advances the steps */
+.track {
+  position: relative;
+}
+
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(50rem 26rem at 12% 110%, var(--brand-100) 0%, transparent 60%),
+    linear-gradient(180deg, #fff 0%, var(--paper-soft) 100%);
+  border-block: 1px solid var(--line);
+}
+
+.inner {
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  max-width: 46rem;
+  margin: 0 auto clamp(2rem, 5vh, 3.5rem);
+}
+
+.heading {
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  font-weight: 600;
+}
+
+.lede {
+  margin-top: 0.8rem;
+  color: var(--ink-500);
+  font-size: 1.05rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(200px, 0.8fr) 1.5fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+/* Progress rail ----------------------------------------------------------- */
+
+.rail {
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
-  gap: 1.5rem;
-  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.card {
-  height: 100%;
-  padding: 1.8rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: linear-gradient(180deg, var(--paper-soft) 0%, #fff 45%);
+.railTrack,
+.railFill {
+  position: absolute;
+  left: 8px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--line);
 }
 
-.illustration {
-  height: 120px;
-  width: auto;
-  margin-bottom: 1.25rem;
+.railFill {
+  background: var(--brand-600);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.railItem {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.45rem 0;
+  border: 0;
+  background: none;
+  text-align: left;
+}
+
+.dot {
+  position: relative;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: #fff;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.railLabel {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-500);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.railPassed .dot {
+  border-color: var(--brand-600);
+  background: var(--brand-100);
+}
+
+.railActive .dot {
+  border-color: var(--brand-600);
+  background: var(--brand-600);
+  box-shadow: 0 0 0 5px var(--brand-100);
+  transform: scale(1.15);
+}
+
+.railActive .railLabel {
+  color: var(--brand-700);
+  font-weight: 600;
+  transform: translateX(4px);
+}
+
+.railItem:hover .railLabel {
+  color: var(--ink-900);
+}
+
+/* Step content ------------------------------------------------------------ */
+
+.viewer {
+  position: relative;
+  min-height: clamp(280px, 42vh, 380px);
+}
+
+.step {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition:
+    opacity 0.45s ease,
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0s;
+}
+
+.stepPrev,
+.stepNext {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.45s ease,
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.45s;
+}
+
+.stepPrev {
+  transform: translateY(-52px) scale(0.96);
+}
+
+.stepNext {
+  transform: translateY(64px) scale(0.96);
+}
+
+.ghost {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-58%);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 16vw, 13rem);
+  font-weight: 700;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--brand-100);
+  user-select: none;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stepPrev .ghost {
+  transform: translateY(-58%) translateX(-40px);
+}
+
+.stepNext .ghost {
+  transform: translateY(-58%) translateX(40px);
 }
 
 .stepNumber {
+  position: relative;
   font-family: var(--font-display);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brand-600);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
-.cardTitle {
-  font-size: 1.2rem;
-  font-weight: 600;
+.stepTitle {
+  position: relative;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 700;
 }
 
 .kicker {
-  margin-top: 0.25rem;
-  font-size: 0.9rem;
-  color: var(--teal-600);
+  position: relative;
+  margin-top: 0.4rem;
+  font-size: 1rem;
   font-weight: 500;
+  color: var(--teal-600);
 }
 
-.cardText {
-  margin-top: 0.7rem;
+.text {
+  position: relative;
+  margin-top: 1rem;
+  font-size: 1.05rem;
   color: var(--ink-500);
-  font-size: 0.97rem;
+  max-width: 30rem;
+}
+
+/* Illustration ------------------------------------------------------------ */
+
+.artWrap {
+  position: relative;
+  min-height: clamp(220px, 38vh, 340px);
+}
+
+.art {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition:
+    opacity 0.45s ease,
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.artPrev,
+.artNext {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.artPrev {
+  transform: translateY(-36px) rotate(-4deg) scale(0.88);
+}
+
+.artNext {
+  transform: translateY(44px) rotate(4deg) scale(0.88);
+}
+
+/* Responsive ---------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .rail {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .railTrack,
+  .railFill {
+    display: none;
+  }
+
+  .railItem {
+    padding: 0.3rem;
+  }
+
+  .railLabel {
+    display: none;
+  }
+
+  .viewer {
+    min-height: clamp(260px, 38vh, 340px);
+    text-align: center;
+  }
+
+  .step {
+    align-items: center;
+  }
+
+  .ghost {
+    right: 50%;
+    transform: translate(50%, -58%);
+  }
+
+  .stepPrev .ghost {
+    transform: translate(50%, -58%) translateX(-40px);
+  }
+
+  .stepNext .ghost {
+    transform: translate(50%, -58%) translateX(40px);
+  }
+
+  .artWrap {
+    min-height: 24vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .step,
+  .stepPrev,
+  .stepNext,
+  .art,
+  .artPrev,
+  .artNext,
+  .ghost,
+  .dot,
+  .railLabel,
+  .railFill {
+    transition: none;
+  }
 }
