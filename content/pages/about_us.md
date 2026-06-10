@@ -1,6 +1,6 @@
 ---
 seo:
-  title: About Us — The Team Behind Link2Ed
+  title: "About Us: The Team Behind Link2Ed"
   description: Link2Ed was built by psychologists, special educators, and
     technologists to give school psychology and special education teams the
     systems they deserve. Meet the people behind the platform.
@@ -9,7 +9,7 @@ sections:
     eyebrow: About Link2Ed
     title: One platform. Every stakeholder. Every child.
     lead: Built by people who have lived and worked at the intersection of
-      education, child psychology, and technology — and saw firsthand what was
+      education, child psychology, and technology, and saw firsthand what was
       missing.
     image: img/passersby-people-working-around.webp
     image_alt: The Link2Ed team at work
@@ -42,7 +42,7 @@ sections:
 
           Our founding team includes people who have witnessed the
           transformative power of timely support, and knows what it means when
-          the system works — and what's lost when it doesn't.
+          the system works, and what's lost when it doesn't.
   - type: feature_split
     eyebrow: Our Vision
     title: Personalized support to help every child thrive
@@ -81,7 +81,7 @@ sections:
     image_side: left
   - type: team
     title: The People Behind the Platform
-    description: Expertise in child psychology, education, and technology —
+    description: Expertise in child psychology, education, and technology,
       united by one shared mission.
     items:
       - tag: The Subject Matter Expert
@@ -155,15 +155,15 @@ sections:
           support, she is passionate about raising awareness and driving
           systemic change. Her focus is now to enable schools, parents, and
           educators through a unified platform designed to assess, track, and
-          collaborate — ensuring that every child receives the support they
+          collaborate, ensuring that every child receives the support they
           need to thrive.
         image: img/malini.webp
       - tag: The Innovator
         name: Sivaraman SJ
         creds: CIO
         description: Siva, Chief Information Architect at Link2Ed, brings over
-          20+ years of technology leadership and entrepreneurial experience —
-          including founding Rekonist and the TeleRAD Group — to our mission.
+          20+ years of technology leadership and entrepreneurial experience,
+          including founding Rekonist and the TeleRAD Group, to our mission.
           With a track record of delivering enterprise-grade solutions for
           leading global financial services clients, Siva is passionate about
           applying his full-stack expertise to create scalable, secure

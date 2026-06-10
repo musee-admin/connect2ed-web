@@ -1,8 +1,8 @@
 ---
 seo:
-  title: Knowledge Center — Learning Difficulties & Inclusive Education
+  title: "Knowledge Center: Learning Difficulties & Inclusive Education"
   description: Resources for parents and educators on learning difficulties,
-    early intervention, and inclusive education — plus answers to the questions
+    early intervention, and inclusive education, plus answers to the questions
     schools and families ask most.
 sections:
   - type: hero
@@ -98,7 +98,7 @@ sections:
 
 
           Early Signs Show Up Young: Conditions like autism, ADHD, and dyslexia
-          often show signs before age 5 — like delayed speech, trouble
+          often show signs before age 5, like delayed speech, trouble
           following instructions, or being very active. Spotting these signs
           early is important.
 
@@ -119,8 +119,8 @@ sections:
 
 
           Helping Families and Teachers: Early identification gives parents and
-          teachers the tools, resources, and strategies to support the child —
-          like IEPs or learning aids — before school gets tough.
+          teachers the tools, resources, and strategies to support the child,
+          like IEPs or learning aids, before school gets tough.
 
 
           Better Future Outcomes: Children who get early help often do better
@@ -194,8 +194,8 @@ sections:
 
 
           Simplifying Documentation: Easily capture real-time or offline notes
-          on student behavior, academic progress, and classroom interactions —
-          no more paper files.
+          on student behavior, academic progress, and classroom interactions,
+          with no more paper files.
 
 
           Saving Time: Streamlined digital tools reduce administrative
@@ -222,7 +222,7 @@ sections:
 
 
           Our solution turns everyday classroom observations into meaningful
-          data — helping teachers support every learner with confidence and
+          data, helping teachers support every learner with confidence and
           clarity.
       - question: How does this tool help me as a special educator?
         answer: >-
@@ -269,8 +269,8 @@ sections:
 
 
           Providing Real-Time Updates: Track your child's academic progress,
-          behavior, and interventions as they happen — no waiting for periodic
-          reports.
+          behavior, and interventions as they happen, with no waiting for
+          periodic reports.
 
 
           Enabling Two-Way Communication: Share and receive feedback, concerns,
@@ -293,7 +293,7 @@ sections:
 
 
           By keeping you connected and informed, our solution helps you play an
-          active role in your child's growth — both at school and at home.
+          active role in your child's growth, both at school and at home.
       - question: What are the benefits of this tool to an inclusive school?
         answer: >-
           Our solution streamlines support for neurodivergent students across
@@ -301,7 +301,7 @@ sections:
 
 
           Centralize Student Data: Maintain organized, digital records of
-          observations, assessments, IEPs, and progress — all in one place.
+          observations, assessments, IEPs, and progress, all in one place.
 
 
           Enhance Collaboration: Facilitate real-time communication between
@@ -320,7 +320,7 @@ sections:
 
           Empower Teachers & Staff: Equip educators with tools to document
           observations efficiently, adapt strategies, and access student
-          information anytime — even offline.
+          information anytime, even offline.
 
 
           By promoting transparency, efficiency, and coordination, the platform
@@ -335,7 +335,7 @@ sections:
 
           Centralizing Student Information: Access a complete view of each
           student's academic progress, behavioral observations, IEPs, and
-          intervention history — all in one place.
+          intervention history, all in one place.
 
 
           Enabling Early Identification: Use ongoing classroom data and teacher
@@ -353,7 +353,7 @@ sections:
 
 
           Improving Case Management: Organize session notes, observations, and
-          student plans digitally — saving time and reducing paperwork.
+          student plans digitally, saving time and reducing paperwork.
 
 
           By giving counselors real-time insights and collaborative tools, our

@@ -2,14 +2,14 @@
 seo:
   title: School Psychology & Special Education Platform
   description: Link2Ed is a purpose-built platform for school psychology and
-    special education teams — collaboration, progress tracking, standardised
-    workflows, and secure data management in one place.
+    special education teams, bringing collaboration, progress tracking,
+    standardised workflows, and secure data management together in one place.
 sections:
   - type: hero
     eyebrow: Less paperwork. More impact.
     title: A platform built so the right support reaches every child, faster.
     lead: Link2Ed is a purpose-built platform for school psychology and special
-      education teams — bringing collaboration, progress tracking, standardised
+      education teams, bringing collaboration, progress tracking, standardised
       workflows, and secure data management into one place.
     image: img/woman-and-a-man-analyze-data.webp
     image_alt: A school support team reviewing student progress together

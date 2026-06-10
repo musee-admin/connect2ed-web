@@ -1,6 +1,6 @@
 ---
 seo:
-  title: Contact Us — Book a Demo
+  title: "Contact Us: Book a Demo"
   description: Book a demo and see how your school can better support every
     learner. Get in touch with the Link2Ed team in Bangalore.
 sections:

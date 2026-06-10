@@ -1,9 +1,10 @@
 ---
 seo:
-  title: Our Ecosystem — Every Role in a Child's Support Network
-  description: Link2Ed connects the full support network around each student —
-    counsellors, special educators, teachers, therapists, psychologists,
-    assessment agencies, and parents — in one collaborative platform.
+  title: "Our Ecosystem: Every Role in a Child's Support Network"
+  description: Link2Ed connects the full support network around each student,
+    from counsellors, special educators, teachers, therapists, and
+    psychologists to assessment agencies and parents, in one collaborative
+    platform.
 sections:
   - type: hero
     eyebrow: Our Network
@@ -15,7 +16,7 @@ sections:
   - type: ecosystem
     eyebrow: Helping hands
     title: Who We Work With
-    description: Every role in a child's support network — described in the
+    description: Every role in a child's support network, described in the
       child's own words.
     intro: At the centre of everything is the student. Here is what each member
       of the network does for them, in their words.

@@ -1,15 +1,16 @@
 ---
 seo:
-  title: Our Solution — One Platform for Student Support Teams
+  title: "Our Solution: One Platform for Student Support Teams"
   description: Link2Ed brings together every tool your school psychology and
-    special education department needs — structured workflows, IEPs, dashboards,
-    and collaboration for counsellors, therapists, parents, and leadership.
+    special education department needs, from structured workflows and IEPs to
+    dashboards and collaboration for counsellors, therapists, parents, and
+    leadership.
 sections:
   - type: hero
     eyebrow: Everyone who supports a child, connected in one place
     title: A smarter way to support every student
     lead: Link2Ed brings together every tool your school psychology and special
-      education department needs — without the complexity, the scattered files,
+      education department needs, without the complexity, the scattered files,
       or the missed handoffs.
     image: img/office-worker-having-an-idea.webp
     image_alt: An educator planning student support on the Link2Ed platform
@@ -82,8 +83,9 @@ sections:
     title: Everything your team needs. Nothing they don't.
     items:
       - title: Personalized User Journeys
-        description: Each stakeholder sees only what's relevant to their role —
-          counsellor, special educator, therapist, parent, or administrator.
+        description: Each stakeholder sees only what's relevant to their role,
+          whether counsellor, special educator, therapist, parent, or
+          administrator.
         video: img/formal-assesment.mp4
       - title: Intuitive Dashboards
         description: Live views of student progress, caseload status, and team
@@ -94,8 +96,8 @@ sections:
           keep the whole team aligned without the email chains.
         video: img/notes.mp4
       - title: Multi-Mode Observation
-        description: Record observations in the format that works — text,
-          checklists, or structured templates — and from any device.
+        description: Record observations in the format that works, whether
+          text, checklists, or structured templates, and from any device.
         video: img/student-info.mp4
       - title: Standardised Checklists
         description: Evidence-based, professionally designed checklists for
