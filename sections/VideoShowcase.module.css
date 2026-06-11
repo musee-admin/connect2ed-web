@@ -31,19 +31,22 @@
    readable for ~80vh of scrolling before the next one slides over it. */
 .panelTrack {
   height: 180vh;
-  height: 180svh;
+  height: 180dvh;
 }
 
 .panelTrack:last-child {
   height: 140vh;
-  height: 140svh;
+  height: 140dvh;
 }
 
 .panel {
   position: sticky;
   top: 0;
+  /* dvh tracks the mobile browser chrome as it shows/hides, so the pinned
+     panel always fills the visible viewport (svh leaves a gap once the
+     toolbar collapses) */
   height: 100vh;
-  height: 100svh;
+  height: 100dvh;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -77,7 +80,7 @@
 
 .caption {
   position: relative;
-  padding-bottom: clamp(3rem, 8vh, 5.5rem);
+  padding-bottom: calc(clamp(3rem, 8vh, 5.5rem) + env(safe-area-inset-bottom, 0px));
   color: #fff;
 }
 
@@ -152,6 +155,28 @@
   font-size: clamp(1rem, 1.4vw, 1.15rem);
   color: rgba(255, 255, 255, 0.85);
   max-width: 38rem;
+}
+
+/* Phones / short viewports: tighten the caption so even long titles and
+   descriptions fit comfortably inside one screen of video */
+@media (max-width: 600px), (max-height: 560px) {
+  .caption {
+    padding-bottom: calc(clamp(1.75rem, 5vh, 3rem) + env(safe-area-inset-bottom, 0px));
+  }
+
+  .counter {
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    margin-top: 0.7rem;
+    font-size: 0.95rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
