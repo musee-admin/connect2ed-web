@@ -4,47 +4,61 @@ import { Reveal } from "../components/Reveal";
 import { assetUrl } from "../utils";
 
 const Panel = ({ item, index, total }) => {
-  const ref = useRef(null);
+  const trackRef = useRef(null);
   const videoRef = useRef(null);
-  const [active, setActive] = useState(false);
-  const prevRatio = useRef(0);
+  const [progress, setProgress] = useState(0);
+  const rafRef = useRef(null);
 
   useEffect(() => {
-    const node = ref.current;
-    if (!node) {
-      return undefined;
-    }
-    const thresholds = Array.from({ length: 21 }, (_, i) => i / 20);
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        const ratio = entry.intersectionRatio;
-        const goingOut = ratio < prevRatio.current;
-        prevRatio.current = ratio;
+    const handleScroll = () => {
+      if (rafRef.current) return;
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = null;
+        const track = trackRef.current;
+        if (!track) return;
 
-        if (!goingOut && ratio >= 0.85) {
-          setActive(true);
-        } else if (goingOut && ratio <= 0.65) {
-          setActive(false);
+        const rect = track.getBoundingClientRect();
+        const trackHeight = rect.height;
+        const viewportHeight = window.innerHeight;
+        const scrollable = trackHeight - viewportHeight;
+
+        if (scrollable <= 0) {
+          setProgress(0);
+          return;
         }
+
+        const p = Math.max(0, Math.min(1, -rect.top / scrollable));
+        setProgress(p);
 
         const video = videoRef.current;
         if (video) {
-          if (ratio > 0) {
+          if (rect.bottom > 0 && rect.top < viewportHeight) {
             video.play().catch(() => {});
           } else {
             video.pause();
           }
         }
-      },
-      { threshold: thresholds },
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const activeAmt = (() => {
+    const reveal = progress / 0.02;
+    const conceal = (progress - 0.98) / 0.02;
+    return Math.max(0, Math.min(1, Math.min(reveal, 1 - conceal)));
+  })();
+
+  const cap = (offset) => {
+    return Math.max(0, Math.min(1, (activeAmt - offset) / 0.3));
+  };
+
   return (
-    <div className={styles.panelTrack}>
-      <article ref={ref} className={`${styles.panel} ${active ? styles.active : ""}`}>
+    <div className={styles.panelTrack} ref={trackRef}>
+      <article className={styles.panel}>
         <video
           ref={videoRef}
           className={styles.video}
@@ -54,17 +68,46 @@ const Panel = ({ item, index, total }) => {
           playsInline
           preload="metadata"
           aria-hidden
+          style={{ transform: `scale(${1.14 - activeAmt * 0.14})` }}
         />
         <div className={styles.scrim} />
-        <div className={styles.blackOverlay} />
+        <div className={styles.blackOverlay} style={{ opacity: 1 - activeAmt }} />
         <div className={`container ${styles.caption}`}>
-          <p className={styles.counter}>
+          <p className={styles.counter}
+            style={{
+              opacity: cap(0),
+              transform: `translateY(${28 * (1 - cap(0))}px)`,
+            }}
+          >
             {String(index + 1).padStart(2, "0")}
             <span className={styles.counterTotal}> / {String(total).padStart(2, "0")}</span>
           </p>
-          {item.sub_heading && <p className={styles.kicker}>{item.sub_heading}</p>}
-          <h3 className={styles.title}>{item.title}</h3>
-          <p className={styles.text}>{item.description}</p>
+          {item.sub_heading && (
+            <p className={styles.kicker}
+              style={{
+                opacity: cap(0.1),
+                transform: `translateY(${28 * (1 - cap(0.1))}px)`,
+              }}
+            >
+              {item.sub_heading}
+            </p>
+          )}
+          <h3 className={styles.title}
+            style={{
+              opacity: cap(0.2),
+              transform: `translateY(${28 * (1 - cap(0.2))}px)`,
+            }}
+          >
+            {item.title}
+          </h3>
+          <p className={styles.text}
+            style={{
+              opacity: cap(0.3),
+              transform: `translateY(${28 * (1 - cap(0.3))}px)`,
+            }}
+          >
+            {item.description}
+          </p>
         </div>
       </article>
     </div>
