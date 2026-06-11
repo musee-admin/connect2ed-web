@@ -9,7 +9,7 @@
   top: 0;
   height: 100vh;
   height: 100dvh;
-  transition: height 0.15s ease;
+  transition: height 0.5s ease;
   overflow: hidden;
   display: flex;
   align-items: center;

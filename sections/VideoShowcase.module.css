@@ -30,13 +30,13 @@
 .panelTrack {
   height: 180vh;
   height: 180dvh;
-  transition: height 0.15s ease;
+  transition: height 0.5s ease;
 }
 
 .panelTrack:last-child {
   height: 140vh;
   height: 140dvh;
-  transition: height 0.15s ease;
+  transition: height 0.5s ease;
 }
 
 .panel {
@@ -44,7 +44,7 @@
   top: 0;
   height: 100vh;
   height: 100dvh;
-  transition: height 0.15s ease;
+  transition: height 0.5s ease;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
