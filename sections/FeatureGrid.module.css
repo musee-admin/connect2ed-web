@@ -12,10 +12,30 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
-  gap: 1.25rem;
+  gap: 1.4rem;
+}
+
+/* Entry: rise, settle from a slight scale, and de-blur (overrides the global
+   .reveal transform; gated behind html.js like the global rule) */
+:global(html.js) .revealCard {
+  transform: translateY(30px) scale(0.96);
+  filter: blur(10px);
+  transition:
+    opacity 0.7s ease,
+    filter 0.7s ease,
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:global(html.js) .revealCard:global(.is-visible) {
+  transform: none;
+  filter: none;
 }
 
 .card {
+  --mx: 50%;
+  --my: 0%;
+  position: relative;
+  overflow: hidden;
   height: 100%;
   padding: 1.8rem;
   border: 1px solid var(--glass-edge);
@@ -24,6 +44,10 @@
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   box-shadow: var(--glass-shadow);
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
 .dark .card {
@@ -32,19 +56,114 @@
   box-shadow: var(--glass-dark-shadow);
 }
 
-.index {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--brand-600);
-  margin-bottom: 1.1rem;
+/* Cursor-tracked spotlight */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    14rem circle at var(--mx) var(--my),
+    color-mix(in srgb, var(--accent) 14%, transparent),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.45s ease;
 }
 
-.dark .index {
-  color: #6fa1f2;
+/* Sheen that sweeps across on hover */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 58%
+  );
+  transform: translateX(-130%);
+}
+
+.dark .card::after {
+  background: linear-gradient(
+    105deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 58%
+  );
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--glass-edge));
+  box-shadow:
+    0 24px 56px -16px color-mix(in srgb, var(--accent) 30%, rgba(11, 34, 57, 0.28)),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.dark .card:hover {
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--glass-dark-edge));
+  box-shadow:
+    0 24px 56px -16px color-mix(in srgb, var(--accent) 25%, rgba(0, 0, 0, 0.4)),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover::after {
+  transform: translateX(130%);
+  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accent hairline along the top edge; stretches across on hover */
+.hairline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 32%;
+  border-top-left-radius: var(--radius-md);
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0.8;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .hairline {
+  width: 100%;
+}
+
+/* Oversized ghost numeral behind the content */
+.ghost {
+  position: absolute;
+  top: -0.9rem;
+  right: 0.4rem;
+  font-family: var(--font-display);
+  font-size: 6.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
+}
+
+.dark .ghost {
+  opacity: 0.14;
+}
+
+.card:hover .ghost {
+  transform: translateY(0.3rem) scale(1.06);
+  opacity: 0.18;
 }
 
 .cardTitle {
+  position: relative;
   font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.6rem;
@@ -55,6 +174,7 @@
 }
 
 .cardBody {
+  position: relative;
   color: var(--ink-500);
   font-size: 0.97rem;
 }
@@ -65,4 +185,41 @@
 
 .ctaRow {
   margin-top: 2.5rem;
+}
+
+@media (max-width: 40rem) {
+  .card {
+    padding: 1.5rem 1.35rem;
+  }
+
+  .ghost {
+    font-size: 5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(html.js) .revealCard {
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+
+  .card,
+  .hairline,
+  .ghost {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card::before,
+  .card::after {
+    display: none;
+  }
+
+  .card:hover .ghost {
+    transform: none;
+  }
 }

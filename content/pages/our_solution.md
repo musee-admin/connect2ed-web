@@ -26,6 +26,7 @@ sections:
         body: Link2Ed guides your team through every step, ensuring nothing is
           missed and nothing is lost.
   - type: feature_grid
+    tone: dark
     eyebrow: Designed for every member of the support team
     title: Who is it for?
     items:
