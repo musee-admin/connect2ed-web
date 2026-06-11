@@ -15,8 +15,12 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  background: var(--paper-soft);
-  border-block: 1px solid var(--line);
+  /* translucent frost over the global aurora backdrop so the pinned stage
+     stays readable while the colour shows through */
+  background: rgba(245, 248, 252, 0.6);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-block: 1px solid var(--glass-edge);
 }
 
 .inner {
@@ -141,9 +145,11 @@
 .frame {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-md);
-  background: var(--navy-900);
+  border: 1px solid var(--glass-dark-edge);
+  box-shadow: var(--glass-dark-shadow);
+  background: rgba(11, 34, 57, 0.7);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .chrome {
@@ -237,8 +243,7 @@
   .mobile {
     display: block;
     padding-block: var(--section-pad);
-    background: var(--paper-soft);
-    border-block: 1px solid var(--line);
+    border-block: 1px solid var(--glass-edge);
   }
 
   .mobile .header {

@@ -2,17 +2,17 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid transparent;
   transition: border-color 0.25s ease, box-shadow 0.25s ease,
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scrolled {
-  border-bottom-color: var(--line);
-  box-shadow: var(--shadow-sm);
+  border-bottom-color: var(--glass-edge);
+  box-shadow: 0 8px 32px rgba(11, 34, 57, 0.08);
 }
 
 .hidden {
@@ -87,9 +87,11 @@
   justify-content: center;
   width: 44px;
   height: 44px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--glass-edge);
   border-radius: 10px;
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .burger,
@@ -164,8 +166,10 @@
     display: grid;
     gap: 0.25rem;
     padding: 0 var(--gutter) 1.25rem;
-    background: #fff;
-    border-bottom: 1px solid var(--line);
+    background: var(--glass-bg-strong);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--glass-edge);
     max-height: 0;
     overflow: hidden;
     padding-block: 0;

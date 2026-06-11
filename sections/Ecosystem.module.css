@@ -100,8 +100,8 @@
   border-radius: 50%;
   object-fit: cover;
   background: var(--paper-tint);
-  border: 2px solid #fff;
-  box-shadow: var(--shadow-sm);
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  box-shadow: var(--glass-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -122,7 +122,9 @@
   line-height: 1.25;
   text-align: center;
   color: var(--ink-500);
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   border-radius: 8px;
   padding: 0.1rem 0.4rem;
   transition: color 0.3s ease;
@@ -186,8 +188,8 @@
   border-radius: 50%;
   object-fit: cover;
   background: var(--brand-100);
-  border: 3px solid #fff;
-  box-shadow: var(--shadow-md);
+  border: 3px solid rgba(255, 255, 255, 0.65);
+  box-shadow: var(--glass-shadow-lg);
 }
 
 .centerLabel {
@@ -195,11 +197,13 @@
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--ink-900);
-  background: #fff;
-  border: 1px solid var(--line);
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-edge);
   border-radius: 999px;
   padding: 0.25rem 0.8rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--glass-shadow);
 }
 
 /* Speech bubble ---------------------------------------------------------------
@@ -222,10 +226,12 @@
   left: 0;
   right: 0;
   padding: 1.1rem 1.3rem 1.2rem;
-  background: #fff;
-  border: 1px solid var(--line);
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-edge);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--glass-shadow-lg);
   opacity: 0;
   visibility: hidden;
 }
@@ -237,9 +243,9 @@
   left: 50%;
   width: 15px;
   height: 15px;
-  background: #fff;
-  border-left: 1px solid var(--line);
-  border-top: 1px solid var(--line);
+  background: var(--glass-bg-strong);
+  border-left: 1px solid var(--glass-edge);
+  border-top: 1px solid var(--glass-edge);
   transform: translateX(-50%) rotate(45deg);
 }
 
@@ -297,8 +303,8 @@
   bottom: -8px;
   border-left: none;
   border-top: none;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--glass-edge);
+  border-bottom: 1px solid var(--glass-edge);
 }
 
 .bubbleMeta {
@@ -378,8 +384,8 @@
   .bubblesTop .bubble::before {
     top: -8px;
     bottom: auto;
-    border-left: 1px solid var(--line);
-    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--glass-edge);
+    border-top: 1px solid var(--glass-edge);
     border-right: none;
     border-bottom: none;
   }

@@ -1,5 +1,12 @@
 .section {
-  background: var(--navy-950);
+  /* hard-edged discs/rings give the dark glass stat block detail to blur */
+  background:
+    radial-gradient(circle at 12% 80%, rgba(79, 110, 245, 0.07) 0 9rem, transparent calc(9rem + 1px)),
+    radial-gradient(circle at 30% 15%, transparent 0 5rem, rgba(236, 110, 195, 0.05) 5rem 6rem, transparent calc(6rem + 1px)),
+    radial-gradient(circle at 88% 30%, rgba(34, 211, 238, 0.06) 0 6rem, transparent calc(6rem + 1px)),
+    radial-gradient(circle at 70% 85%, transparent 0 4rem, rgba(147, 110, 250, 0.06) 4rem 5rem, transparent calc(5rem + 1px)),
+    radial-gradient(circle at 50% 50%, rgba(45, 188, 150, 0.05) 0 5rem, transparent calc(5rem + 1px)),
+    var(--navy-950);
 }
 
 .grid {
@@ -12,9 +19,12 @@
 .statBlock {
   text-align: center;
   padding: 2.5rem 2rem;
-  border: 1px solid var(--navy-800);
+  border: 1px solid var(--glass-dark-edge);
   border-radius: var(--radius-lg);
-  background: var(--navy-900);
+  background: var(--glass-dark-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-dark-shadow);
 }
 
 .statValue {

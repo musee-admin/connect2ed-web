@@ -36,6 +36,22 @@
   --on-navy: #e8eff8;
   --on-navy-muted: #a8bcd2;
 
+  /* Glass — frosted surfaces over tinted backdrops. The bg stays fairly
+     opaque so text keeps contrast even where backdrop-filter is unsupported */
+  --glass-bg: rgba(255, 255, 255, 0.32);
+  --glass-bg-strong: rgba(255, 255, 255, 0.5);
+  /* bright edge + inner highlight: the pane reads as glass even where the
+     backdrop happens to be quiet */
+  --glass-edge: rgba(255, 255, 255, 0.75);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  /* extra saturation pulls colour from the pale backdrop through the glass */
+  --glass-blur: blur(6px) saturate(2);
+  --glass-shadow: 0 8px 32px rgba(11, 34, 57, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --glass-shadow-lg: 0 20px 56px -8px rgba(11, 34, 57, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --glass-dark-bg: rgba(19, 47, 76, 0.45);
+  --glass-dark-edge: rgba(255, 255, 255, 0.14);
+  --glass-dark-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
   /* Shape */
   --radius-sm: 10px;
   --radius-md: 16px;
@@ -69,9 +85,31 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   color: var(--ink-700);
-  background: var(--paper);
+  /* transparent so the fixed aurora pseudo-element below shows through */
+  background: transparent;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+/* Vibrant aurora backdrop — fixed colour blobs the frosted glass surfaces
+   blur against. A fixed pseudo-element instead of background-attachment:
+   fixed, which is janky on mobile Safari */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  /* Blur only reads against high-frequency detail, so the backdrop floats
+     hard-edged discs and rings: crisp outside the glass, melted under it */
+  background:
+    radial-gradient(circle at 10% 16%, rgba(79, 110, 245, 0.05) 0 13rem, transparent calc(13rem + 1px)),
+    radial-gradient(circle at 88% 12%, rgba(34, 211, 238, 0.05) 0 9rem, transparent calc(9rem + 1px)),
+    radial-gradient(circle at 84% 82%, rgba(236, 110, 195, 0.04) 0 15rem, transparent calc(15rem + 1px)),
+    radial-gradient(circle at 12% 86%, rgba(147, 110, 250, 0.05) 0 11rem, transparent calc(11rem + 1px)),
+    radial-gradient(circle at 56% 40%, transparent 0 8rem, rgba(45, 188, 150, 0.05) 8rem 9.5rem, transparent calc(9.5rem + 1px)),
+    radial-gradient(circle at 32% 66%, transparent 0 5rem, rgba(251, 191, 36, 0.07) 5rem 6rem, transparent calc(6rem + 1px)),
+    var(--paper);
 }
 
 h1,

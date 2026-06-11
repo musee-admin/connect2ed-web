@@ -1,9 +1,7 @@
 .hero {
-  background:
-    radial-gradient(60rem 30rem at 85% -10%, var(--brand-100) 0%, transparent 60%),
-    linear-gradient(180deg, var(--paper-soft) 0%, var(--paper) 100%);
+  /* transparent — the global aurora backdrop provides the colour */
   padding-block: clamp(4rem, 9vw, 7rem) clamp(3rem, 6vw, 5rem);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--glass-edge);
 }
 
 .compact {
@@ -53,8 +51,13 @@
   aspect-ratio: 5 / 4;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--line);
+  /* frosted mat: the translucent padding ring blurs whatever sits behind */
+  padding: 0.6rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-edge);
+  box-shadow: var(--glass-shadow-lg);
 }
 
 .stats {
@@ -62,14 +65,17 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1px;
   margin: clamp(3rem, 6vw, 4.5rem) 0 0;
-  background: var(--line);
-  border: 1px solid var(--line);
+  background: var(--glass-edge);
+  border: 1px solid var(--glass-edge);
   border-radius: var(--radius-md);
   overflow: hidden;
+  box-shadow: var(--glass-shadow);
 }
 
 .stat {
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   padding: 1.6rem 1.8rem;
   display: flex;
   flex-direction: column-reverse;
