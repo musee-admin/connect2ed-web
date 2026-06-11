@@ -69,7 +69,7 @@ export const Ecosystem = ({ eyebrow, title, description, student_image, members 
   return (
     <section className="section">
       <div className="container">
-        <SectionHeading eyebrow={eyebrow} title={title} lede={description} align="center" />
+        <SectionHeading eyebrow={eyebrow} title={title} lede={description} align="left" />
 
         <div className={styles.stageWrap}>
           <div

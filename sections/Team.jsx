@@ -6,7 +6,7 @@ import { paragraphs, assetUrl } from "../utils";
 export const Team = ({ eyebrow, title, description, items }) => (
   <section className={`section ${styles.section}`}>
     <div className="container">
-      <SectionHeading eyebrow={eyebrow} title={title} lede={description} align="center" />
+      <SectionHeading eyebrow={eyebrow} title={title} lede={description} align="left" />
       <div className={styles.grid}>
         {items?.map((person, index) => (
           <Reveal key={index} delay={(index % 2) * 80}>
