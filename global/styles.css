@@ -3,6 +3,10 @@
    ========================================================================== */
 
 :root {
+  /* Always render light — opts out of browser auto-darkening (e.g. Chrome
+     Android "darken websites") when the system preference is dark */
+  color-scheme: only light;
+
   /* Type */
   --font-display: "Sora", "Inter", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;

@@ -11,6 +11,7 @@ export default function Document() {
           rel="stylesheet"
         />
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <meta name="color-scheme" content="only light" />
         <meta name="theme-color" content="#0b2239" />
         {/* Gates reveal-on-scroll styles so content stays visible without JS */}
         <script
