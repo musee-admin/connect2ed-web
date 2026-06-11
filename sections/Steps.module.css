@@ -7,11 +7,9 @@
 .stage {
   position: sticky;
   top: 0;
-  /* dvh tracks the mobile browser chrome as it shows/hides, so the pinned
-     stage always fills the visible viewport (svh leaves a gap once the
-     toolbar collapses) */
   height: 100vh;
   height: 100dvh;
+  transition: height 0.15s ease;
   overflow: hidden;
   display: flex;
   align-items: center;

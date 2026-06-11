@@ -30,21 +30,21 @@
 .panelTrack {
   height: 180vh;
   height: 180dvh;
+  transition: height 0.15s ease;
 }
 
 .panelTrack:last-child {
   height: 140vh;
   height: 140dvh;
+  transition: height 0.15s ease;
 }
 
 .panel {
   position: sticky;
   top: 0;
-  /* dvh tracks the mobile browser chrome as it shows/hides, so the pinned
-     panel always fills the visible viewport (svh leaves a gap once the
-     toolbar collapses) */
   height: 100vh;
   height: 100dvh;
+  transition: height 0.15s ease;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
