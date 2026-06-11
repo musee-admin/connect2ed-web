@@ -14,11 +14,24 @@ export const NAV_LINKS = [
 
 export const SiteHeader = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useRouter();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 8);
+      // Hide only after clearing the hero top so the header never vanishes
+      // right at the top of the page; any upward scroll brings it back.
+      if (y > lastY && y > 120) {
+        setHidden(true);
+      } else if (y < lastY) {
+        setHidden(false);
+      }
+      lastY = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -29,7 +42,11 @@ export const SiteHeader = () => {
   }, [pathname]);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
+    <header
+      className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${
+        hidden && !menuOpen ? styles.hidden : ""
+      }`}
+    >
       <div className={`container ${styles.bar}`}>
         <Link href="/" className={styles.brand} aria-label="Link2Ed home">
           <img src={assetUrl(basic.full_logo)} alt="Link2Ed" className={styles.logo} />

@@ -6,12 +6,23 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scrolled {
   border-bottom-color: var(--line);
   box-shadow: var(--shadow-sm);
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header {
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
 }
 
 .bar {
