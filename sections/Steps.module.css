@@ -1,13 +1,17 @@
 /* Tall scroll track; the stage inside pins while scroll advances the steps */
 .track {
   position: relative;
+  height: var(--track-height);
 }
 
 .stage {
   position: sticky;
   top: 0;
+  /* dvh tracks the mobile browser chrome as it shows/hides, so the pinned
+     stage always fills the visible viewport (svh leaves a gap once the
+     toolbar collapses) */
   height: 100vh;
-  height: 100svh;
+  height: 100dvh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -255,6 +259,99 @@
 
 .artNext {
   transform: translateY(44px) rotate(4deg) scale(0.88);
+}
+
+/* Mobile stacked layout ------------------------------------------------------ */
+
+.mobile {
+  display: none;
+}
+
+/* Phones and short (landscape) viewports: the six pinned steps can't fit a
+   small screen, so swap the scroll-driven stage for a natural stacked
+   timeline that works at any resolution. */
+@media (max-width: 768px), (max-height: 560px) {
+  .track {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    padding-block: var(--section-pad);
+    background:
+      radial-gradient(50rem 26rem at 12% 110%, var(--brand-100) 0%, transparent 60%),
+      linear-gradient(180deg, #fff 0%, var(--paper-soft) 100%);
+    border-block: 1px solid var(--line);
+  }
+
+  .mobile .header {
+    margin-bottom: 2.25rem;
+  }
+
+  .mobileList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobileStep {
+    position: relative;
+    padding: 0 0 2.5rem 2rem;
+  }
+
+  /* Vertical rail connecting the steps, echoing the desktop progress rail */
+  .mobileStep::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 24px;
+    bottom: 4px;
+    width: 2px;
+    border-radius: 2px;
+    background: var(--line);
+  }
+
+  .mobileStep:last-child {
+    padding-bottom: 0;
+  }
+
+  .mobileStep:last-child::before {
+    display: none;
+  }
+
+  .mobileStep::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--brand-600);
+    background: var(--brand-100);
+  }
+
+  .mobileTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+
+  .mobileStep .stepNumber {
+    margin-bottom: 0.4rem;
+  }
+
+  .mobileStep .text {
+    margin-top: 0.7rem;
+    font-size: 1rem;
+  }
+
+  .mobileArt {
+    display: block;
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+    margin-top: 1.25rem;
+  }
 }
 
 /* Responsive ---------------------------------------------------------------- */

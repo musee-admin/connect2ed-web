@@ -52,12 +52,13 @@ export const Steps = ({ title, description, items = [] }) => {
   };
 
   return (
-    <section
-      ref={trackRef}
-      className={styles.track}
-      style={{ height: `${items.length * 70 + 100}vh` }}
-    >
-      <div className={styles.stage}>
+    <section>
+      <div
+        ref={trackRef}
+        className={styles.track}
+        style={{ "--track-height": `${items.length * 70 + 100}vh` }}
+      >
+        <div className={styles.stage}>
         <div className={`container ${styles.inner}`}>
           <header className={styles.header}>
             <h2 className={styles.heading}>{title}</h2>
@@ -115,6 +116,37 @@ export const Steps = ({ title, description, items = [] }) => {
               )}
             </div>
           </div>
+        </div>
+      </div>
+      </div>
+
+      {/* Static stacked layout for phones / short viewports; the pinned
+         stage above is hidden there via the same media query. */}
+      <div className={styles.mobile}>
+        <div className="container">
+          <header className={styles.header}>
+            <h2 className={styles.heading}>{title}</h2>
+            {description && <p className={styles.lede}>{description}</p>}
+          </header>
+
+          <ol className={styles.mobileList}>
+            {items.map((item, index) => (
+              <li key={index} className={styles.mobileStep}>
+                <p className={styles.stepNumber}>Step {index + 1}</p>
+                <h3 className={styles.mobileTitle}>{item.title}</h3>
+                {item.sub_heading && <p className={styles.kicker}>{item.sub_heading}</p>}
+                <p className={styles.text}>{item.description}</p>
+                {item.image && (
+                  <img
+                    src={assetUrl(item.image)}
+                    alt=""
+                    loading="lazy"
+                    className={styles.mobileArt}
+                  />
+                )}
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>

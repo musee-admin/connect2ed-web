@@ -2,6 +2,63 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./FeatureTour.module.css";
 import { assetUrl } from "../utils";
 
+/* Stacked feature card for phones; its video plays while scrolled into view */
+const MobileFeature = ({ item, index }) => {
+  const ref = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) {
+      return undefined;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const video = videoRef.current;
+        if (!video) {
+          return;
+        }
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.35 },
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <article ref={ref} className={styles.mobileItem}>
+      <p className={styles.mobileIndex}>{String(index + 1).padStart(2, "0")}</p>
+      <h3 className={styles.mobileTitle}>{item.title}</h3>
+      <p className={styles.mobileText}>{item.description}</p>
+      <div className={styles.frame}>
+        <div className={styles.chrome} aria-hidden>
+          <span className={styles.chromeDot} />
+          <span className={styles.chromeDot} />
+          <span className={styles.chromeDot} />
+          <span className={styles.chromePill}>{item.title}</span>
+        </div>
+        <div className={styles.screen}>
+          <video
+            ref={videoRef}
+            className={styles.mobileShot}
+            src={assetUrl(item.video)}
+            muted
+            loop
+            playsInline
+            preload="none"
+            aria-label={`${item.title} demo video`}
+          />
+        </div>
+      </div>
+    </article>
+  );
+};
+
 export const FeatureTour = ({ eyebrow, title, description, items = [] }) => {
   const trackRef = useRef(null);
   const videoRefs = useRef([]);
@@ -79,12 +136,13 @@ export const FeatureTour = ({ eyebrow, title, description, items = [] }) => {
   };
 
   return (
-    <section
-      ref={trackRef}
-      className={styles.track}
-      style={{ height: `${items.length * 60 + 100}vh` }}
-    >
-      <div className={styles.stage}>
+    <section>
+      <div
+        ref={trackRef}
+        className={styles.track}
+        style={{ "--track-height": `${items.length * 60 + 100}vh` }}
+      >
+        <div className={styles.stage}>
         <div className={`container ${styles.inner}`}>
           <header className={styles.header}>
             {eyebrow && <p className="eyebrow">{eyebrow}</p>}
@@ -148,6 +206,25 @@ export const FeatureTour = ({ eyebrow, title, description, items = [] }) => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      {/* Static stacked layout for phones / short viewports; the pinned
+         stage above is hidden there via the same media query. */}
+      <div className={styles.mobile}>
+        <div className="container">
+          <header className={styles.header}>
+            {eyebrow && <p className="eyebrow">{eyebrow}</p>}
+            <h2 className={styles.heading}>{title}</h2>
+            {description && <p className={styles.lede}>{description}</p>}
+          </header>
+
+          <div className={styles.mobileList}>
+            {items.map((item, index) => (
+              <MobileFeature key={index} item={item} index={index} />
+            ))}
           </div>
         </div>
       </div>
