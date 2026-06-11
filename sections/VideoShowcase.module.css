@@ -76,6 +76,19 @@
   );
 }
 
+.blackOverlay {
+  position: absolute;
+  inset: 0;
+  background: var(--navy-950);
+  opacity: 1;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+.active .blackOverlay {
+  opacity: 0;
+}
+
 .caption {
   position: relative;
   padding-bottom: calc(clamp(3rem, 8vh, 5.5rem) + env(safe-area-inset-bottom, 0px));
@@ -185,6 +198,11 @@
   .text {
     opacity: 1;
     transform: none;
+    transition: none;
+  }
+
+  .blackOverlay {
+    opacity: 0;
     transition: none;
   }
 }

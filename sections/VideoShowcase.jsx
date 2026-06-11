@@ -7,25 +7,36 @@ const Panel = ({ item, index, total }) => {
   const ref = useRef(null);
   const videoRef = useRef(null);
   const [active, setActive] = useState(false);
+  const prevRatio = useRef(0);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) {
       return undefined;
     }
+    const thresholds = Array.from({ length: 21 }, (_, i) => i / 20);
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setActive(entry.isIntersecting);
+        const ratio = entry.intersectionRatio;
+        const goingOut = ratio < prevRatio.current;
+        prevRatio.current = ratio;
+
+        if (!goingOut && ratio >= 0.85) {
+          setActive(true);
+        } else if (goingOut && ratio <= 0.65) {
+          setActive(false);
+        }
+
         const video = videoRef.current;
         if (video) {
-          if (entry.isIntersecting) {
+          if (ratio > 0) {
             video.play().catch(() => {});
           } else {
             video.pause();
           }
         }
       },
-      { threshold: 0.4 },
+      { threshold: thresholds },
     );
     observer.observe(node);
     return () => observer.disconnect();
@@ -45,6 +56,7 @@ const Panel = ({ item, index, total }) => {
           aria-hidden
         />
         <div className={styles.scrim} />
+        <div className={styles.blackOverlay} />
         <div className={`container ${styles.caption}`}>
           <p className={styles.counter}>
             {String(index + 1).padStart(2, "0")}
