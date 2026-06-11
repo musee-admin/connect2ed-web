@@ -57,8 +57,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* default fallback before JS sets inline style */
   transform: scale(1.14);
+  transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.active .video {
+  transform: scale(1);
 }
 
 .scrim {
@@ -72,15 +76,6 @@
   );
 }
 
-.blackOverlay {
-  position: absolute;
-  inset: 0;
-  background: var(--navy-950);
-  /* default fallback before JS sets inline style */
-  opacity: 1;
-  pointer-events: none;
-}
-
 .caption {
   position: relative;
   padding-bottom: calc(clamp(3rem, 8vh, 5.5rem) + env(safe-area-inset-bottom, 0px));
@@ -91,9 +86,35 @@
 .kicker,
 .title,
 .text {
-  /* default fallback before JS sets inline style */
   opacity: 0;
   transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.active .counter {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.1s;
+}
+
+.active .kicker {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.2s;
+}
+
+.active .title {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.3s;
+}
+
+.active .text {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.42s;
 }
 
 .counter {
@@ -157,19 +178,17 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .video {
-    transform: scale(1) !important;
-  }
-
+  .video,
   .counter,
   .kicker,
   .title,
   .text {
-    opacity: 1 !important;
-    transform: none !important;
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 
-  .blackOverlay {
-    opacity: 0 !important;
+  .video {
+    transform: scale(1) !important;
   }
 }
