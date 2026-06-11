@@ -6,6 +6,7 @@ import { attributes as basic } from "../content/pages/basic.md";
 import { assetUrl } from "../utils";
 
 export const NAV_LINKS = [
+  { href: "/", label: "Home" },
   { href: "/our-solution", label: "Our Solution" },
   { href: "/our-ecosystem", label: "Our Ecosystem" },
   { href: "/knowledge-center", label: "Knowledge Center" },
@@ -86,9 +87,6 @@ export const SiteHeader = () => {
         aria-label="Mobile"
         className={`${styles.mobileNav} ${menuOpen ? styles.mobileNavOpen : ""}`}
       >
-        <Link href="/" className={styles.mobileLink}>
-          Home
-        </Link>
         {NAV_LINKS.map(({ href, label }) => (
           <Link key={href} href={href} className={styles.mobileLink}>
             {label}
