@@ -10,7 +10,7 @@ sections:
     secondary_cta_text: Explore the Platform
     eyebrow: Smarter tools for greater impact
     secondary_cta_link: /our-solution
-    title: One ecosystem.Connected and Collaborative student support.
+    title: One ecosystem.  Connected and Collaborative student support.
     primary_cta_text: Book a Demo
     type: hero
     image: img/woman-and-a-man-analyze-data.webp
