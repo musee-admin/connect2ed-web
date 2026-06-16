@@ -38,9 +38,6 @@ export const SiteFooter = () => {
 
           <nav className={styles.linkCol} aria-label="Footer">
             <p className={styles.colTitle}>Explore</p>
-            <Link href="/" className={styles.link}>
-              Home
-            </Link>
             {NAV_LINKS.map(({ href, label }) => (
               <Link key={href} href={href} className={styles.link}>
                 {label}
