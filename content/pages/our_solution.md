@@ -84,28 +84,39 @@ sections:
     title: Everything your team needs. Nothing they don't.
     items:
       - title: Personalized User Journeys
-        description: Each stakeholder sees only what's relevant to their role,
-          whether counsellor, special educator, therapist, parent, or
-          administrator.
-        video: img/formal-assesment.mp4
-      - title: Intuitive Dashboards
-        description: Live views of student progress, caseload status, and team
-          activity, for practitioners and leadership alike.
-        video: img/dashboard.mp4
-      - title: Collaborative Workflows
-        description: Structured handoffs, shared notes, and real-time updates
-          keep the whole team aligned without the email chains.
-        video: img/notes.mp4
-      - title: Multi-Mode Observation
-        description: Record observations in the format that works, whether
-          text, checklists, or structured templates, and from any device.
-        video: img/student-info.mp4
-      - title: Standardised Checklists
-        description: Evidence-based, professionally designed checklists for
-          consistent assessment and documentation across your school.
-        video: img/checklist.mp4
-      - title: Flexible Education Plans
-        description: Build, update, and share Individual Education Plans (IEPs)
-          collaboratively, with version history and access controls.
+        description: Each stakeholder sees only what's relevant to their role.
+          Special educators, counsellors, teachers, therapists, and parents get
+          their own checklists, screens, and permissions on the same student
+          record.
+        video: img/personalized-journeys.mp4
+      - title: Student-Centric Workspace
+        description: One profile per child holds the plan of action, SWOT,
+          checklists, notes, present levels of performance, and exam history, so
+          the full picture is always a click away.
+        video: img/student-centric.mp4
+      - title: Individual Education Plans
+        description: Build an Individual Education Plan (IEP) step by step, from
+          student details and diagnosis to annual goals, support services,
+          accommodations, and team sign-off, then export it as a PDF.
         video: img/iep.mp4
+      - title: Group-Level Sessions
+        description: Run and document sessions for a whole grade or group in one
+          place. Log what was covered once and it lands on every participating
+          student's record.
+        video: img/group-level-sessions.mp4
+      - title: Scheduling & Calendar
+        description: Schedule one-off or recurring sessions, capture progress
+          notes and follow-ups against each appointment, and reschedule or
+          notify the team without leaving the calendar.
+        video: img/scheduling-calendar.mp4
+      - title: Templates & Reports
+        description: Standardised, evidence-based templates keep documentation
+          consistent, and reports for attendance, screening, IEPs, or a
+          consolidated view generate in a click.
+        video: img/templates-reports.mp4
+      - title: Leadership Dashboards
+        description: Live views across class, division, teacher, and specialist
+          caseloads give principals and heads of department a real-time picture
+          of how support is running school-wide.
+        video: img/dashboards.mp4
 ---
