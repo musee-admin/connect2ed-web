@@ -2,6 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./FeatureTour.module.css";
 import { assetUrl } from "../utils";
 
+/* Each demo ships as webm (VP9) + mp4 (h264) next to a webp poster frame, all
+   named off the mp4 in the page content. */
+const sources = (video) => ({
+  webm: assetUrl(video.replace(/\.mp4$/, ".webm")),
+  mp4: assetUrl(video),
+  poster: assetUrl(video.replace(/\.mp4$/, "-poster.webp")),
+});
+
 /* Stacked feature card for phones; its video plays while scrolled into view */
 const MobileFeature = ({ item, index }) => {
   const ref = useRef(null);
@@ -30,6 +38,8 @@ const MobileFeature = ({ item, index }) => {
     return () => observer.disconnect();
   }, []);
 
+  const media = sources(item.video);
+
   return (
     <article ref={ref} className={styles.mobileItem}>
       <p className={styles.mobileIndex}>{String(index + 1).padStart(2, "0")}</p>
@@ -46,13 +56,16 @@ const MobileFeature = ({ item, index }) => {
           <video
             ref={videoRef}
             className={styles.mobileShot}
-            src={assetUrl(item.video)}
+            poster={media.poster}
             muted
             loop
             playsInline
             preload="none"
             aria-label={`${item.title} demo video`}
-          />
+          >
+            <source src={media.webm} type="video/webm" />
+            <source src={media.mp4} type="video/mp4" />
+          </video>
         </div>
       </div>
     </article>
@@ -110,6 +123,14 @@ export const FeatureTour = ({ eyebrow, title, description, items = [] }) => {
         video.pause();
       }
     });
+    /* Warm the next clip so the swap doesn't stall on an empty buffer. Touching
+       the DOM property directly: React keeps rendering preload="none" for these
+       and never patches it back, so the hint sticks once we've used it. */
+    const next = videoRefs.current[active + 1];
+    if (inView && next && next.preload === "none") {
+      next.preload = "auto";
+      next.load();
+    }
     if (progressRef.current) {
       progressRef.current.style.transform = "scaleX(0)";
     }
@@ -188,22 +209,30 @@ export const FeatureTour = ({ eyebrow, title, description, items = [] }) => {
                 <span className={styles.chromePill}>{items[active]?.title}</span>
               </div>
               <div className={styles.screen}>
-                {items.map((item, index) => (
-                  <video
-                    key={index}
-                    ref={(node) => {
-                      videoRefs.current[index] = node;
-                    }}
-                    className={`${styles.shot} ${index === active ? styles.shotActive : ""}`}
-                    src={assetUrl(item.video)}
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    onTimeUpdate={index === active ? onTimeUpdate : undefined}
-                    aria-label={`${item.title} demo video`}
-                  />
-                ))}
+                {items.map((item, index) => {
+                  const media = sources(item.video);
+                  return (
+                    <video
+                      key={index}
+                      ref={(node) => {
+                        videoRefs.current[index] = node;
+                      }}
+                      className={`${styles.shot} ${index === active ? styles.shotActive : ""}`}
+                      poster={media.poster}
+                      muted
+                      loop
+                      playsInline
+                      /* Only the opening clip loads up front; the rest are
+                         fetched one ahead as the tour advances */
+                      preload={index === 0 ? "metadata" : "none"}
+                      onTimeUpdate={index === active ? onTimeUpdate : undefined}
+                      aria-label={`${item.title} demo video`}
+                    >
+                      <source src={media.webm} type="video/webm" />
+                      <source src={media.mp4} type="video/mp4" />
+                    </video>
+                  );
+                })}
               </div>
             </div>
           </div>
